@@ -95,7 +95,7 @@ a:hover {
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 60px;
     margin-bottom: 60px;
 }
@@ -126,6 +126,76 @@ a:hover {
     color: #00ff88;
     font-weight: bold;
     text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.experience-item {
+    background: rgba(0, 255, 136, 0.08);
+    border: 1px solid #00ff88;
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+    animation: slideInLeft 0.6s ease;
+}
+
+.experience-item:hover {
+    background: rgba(0, 255, 136, 0.15);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+    transform: translateX(5px);
+}
+
+.experience-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.experience-header h3 {
+    font-size: 20px;
+    color: #00ff88;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.company {
+    font-size: 15px;
+    color: #00ff88;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.duration {
+    font-size: 13px;
+    color: #b0ffb0;
+    opacity: 0.8;
+}
+
+.experience-details p {
+    font-size: 15px;
+    color: #b0ffb0;
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+
+.experience-details ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.experience-details li {
+    font-size: 15px;
+    color: #b0ffb0;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.experience-details li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #00ff88;
 }
 
 .about-skills {

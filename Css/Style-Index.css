@@ -20,7 +20,6 @@ header {
     padding: 20px 0;
     border-bottom: 2px solid #00ff88;
 }
-
 .container {
     display: flex;
     justify-content: space-between;
@@ -100,17 +99,17 @@ a:hover {
     width: 10px;
     height: 20px;
     background: #2d312f;
-    margin-left: 5px;
+    margin-left: 12px;
     animation: terminalBlink 0.8s step-end 3 forwards;
 }
 
 .typewriter {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     overflow: hidden;
     white-space: nowrap;
     border-right: 3px solid #00ff88;
-    animation: typing 4s steps(51) 2.8s forwards, blink 0.7s infinite 2.8s;
+    animation: typing 4s steps(68) 2.8s forwards, blink 0.7s infinite 2.8s;
     margin-bottom: 30px;
     min-height: 50px;
     width: 0;
@@ -129,7 +128,7 @@ p {
         width: 0;
     }
     to {
-        width: 51ch;
+        width: 68ch;
     }
 }
 
