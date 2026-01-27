@@ -1,52 +1,81 @@
 # Portfolio - Mamadou BARRY 🚀
 
-## 📋 Table des matières
-1. [Vue d'ensemble](#vue-densemble)
-2. [Structure du projet](#structure-du-projet)
-3. [Pages HTML](#pages-html)
-4. [Fichiers CSS](#fichiers-css)
-5. [Technologies utilisées](#technologies-utilisées)
-6. [Guide des animations](#guide-des-animations)
-7. [Personnalisation](#personnalisation)
-8. [Responsive Design](#responsive-design)
-
----
+Un portfolio web professionnel et moderne présentant mes projets, compétences et services.
 
 ## 🎯 Vue d'ensemble
 
-Ce portfolio est un site web moderne et professionnel présentant les projets, compétences et moyens de contact de Mamadou BARRY, étudiant en informatique à IUT2 GRENOBLE.
+Portfolio moderne d'un étudiant en informatique à **IUT2 GRENOBLE**, démontrant expertise en :
+- **Développement Web** (HTML, CSS, JavaScript)
+- **Programmation Système** (Java, Linux, Shell)
+- **Bases de Données** (PostgreSQL, SQL)
+- **Réseaux & Infrastructure** (VLAN, LAN, SSH)
+- **Gestion de Projet** (Exigences, Agile)
+- **Durabilité & Responsabilité** (Green IT, ESG)
 
-**Caractéristiques principales :**
-- ✨ Design cyberpunk avec thème vert néon (#00ff88)
-- 🎨 Animations fluides et interactives
-- 📱 Responsive sur tous les appareils
-- 🔗 Navigation fluide entre les pages
-- 💡 Code bien structuré et commenté
-- ⚡ Performance optimisée
+## ✨ Caractéristiques
 
----
+- **Design Cyberpunk** : Thème vert néon moderne et immersif
+- **Animations Fluides** : Effets terminal, typewriter, transitions élégantes
+- **Responsive Design** : Optimisé pour mobile, tablette, desktop
+- **Pages Détail** : 6 pages complètes pour chaque projet SAE
+- **Timeline Éducatif** : Parcours académique structuré avec dates
+- **Footer Riche** : Liens rapides et coordonnées de contact
+- **Performance** : Code optimisé et chargement rapide
 
-## 📁 Structure du projet
+## 📁 Structure du Projet
 
 ```
 Portfolio/
-├── index.html              # Page d'accueil
-├── About.html              # Page À propos
-├── Project.html            # Page des projets
-├── Contact.html            # Page de contact
+├── index.html                 # Accueil - Hero section + Quick Access
+├── About.html                 # À propos - Profil + Expériences + Timeline
+├── Project.html               # Projets - Grille 6 projets SAE
+├── Contact.html               # Contact - Formulaire + Méthodes contact
+├── SAE1.html → SAE6.html      # Pages détail pour chaque projet
 ├── Css/
-│   ├── Style-Index.css     # CSS page d'accueil
-│   ├── About.css           # CSS page À propos
-│   ├── project.css         # CSS page projets
-│   └── contact.css         # CSS page contact
-├── Img/                    # Dossier pour les images
-├── README.md               # Ce fichier
-└── .git/                   # Dépôt Git
+│   ├── Style-Index.css        # Styles accueil (Hero, Quick Cards, CTA)
+│   ├── About.css              # Styles À propos (Timeline, Expériences)
+│   ├── project.css            # Styles Projets (Grille, Cards)
+│   ├── contact.css            # Styles Contact (Formulaire, Liens)
+│   └── project-detail.css     # Styles Pages détail projets
+├── Img/                       # Dossier pour images et assets
+├── README.md                  # Documentation (ce fichier)
+└── .git/                      # Dépôt Git
 ```
 
----
+## 📄 Pages HTML Détaillées
 
-## 📄 Pages HTML
+### 1. **index.html** - Page d'Accueil
+- **Terminal Effect** : `$ sudo install Portfolio` animé
+- **Typewriter Animation** : Message de bienvenue
+- **Quick Access Cards** : 3 cartes vers À propos / Projets / Contact
+- **Highlights Section** : 4 domaines de compétences
+- **CTA Section** : Appel à l'action pour collaboration
+- **Footer** : Liens sociaux et copyright
+
+### 2. **About.html** - Page À Propos
+- **Profil Personnel** : Présentation et intérêts
+- **Parcours Éducatif** : Timeline visuelle avec 3 niveaux d'études
+- **Expérience Professionnelle** : 2 stages détaillés
+  - Great Expert Team (Guinée) - Sécurité RFID
+  - Compagnie des Bauxites de Guinée - Réseaux
+- **Compétences** : Grille 2x3 des domaines techniques
+- **CTA** : Bouton vers page Contact
+
+### 3. **Project.html** - Page Projets
+- **Grille de Projets** : 6 cartes en 2 colonnes
+- **Cartes Interactives** : Icônes animées + Hover effects
+- **Liens Vers Détail** : Chaque carte link vers SAE1-6.html
+- **Métadonnées** : Code course + Tags technologies
+- **Design Responsive** : 1 colonne sur mobile
+
+### 4. **Contact.html** - Page Contact
+- **Formulaire** : Nom, Email, Sujet, Message (2 colonnes)
+- **Méthodes Contact** : 7 cards avec icônes
+  - Email, Téléphone, GitHub, Localisation
+- **Quick Links** : 5 icônes sociaux circulaires
+- **Responsive** : Formulaire empilé sur mobile
+
+### 5. **SAE1.html → SAE6.html** - Pages Détail Projets
 
 ### 1. **index.html** - Page d'accueil
 

@@ -12,26 +12,24 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 0;
 }
 
 header {
     background-color: rgba(10, 14, 39, 0.95);
     padding: 20px 0;
     border-bottom: 2px solid #00ff88;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 0 30px;
-    width: 100%;
 }
 
 .logo h1 {
-    margin: 0;
     font-size: 22px;
     color: #00ff88;
 }
@@ -44,19 +42,17 @@ nav {
 ul {
     display: flex;
     gap: 30px;
-    list-style: none;
 }
 
 li {
     list-style: none;
-    margin: 0;
 }
 
 a {
     text-decoration: none;
     color: #00ff88;
     font-size: 16px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 a:hover {
@@ -64,13 +60,100 @@ a:hover {
     text-shadow: 0 0 10px #00ff88;
 }
 
+.menu-checkbox {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #00ff88;
+    border-radius: 2px;
+    transition: all 0.4s ease-out;
+}
+
+.menu-checkbox:checked + .menu-toggle {
+    animation: spinBurger 0.5s ease-out;
+}
+
+.menu-checkbox:checked + .menu-toggle span {
+    background: #ffffff;
+}
+
+.menu-checkbox:checked + .menu-toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.menu-checkbox:checked + .menu-toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-checkbox:checked + .menu-toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+@keyframes spinBurger {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        background-color: rgba(10, 14, 39, 0.98);
+        border-bottom: 2px solid #00ff88;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .menu-checkbox:checked ~ nav {
+        max-height: 300px;
+    }
+
+    nav ul {
+        padding: 16px 29px;
+    }
+
+    nav li {
+        border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+        padding: 15px 0;
+    }
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    min-height: 100vh;
+    width: 100%;
+}
+
 .content-center {
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 110px;
+    width: 100%;
 }
 
 .terminal-line {
@@ -80,16 +163,15 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 5px;
-    animation: fadeIn 0.5s ease-in;
+    animation: fadeIn 0.3s ease-in;
 }
 
 .terminal-prompt {
-    color: #00ff88;
     font-weight: bold;
 }
 
 .terminal-command {
-    animation: typeCommand 2s steps(20) 0.5s forwards;
+    animation: typeCommand 1.5s steps(20) 0.2s forwards;
     overflow: hidden;
     white-space: nowrap;
     display: inline-block;
@@ -98,29 +180,248 @@ a:hover {
 .cursor {
     width: 10px;
     height: 20px;
-    background: #2d312f;
-    margin-left: 12px;
-    animation: terminalBlink 0.8s step-end 3 forwards;
+    background: #00ff88;
+    margin-left: 5px;
+    animation: terminalBlink 0.7s step-end 3 1.7s forwards;
 }
 
 .typewriter {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     overflow: hidden;
     white-space: nowrap;
     border-right: 3px solid #00ff88;
-    animation: typing 4s steps(68) 2.8s forwards, blink 0.7s infinite 2.8s;
+    animation: typing 3.5s steps(60) 2.3s forwards, blink 0.7s infinite 5.8s;
     margin-bottom: 30px;
     min-height: 50px;
     width: 0;
 }
 
-p {
+.typewriter h3 {
+    margin: 0;
+}
+
+.description {
     font-size: 18px;
+    color: #b0ffb0;
+    margin: 0;
+    animation: fadeIn 0.6s ease-in 5.9s forwards;
+    opacity: 0;
+}
+
+.quick-access {
+    padding: 80px 30px;
+    background: rgba(0, 255, 136, 0.05);
+    border-top: 2px solid #00ff88;
+    border-bottom: 2px solid #00ff88;
+}
+
+.quick-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.quick-card {
+    background: rgba(10, 14, 39, 0.8);
+    border: 2px solid #00ff88;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease;
+}
+
+.quick-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+}
+
+.quick-card i {
+    font-size: 50px;
+    color: #00ff88;
+    margin-bottom: 20px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.quick-card:hover i {
+    font-size: 60px;
+    text-shadow: 0 0 20px #00ff88;
+}
+
+.quick-card h3 {
+    font-size: 22px;
+    color: #00ff88;
+    margin-bottom: 15px;
+}
+
+.quick-card p {
+    margin-bottom: 20px;
+}
+
+.btn-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid #00ff88;
+    color: #00ff88;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-link:hover {
+    background: #00ff88;
+    color: #0a0e27;
+}
+
+.highlights {
+    padding: 80px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.highlights h2 {
+    font-size: 36px;
+    color: #00ff88;
+    margin-bottom: 50px;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.highlight-item {
+    background: rgba(0, 255, 136, 0.08);
+    border: 1px solid #00ff88;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease;
+}
+
+.highlight-item:hover {
+    background: rgba(0, 255, 136, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+}
+
+.highlight-icon {
+    font-size: 40px;
+    color: #00ff88;
+    margin-bottom: 15px;
+}
+
+.highlight-item h3 {
+    font-size: 20px;
+    color: #00ff88;
+    margin-bottom: 12px;
+}
+
+.highlight-item p {
+    font-size: 14px;
+}
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 2px solid #00ff88;
+    background-color: rgba(10, 14, 39, 0.95);
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 14px;
     color: #00ff88;
     margin: 0;
-    animation: fadeIn 0.8s ease-in 6.5s forwards;
-    opacity: 0;
+    margin-top: 20px;
+}
+
+.quick-contact-links {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0, 255, 136, 0.1);
+    border: 2px solid #00ff88;
+    border-radius: 10px;
+    animation: fadeInUp 0.8s ease;
+    margin-bottom: 20px;
+}
+
+.quick-contact-links h2 {
+    font-size: 24px;
+    color: #00ff88;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 255, 136, 0.1);
+    border: 2px solid #00ff88;
+    border-radius: 50%;
+    color: #00ff88;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    background: #00ff88;
+    color: #0a0e27;
+    transform: scale(1.2) rotateZ(10deg);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+}
+
+.social-link.linkedin:hover {
+    background: #0077b5;
+    border-color: #0077b5;
+    color: white;
+}
+
+.social-link.github:hover {
+    background: #333;
+    border-color: #333;
+    transform: scale(1.2) rotatez(-20deg);
+    color: white;
+}
+
+.social-link.twitter:hover {
+    background: #1da1f2;
+    border-color: #1da1f2;
+    color: white;
+}
+
+.social-link.email:hover {
+    background: #ea4335;
+    border-color: #ea4335;
+    transform: scale(1.2) rotatez(-20deg);
+    color: white;
+}
+
+.social-link.phone:hover {
+    background: #00ff88;
+    border-color: #00ff88;
+    color: #0a0e27;
 }
 
 @keyframes typing {
@@ -128,7 +429,7 @@ p {
         width: 0;
     }
     to {
-        width: 68ch;
+        width: 75ch;
     }
 }
 
@@ -159,11 +460,100 @@ p {
     }
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes blink {
     0%, 49% {
         border-right-color: #00ff88;
     }
     50%, 100% {
         border-right-color: transparent;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 30px 20px;
+        min-height: 100vh;
+    }
+
+    .content-center {
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .terminal-line {
+        justify-content: center;
+        font-size: 14px;
+        flex-wrap: wrap;
+    }
+
+    .terminal-command {
+        animation: typeCommand 2s steps(20) 0.5s forwards;
+    }
+
+    .typewriter {
+        font-size: 18px;
+        min-height: 40px;
+        width: 100%;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+
+    .typewriter h3 {
+        font-size: 16px;
+        word-wrap: break-word;
+        white-space: normal;
+        border: none;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .quick-container {
+        grid-template-columns: 1fr;
+    }
+
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .highlights h2,
+    .cta-section h2 {
+        font-size: 28px;
+    }
+
+    .quick-card,
+    .highlight-item {
+        padding: 20px;
+    }
+
+    .quick-card i,
+    .highlight-icon {
+        font-size: 35px;
+    }
+
+    .quick-card h3,
+    .highlight-item h3 {
+        font-size: 18px;
+    }
+
+    .cta-section {
+        padding: 40px 20px;
+    }
+
+    .container {
+        padding: 0 15px;
     }
 }

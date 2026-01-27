@@ -27,7 +27,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 30px;
     width: 100%;
@@ -117,6 +116,7 @@ a:hover {
     display: flex;
     position: relative;
     flex-direction: column;
+    text-decoration: none;
 }
 
 .project-card:hover {
@@ -241,9 +241,10 @@ footer p {
     font-size: 14px;
     color: #00ff88;
     margin: 0;
+    padding-top: 20px;
 }
 
-/* Animations */
+
 @keyframes fadeInDown {
     from {
         opacity: 0;
@@ -274,6 +275,99 @@ footer p {
         transform: translateY(-30px);
     }
 }
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 2px solid #00ff88;
+    background-color: rgba(10, 14, 39, 0.95);
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 14px;
+    color: #00ff88;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.quick-contact-links {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0, 255, 136, 0.1);
+    border: 2px solid #00ff88;
+    border-radius: 10px;
+    animation: fadeInUp 0.8s ease;
+    margin-bottom: 20px;
+}
+
+.quick-contact-links h2 {
+    font-size: 24px;
+    color: #00ff88;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 255, 136, 0.1);
+    border: 2px solid #00ff88;
+    border-radius: 50%;
+    color: #00ff88;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    background: #00ff88;
+    color: #0a0e27;
+    transform: scale(1.2) rotateZ(10deg);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+}
+
+.social-link.linkedin:hover {
+    background: #0077b5;
+    border-color: #0077b5;
+    color: white;
+}
+
+.social-link.github:hover {
+    background: #333;
+    border-color: #333;
+    transform: scale(1.2) rotatez(-20deg);
+    color: white;
+}
+
+.social-link.twitter:hover {
+    background: #1da1f2;
+    border-color: #1da1f2;
+    color: white;
+}
+
+.social-link.email:hover {
+    background: #ea4335;
+    border-color: #ea4335;
+    transform: scale(1.2) rotatez(-20deg);
+    color: white;
+}
+
+.social-link.phone:hover {
+    background: #00ff88;
+    border-color: #00ff88;
+    color: #0a0e27;
+}
+
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;

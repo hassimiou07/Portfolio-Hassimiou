@@ -27,7 +27,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 30px;
     width: 100%;
@@ -193,7 +192,6 @@ a:hover {
     transform: scale(0.98);
 }
 
-/* Contact Methods */
 .contact-method {
     display: flex;
     gap: 20px;
@@ -353,9 +351,10 @@ footer p {
     font-size: 14px;
     color: #00ff88;
     margin: 0;
+    padding-top: 20px;
 }
 
-/* Animations */
+
 @keyframes fadeInDown {
     from {
         opacity: 0;
