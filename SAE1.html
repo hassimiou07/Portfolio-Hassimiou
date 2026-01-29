@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAE 1 - Linux - Portfolio Mamadou BARRY</title>
+    <title>SAE 1 - Installation Debian & IntelliJ - Portfolio Mamadou BARRY</title>
     <link rel="stylesheet" href="Css/project-detail.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -26,17 +26,17 @@
 
     <div class="project-detail-container">
         <div class="breadcrumb">
-            <a href="Project.html">Projets</a> > <span>Installation & Configuration Linux</span>
+            <a href="Project.html">Projets</a> > <span>Installation Debian 13 & IntelliJ IDEA</span>
         </div>
 
         <div class="detail-header">
             <div class="detail-icon">
-                <i class="fab fa-linux"></i>
+                <i class="fas fa-server"></i>
             </div>
             <div class="detail-title">
-                <h1>Installation & Configuration Linux</h1>
-                <p class="category">SAE - Administration Système</p>
-                <p class="course">Code: R1.04</p>
+                <h1>Installation Debian 13</h1>
+                <p class="category">SAE S1.03 - Évaluation Pratique Système</p>
+                <p class="course">linux R1.03 – 2025/2026</p>
             </div>
         </div>
 
@@ -44,45 +44,49 @@
             <section class="overview">
                 <h2>Vue d'ensemble</h2>
                 <p>
-                    Ce projet SAE (Situation d'Apprentissage et d'Évaluation) portait sur l'installation complète et la configuration 
-                    d'une station de travail Linux. L'objectif était d'apprendre les fondamentaux de l'administration système Linux 
-                    en mettant en pratique les concepts théoriques en environnement réel.
+                    Évaluation pratique d'installation et de configuration d'un environnement de développement complet 
+                    sur machine virtuelle Debian 13 avec environnement de bureau KDE/Plasma. Installation et validation 
+                    du JDK, git, et IntelliJ IDEA via 3 méthodes différentes (archive, snap, flatpak).
+                </p>
+                <p>
+                    <strong>Format:</strong> Travail individuel en 3 heures avec captures d'écran progressives (Capture01 à Capture10) 
+                    documentant chaque étape d'installation et de validation sur Chamilo.
                 </p>
             </section>
 
             <section class="objectives">
-                <h2>Objectifs du Projet</h2>
+                <h2>Objectifs de l'Évaluation</h2>
                 <ul>
-                    <li>Comprendre l'architecture et la structure du système Linux</li>
-                    <li>Maîtriser le partitionnement et la gestion des disques</li>
-                    <li>Gérer les utilisateurs, groupes et permissions</li>
-                    <li>Utiliser efficacement le terminal et les commandes shell</li>
-                    <li>Installer et gérer les packages et dépendances</li>
+                    <li>Valider l'intégrité de l'image ISO Debian 13 via SHA512SUM</li>
+                    <li>Installer Debian 13 avec interface KDE/Plasma sur machine virtuelle</li>
+                    <li>Configurer l'utilisateur et l'accès administrateur (sudo)</li>
+                    <li>Installer JDK et git via gestionnaire de paquets Debian (apt)</li>
+                    <li>Installer IntelliJ IDEA Community de 3 façons : archive, snap, flatpak</li>
                 </ul>
             </section>
 
             <section class="methodology">
-                <h2>Méthodologie & Approche</h2>
+                <h2> Étapes d'Installation & Captures Requises</h2>
                 <div class="method-grid">
                     <div class="method-card">
-                        <i class="fas fa-download"></i>
-                        <h3>Installation</h3>
-                        <p>Téléchargement et création d'une clé USB bootable Linux. Installation depuis zéro avec sélection des paquets essentiels.</p>
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Capture 1: Vérification SHA-512</h3>
+                        <p>Empreinte référence site officiel Debian vs empreinte locale calculée avec sha512sum.</p>
                     </div>
                     <div class="method-card">
-                        <i class="fas fa-hdd"></i>
-                        <h3>Partitionnement</h3>
-                        <p>Utilisation de fdisk et parted pour créer des partitions appropriées. Configuration des schémas de partitionnement optimisés.</p>
+                        <i class="fas fa-user-plus"></i>
+                        <h3>Capture 2: Création Utilisateur</h3>
+                        <p>Écran installateur Debian demandant le nom de login (login UGA visible).</p>
                     </div>
                     <div class="method-card">
-                        <i class="fas fa-users"></i>
-                        <h3>Gestion des Utilisateurs</h3>
-                        <p>Création et configuration d'utilisateurs et groupes. Mise en place des permissions et des droits d'accès appropriés.</p>
+                        <i class="fas fa-desktop"></i>
+                        <h3>Capture 3: Bureau KDE/Plasma</h3>
+                        <p>Desktop 1440x900 avec terminal affichant login et résultat kinfo.</p>
                     </div>
                     <div class="method-card">
-                        <i class="fas fa-network-wired"></i>
-                        <h3>Configuration Réseau</h3>
-                        <p>Configuration des interfaces réseau, IP statique/DHCP. Mise en place de la connectivité Internet et du DNS.</p>
+                        <i class="fas fa-lock"></i>
+                        <h3>Capture 4: Accès Root</h3>
+                        <p>Validation de la commande sudo -i avec accès administrateur.</p>
                     </div>
                 </div>
             </section>
@@ -91,16 +95,28 @@
                 <h2>Technologies & Outils Utilisés</h2>
                 <div class="tech-grid">
                     <div class="tech-item">
-                        <span class="tech-badge">Linux (Debian)</span>
+                        <span class="tech-badge">Debian 13</span>
                     </div>
                     <div class="tech-item">
-                        <span class="tech-badge">Bash/Shell</span>
+                        <span class="tech-badge">Plasma</span>
                     </div>
                     <div class="tech-item">
-                        <span class="tech-badge">apt</span>
+                        <span class="tech-badge">JDK</span>
                     </div>
                     <div class="tech-item">
-                        <span class="tech-badge">SSH</span>
+                        <span class="tech-badge">Image ISO</span>
+                    </div>
+                     <div class="tech-item">
+                        <span class="tech-badge">IntelliJ IDEA</span>
+                    </div>
+                     <div class="tech-item">
+                        <span class="tech-badge">Snap</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-badge">FlatPak</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-badge">SHA-512</span>
                     </div>
                 </div>
             </section>
@@ -111,64 +127,69 @@
                     <div class="task-item">
                         <div class="task-icon">1</div>
                         <div class="task-info">
-                            <h3>Partitionnement du Disque</h3>
-                            <p>Création de schémas de partitionnement efficaces avec / (root), /home et swap. Optimisation pour les performances et la maintenabilité.</p>
+                            <h3>Installation du Système & Configuration Initiale</h3>
+                            <p>Installation complète de Debian 13 avec environnement KDE/Plasma. Création d'un compte utilisateur dédié et configuration sudo. Capture 01-02.</p>
                         </div>
                     </div>
                     <div class="task-item">
                         <div class="task-icon">2</div>
                         <div class="task-info">
-                            <h3>Installation des Systèmes de Fichiers</h3>
-                            <p>Formatage et montage des partitions avec ext4. Configuration du swap pour la mémoire virtuelle.</p>
+                            <h3>Vérification Sécurité & Permissions</h3>
+                            <p>Vérification des sommes SHA-512 d'IntelliJ IDEA. Configuration des droits d'accès et validation des permissions administrateur. Capture 03-05.</p>
                         </div>
                     </div>
                     <div class="task-item">
                         <div class="task-icon">3</div>
                         <div class="task-info">
-                            <h3>Configuration d'Accès Réseau</h3>
-                            <p>Configuration des interfaces réseau, attribution d'adresses IP, mise en place du routage et du DNS.</p>
+                            <h3>Installation des Dépendances (JDK & Git)</h3>
+                            <p>Installation via apt de Java Development Kit et Git. Vérification des versions et variables d'environnement. Capture 06.</p>
                         </div>
                     </div>
                     <div class="task-item">
                         <div class="task-icon">4</div>
                         <div class="task-info">
-                            <h3>Gestion des Permissions & Sécurité</h3>
-                            <p>Mise en place des droits de fichier (rwx), création de groupes d'utilisateurs, configuration des sudo.</p>
+                            <h3>Installation IntelliJ IDEA - Méthode Archive</h3>
+                            <p>Décompression locale de l'archive IntelliJ IDEA. Lancement et vérification de l'application. Documentation de l'espace disque utilisé. Capture 07.</p>
                         </div>
                     </div>
                     <div class="task-item">
                         <div class="task-icon">5</div>
                         <div class="task-info">
-                            <h3>Installation de Paquets</h3>
-                            <p>Utilisation d'apt pour installer les outils essentiels: développement, réseau, utilitaires système.</p>
+                            <h3>Installation IntelliJ IDEA - Méthode Snap</h3>
+                            <p>Installation de IntelliJ IDEA via le gestionnaire universel Snap. Lancement et configuration. Documentation de la taille. Capture 08.</p>
                         </div>
                     </div>
                     <div class="task-item">
                         <div class="task-icon">6</div>
                         <div class="task-info">
-                            <h3>Tests & Documentation</h3>
-                            <p>Tests complets du système, vérification de tous les composants, documentation des configurations.</p>
+                            <h3>Installation IntelliJ IDEA - Méthode FlatPak</h3>
+                            <p>Installation de IntelliJ IDEA via FlatPak (conteneurisation). Vérification et comparaison des trois méthodes. Vérification finale de l'espace disque. Capture 09-10.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
             <section class="challenges">
-                <h2>Défis & Solutions</h2>
+                <h2>Défis & Points d'Attention</h2>
                 <div class="challenge-item">
-                    <h3><i class="fas fa-exclamation-triangle"></i> Problème: Incompatibilité du Bootloader</h3>
-                    <p><strong>Défi:</strong> Installation échouée du GRUB sur certaines machines virtuelles.</p>
-                    <p><strong>Solution:</strong> Reconfiguration manuelle du GRUB, utilisation de chroot pour corriger l'installation.</p>
+                    <h3><i class="fas fa-exclamation-triangle"></i> Vérification des Empreintes SHA-512</h3>
+                    <p><strong>Défi:</strong> Valider l'intégrité des fichiers téléchargés IntelliJ IDEA via la commande sha512sum.</p>
+                    <p><strong>Point clé:</strong> Compréhension de la sécurité cryptographique et de l'importance de la vérification des fichiers avant utilisation.</p>
                 </div>
                 <div class="challenge-item">
-                    <h3><i class="fas fa-exclamation-triangle"></i> Problème: Configuration Réseau Complexe</h3>
-                    <p><strong>Défi:</strong> Problèmes de connectivité réseau après installation initiale.</p>
-                    <p><strong>Solution:</strong> Diagnostic utilisant ifconfig, route, ping et modifications du fichier /etc/network/interfaces.</p>
+                    <h3><i class="fas fa-exclamation-triangle"></i> Configuration des Permissions Utilisateur & Sudo</h3>
+                    <p><strong>Défi:</strong> Mettre en place correctement les accès administrateur pour un utilisateur standard via sudo.</p>
+                    <p><strong>Point clé:</strong> Compréhension de la sécurité Linux et du principe du moindre privilège.</p>
                 </div>
                 <div class="challenge-item">
-                    <h3><i class="fas fa-exclamation-triangle"></i> Problème: Gestion des Permissions</h3>
-                    <p><strong>Défi:</strong> Comprendre la hiérarchie des permissions Unix (rwx).</p>
-                    <p><strong>Solution:</strong> Apprentissage pratique avec chmod, chown et création de groupes d'utilisateurs.</p>
+                    <h3><i class="fas fa-exclamation-triangle"></i> Trois Méthodes d'Installation Différentes</h3>
+                    <p><strong>Défi:</strong> Comprendre les différences entre installation archive (native), Snap (universel) et FlatPak (conteneurisé).</p>
+                    <p><strong>Point clé:</strong> Analyse comparative: taille disque, dépendances, avantages/inconvénients de chaque méthode.</p>
+                </div>
+                <div class="challenge-item">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Gestion de l'Espace Disque</h3>
+                    <p><strong>Défi:</strong> Documenter l'espace disque consommé par chaque installation et comparer les impacts.</p>
+                    <p><strong>Point clé:</strong> Utilisation de commandes df et du pour l'analyse de l'utilisation disque.</p>
                 </div>
             </section>
 
@@ -176,26 +197,60 @@
                 <h2>Apprentissages Clés</h2>
                 <div class="learning-grid">
                     <div class="learning-card">
-                        <h3>Fondamentaux Linux</h3>
-                        <p>Compréhension approfondie de l'architecture du système Linux et ses composants essentiels.</p>
+                        <h3>Installation Système Complète</h3>
+                        <p>Maîtrise du processus d'installation d'un système Debian GNU/Linux complet avec environnement graphique KDE/Plasma.</p>
                     </div>
                     <div class="learning-card">
-                        <h3>Shell & Terminal</h3>
-                        <p>Maîtrise des commandes Linux essentielles et scripting shell pour l'automatisation.</p>
+                        <h3>Sécurité & Cryptographie</h3>
+                        <p>Compréhension des fonctions de hachage SHA-512 et importance de la vérification d'intégrité des fichiers téléchargés.</p>
                     </div>
                     <div class="learning-card">
-                        <h3>Diagnostic & Dépannage</h3>
-                        <p>Techniques de diagnostic et de dépannage pour résoudre les problèmes système efficacement.</p>
+                        <h3>Gestion des Permissions & Sudo</h3>
+                        <p>Configuration des droits d'accès utilisateur, gestion du contrôle d'accès et utilisation sécurisée des privilèges administrateur.</p>
+                    </div>
+                    <div class="learning-card">
+                        <h3>Gestionnaires de Paquets</h3>
+                        <p>Maîtrise d'apt (gestionnaire natif), Snap (universel) et FlatPak (conteneurisation) pour l'installation et la gestion logicielle.</p>
+                    </div>
+                    <div class="learning-card">
+                        <h3>Installation d'IDE Professionnel</h3>
+                        <p>Installation et configuration de IntelliJ IDEA via trois méthodes différentes avec analyse des avantages/inconvénients.</p>
+                    </div>
+                    <div class="learning-card">
+                        <h3>Gestion de l'Infrastructure IT</h3>
+                        <p>Fondamentaux de l'administration système, documentation des installations et analyse comparative des solutions technologiques.</p>
                     </div>
                 </div>
             </section>
 
             <section class="results">
-                <h2>Résultats & Impact</h2>
-                <p>
-                    Ce projet a permis d'acquérir une solide compréhension de Linux et des principes d'administration système. 
-                    Les connaissances obtenues sont directement appliquées dans d'autres projets et situées au cœur de la gestion 
-                    d'infrastructure IT moderne. Ce fondement a été essentiel pour tous les projets réseau et sécurité ultérieurs.
+                <h2>Résultats </h2>
+                <div class="recommendations-grid">
+                    <div class="recommendation-item">
+                        <strong>Fenêtrage</strong>
+                        <p>Captures montrant uniquement la fenêtre de la VM (pas d'écran entier du bureau)</p>
+                    </div>
+                    <div class="recommendation-item">
+                        <strong>Identification</strong>
+                        <p>Nom d'utilisateur visible sur chaque capture</p>
+                    </div>
+                    <div class="recommendation-item">
+                        <strong>Minimalisme</strong>
+                        <p>Contenu visible minimal pour clarté et focus sur les éléments clés</p>
+                    </div>
+                    <div class="recommendation-item">
+                        <strong>Nomenclature</strong>
+                        <p>Format exact: Capture01.png à Capture10.png (numérotation à 2 chiffres)</p>
+                    </div>
+                    <div class="recommendation-item">
+                        <strong>Délai</strong>
+                        <p>Travail à réaliser en 3 heures (ou 4 heures avec tiers-temps)</p>
+                    </div>
+                </div>
+                <p style="margin-top: 30px; font-style: italic; border-left: 4px solid #0066cc; padding-left: 15px;">
+                    Cette évaluation m'a permis de valide la capacité à installer et configurer complètement un environnement de développement Linux professionnel, 
+                    incluant la sécurité (vérification SHA-512), l'administration système (permissions, sudo, JDK/Git), et la comparaison de trois méthodes différentes 
+                    d'installation d'IDE professionnel.
                 </p>
             </section>
         </div>

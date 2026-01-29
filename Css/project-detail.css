@@ -87,6 +87,13 @@ a:hover {
 .breadcrumb span {
     color: #b0ffb0;
 }
+.benefit-card > p{
+    color: #b0ffb0;
+    padding-top: 5px;
+}
+.benefit-card h3 {
+    padding-top: 25px;
+}
 
 .detail-header {
     display: flex;

@@ -102,9 +102,9 @@ a:hover {
 .about-text h2 {
     font-size: 24px;
     margin-top: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
     color: #00ff88;
-    border-left: 3px solid #00ff88;
+    border-left: 5px solid #00ff88;
     padding-left: 15px;
     animation: slideInLeft 0.6s ease;
 }
@@ -338,12 +338,12 @@ a:hover {
     transition: all 0.3s ease;
     cursor: pointer;
     animation: fadeIn 0.8s ease;
+    height: 140px;
 }
 
 .skill-card:hover {
     background: rgba(0, 255, 136, 0.2);
-    box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
-    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgb(243, 245, 244);
 }
 
 .skill-card h3 {
@@ -356,6 +356,27 @@ a:hover {
     font-size: 14px;
     color: #b0ffb0;
     margin: 0;
+}
+.skill-card:hover .flip-card-front {
+    display: none;
+}
+
+.flip-card-front {
+    display: block;
+
+}
+
+.flip-card-back {
+    display: none;
+}
+.skill-card:hover .flip-card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 100px;
+    animation: fadeIn 1.5s ease;
+    margin-top: -20px;
 }
 footer {
     text-align: center;

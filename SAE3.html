@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAE 3 - Chatbot de Culture Générale - Portfolio Mamadou BARRY</title>
+    <link rel="stylesheet" href="Css/project-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>BARRY Mamadou</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="About.html">À propos</a></li>
+                    <li><a href="Project.html">Projets</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="project-detail-container">
+        <div class="breadcrumb">
+            <a href="Project.html">Projets</a> > <span>Chatbot de Culture Générale</span>
+        </div>
+
+        <div class="detail-header">
+            <div class="detail-icon">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="detail-title">
+                <h1>Chatbot de Culture Générale</h1>
+                <p class="category">SAE S1.01 - Projet Chatbot</p>
+                <p class="course">Java – 2025/2026</p>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <section class="overview">
+                <h2>Vue d'ensemble</h2>
+                <p>
+                    Développement d'un chatbot intelligent capable de répondre à des questions de culture générale. 
+                    Le système utilise une approche en entonnoir avec deux étapes : recherche thématique des réponses 
+                    candidates basée sur les mots clés, puis sélection selon la cohérence de forme avec la question.
+                </p>
+                <p>
+                    <strong>Objectif :</strong> Créer un chatbot rapide et fiable avec gestion d'index optimisés, 
+                    support des synonymes, contexte conversationnel, et capacité d'apprentissage interactif.
+                </p>
+            </section>
+
+            <section class="objectives">
+                <h2>Objectifs du Projet</h2>
+                <ul>
+                    <li>Implémenter une recherche thématique rapide via index sur le contenu</li>
+                    <li>Sélectionner les réponses par cohérence de forme via index sur les formes</li>
+                    <li>Gérer les synonymes et variantes avec un thésaurus</li>
+                    <li>Supporter les réponses en contexte (questions incomplètes)</li>
+                    <li>Intégrer les nombres dans la détection de formes</li>
+                    <li>Permettre l'apprentissage interactif de nouvelles réponses</li>
+                </ul>
+            </section>
+
+            <section class="methodology">
+                <h2>Architecture & Approche</h2>
+                <div class="method-grid">
+                    <div class="method-card">
+                        <i class="fas fa-search"></i>
+                        <h3>Étape 1 : Recherche Thématique</h3>
+                        <p>Index sur le contenu pour trouver rapidement les réponses candidates contenant tous les mots-clés de la question.</p>
+                    </div>
+                    <div class="method-card">
+                        <i class="fas fa-filter"></i>
+                        <h3>Étape 2 : Sélection par Forme</h3>
+                        <p>Index sur la forme pour sélectionner les réponses cohérentes avec la structure grammaticale de la question.</p>
+                    </div>
+                    <div class="method-card">
+                        <i class="fas fa-list"></i>
+                        <h3>Thésaurus & Variantes</h3>
+                        <p>Gestion des synonymes et variantes de mots pour améliorer la couverture (peint/peinte, nomme/appellent).</p>
+                    </div>
+                    <div class="method-card">
+                        <i class="fas fa-comments"></i>
+                        <h3>Contexte Conversationnel</h3>
+                        <p>Support des questions incomplètes en utilisant le contexte thématique de la question précédente.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="technologies">
+                <h2>Technologies & Outils Utilisés</h2>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <span class="tech-badge">Java</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-badge">IntelliJ IDEA</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-badge">Algorithmes</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-badge">Indexation</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-badge">Thésaurus</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-badge">Contextualisation</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tasks">
+                <h2>Étapes Principales</h2>
+                <div class="tasks-list">
+                    <div class="task-item">
+                        <div class="task-icon">P1</div>
+                        <div class="task-info">
+                            <h3>Partie 1 : Étapes 1 & 2 (Index & Formes)</h3>
+                            <p>Classe Index pour stockage et recherche. Index sur contenu pour recherche thématique. Index sur formes pour sélection cohérente. Algorithmes de fusion et recherche dichotomique.</p>
+                        </div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-icon">P2.1</div>
+                        <div class="task-info">
+                            <h3>Partie 2.1 : Thésaurus & Synonymes</h3>
+                            <p>Fichier thesaurus.txt avec mappages mot→forme canonique. Intégration dans tous les index et traitements. Support variantes (peint/peinte, nomme/appellent, articles).</p>
+                        </div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-icon">P2.2</div>
+                        <div class="task-info">
+                            <h3>Partie 2.2 : Réponses en Contexte</h3>
+                            <p>Méthode repondreEnContexte() pour questions incomplètes. Utilise contexte thématique précédent. Support "En quelle année ?" → prolonge question sur invention du téléphone.</p>
+                        </div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-icon">P2.3</div>
+                        <div class="task-info">
+                            <h3>Partie 2.3 : Nombres dans Formes</h3>
+                            <p>Détection des nombres et remplacement par "NUM". Distinction entre "Où ?" et "Quand ?" selon présence d'année. Amélioration précision des réponses.</p>
+                        </div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-icon">P2.4</div>
+                        <div class="task-info">
+                            <h3>Partie 2.4 : Apprentissage Interactif</h3>
+                            <p>Ajout dynamique de connaissances sans éditer fichiers. Détecte si réponse/forme existe. Persiste en fichier. Trois cas : nouvelle forme, nouvelle réponse, ou les deux.</p>
+                        </div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-icon">P2.5</div>
+                        <div class="task-info">
+                            <h3>Partie 2.5 : Enrichissement & Spécialisation</h3>
+                            <p>Expansion base réponses. Spécialisation sur domaine (cours, FAQ, sujet). Formulations multiples. Méta-questions ("Quelles questions puis-je te poser ?").</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="challenges">
+                <h2>Défis & Solutions Clés</h2>
+                <div class="challenge-item">
+                    <h3><i class="fas fa-bolt"></i> Performance avec Bases Volumineuses</h3>
+                    <p>Approche naïve O(nr × nmq) insoutenable. Solution: index en O(nmq × log(nmv)) pour recherche thématique, réduisant facteur accélération jusqu'à 100x sur bases grandes.</p>
+                </div>
+                <div class="challenge-item">
+                    <h3><i class="fas fa-language"></i> Variabilité Linguistique</h3>
+                    <p>Mêmes concepts, formulations différentes ("peint" vs "peinte"). Solution: thésaurus mappant variantes à forme canonique unique, augmentant couverture sans explosion base.</p>
+                </div>
+                <div class="challenge-item">
+                    <h3><i class="fas fa-comments-dollar"></i> Dialogues Naturels</h3>
+                    <p>Utilisateurs posent questions fragmentaires ("En quelle année ?"). Solution: contexte conversationnel réutilisant mots-clés question précédente.</p>
+                </div>
+                <div class="challenge-item">
+                    <h3><i class="fas fa-graduation-cap"></i> Capacité d'Apprentissage</h3>
+                    <p>Chatbot initial limité à base pré-chargée. Solution: API interactif permettant enrichissement base en temps réel avec persistance fichier.</p>
+                </div>
+            </section>
+
+            <section class="learning">
+                <h2>Apprentissages Clés</h2>
+                <div class="learning-grid">
+                    <div class="learning-card">
+                        <h3>Structures d'Index</h3>
+                        <p>Conception et implémentation d'index pour accélérer recherche. Choix entre approches (hash, arbre, table inversée).</p>
+                    </div>
+                    <div class="learning-card">
+                        <h3>Algorithmes d'Intersection</h3>
+                        <p>Fusion efficace de listes, recherche dichotomique, algorithmes probabilistes pour sélection optimale parmi alternatives.</p>
+                    </div>
+                    <div class="learning-card">
+                        <h3>Traitement Langage Naturel</h3>
+                        <p>Extraction mots-clés, tokenization, gestion synonymes, contextualisation basique, approches statistiques vs approches linguistiques.</p>
+                    </div>
+                </div>
+            </section>
+
+        <section class="results">
+            <h2>Compétences Acquises</h2>
+            <div class="skills-grid">
+            <div class="skill-card">
+                <h3><i class="fas fa-bolt"></i> Optimisation Algorithmique</h3>
+                <p>Passage d'une recherche naïves ur l'ensemble du fichier à une approche indexée. Réduction drastique du coût de recherche sur bases Volumineuses.</p>
+            </div>
+            <div class="skill-card">
+                <h3><i class="fas fa-database"></i> Structures d'Index</h3>
+                <p>Conception et implémentation d'index inversés pour stocker mappages mot-clé → réponses. Accélération jusqu'à 100x sur recherche thématique comparé à balayage séquentiel fichier.</p>
+            </div>
+            <div class="skill-card">
+                <h3><i class="fas fa-search"></i> Recherche sur Fichiers Volumineux</h3>
+                <p>Gestion efficace de fichiers texte contenant milliers de réponses. Indexation au démarrage, puis requêtes ultra-rapides sans relecture fichier complet.</p>
+            </div>
+            <div class="skill-card">
+                <h3><i class="fas fa-code"></i> Analyse de Complexité</h3>
+                <p>Calcul asymptotique on est arrivée a la conclusion que avec index, le facteur d'accélération etait superieur a x3000.</p>
+            </div>
+            </div>
+        </section>
+
+        <div class="navigation-links">
+            <a href="Project.html" class="btn-back">
+                <i class="fas fa-arrow-left"></i> Retour aux Projets
+            </a>
+            <a href="Contact.html" class="btn-contact">
+                En savoir plus <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+    <footer>
+        <div class="quick-contact-links">
+            <h2>Liens rapides</h2>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/mamadoubarry" class="social-link linkedin" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/hassimiou07" class="social-link github" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/mamadoubarry" class="social-link twitter" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="mailto:mamadou.barry@example.com" class="social-link email" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+33612345678" class="social-link phone" title="Téléphone">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+        </div>
+        <p>&copy; 2026 Mamadou BARRY. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

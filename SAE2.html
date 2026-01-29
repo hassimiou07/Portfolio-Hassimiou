@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAE 2 - Base de Données Le Tourmentin - Portfolio Mamadou BARRY</title>
+    <link rel="stylesheet" href="Css/project-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>BARRY Mamadou</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="About.html">À propos</a></li>
+                    <li><a href="Project.html">Projets</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="project-detail-container">
+        <div class="breadcrumb">
+            <a href="Project.html">Projets</a> > <span>Base de Données Le Tourmentin</span>
+        </div>
+
+        <div class="detail-header">
+            <div class="detail-icon">
+                <i class="fas fa-ship"></i>
+            </div>
+            <div class="detail-title">
+                <h1>Base de Données Le Tourmentin</h1>
+                <p class="category">SAE S1.04 - Création d'une Base de Données</p>
+                <p class="course">SQL -- R1.05  2025/2026</p>
+            </div>
+        </div>
+        <div class="detail-content">
+            <section class="overview">
+                <h2>Vue d'ensemble</h2>
+                <p>
+                    Conception et implémentation d'une base de données pour l'association "Le Tourmentin", 
+                    qui organise des activités maritimes (sorties et rallyes de voiliers). Le projet inclut 
+                    la modélisation complète des adhérents, bateaux, activités, équipages et cotisations, 
+                    avec normalisation et mise en place de contraintes d'intégrité.
+                </p>
+                <p>
+                    <strong>Contexte :</strong> L'association doit informatiser sa gestion pour mieux gérer 
+                    ses adhérents croissants, les bateaux disponibles, les rallyés organisés et les participations.
+                </p>
+            </section>
+
+            <section class="objectives">
+                <h2>Objectifs du Projet</h2>
+                <ul>
+                    <li>Analyser les besoins et élaborer les règles de gestion d'une association</li>
+                    <li>Concevoir un SEA (Schéma Entité-Association) conforme aux règles MERISE</li>
+                    <li>Transformer le SEA en SLR (Schéma Logique Relationnel) normalisé</li>
+                    <li>Identifier et formaliser les contraintes d'intégrité (PK, FK, domaines)</li>
+                    <li>Implémenter la base de données en PostgreSQL/MySQL</li>
+                </ul>
+            </section>
+
+            <section class="methodology">
+                <h2>Méthodologie & Approche</h2>
+                <div class="method-grid">
+                    <div class="method-card">
+                        <i class="fas fa-list-check"></i>
+                        <h3>Analyse des Règles de Gestion</h3>
+                        <p>Lecture et compréhension des 9 règles métier définissant le système.</p>
+                    </div>
+                    <div class="method-card">
+                        <i class="fas fa-diagram-project"></i>
+                        <h3>Modélisation SEA</h3>
+                        <p>Création du Schéma Entité-Association avec entités, associations et cardinalités.</p>
+                    </div>
+                    <div class="method-card">
+                        <i class="fas fa-sitemap"></i>
+                        <h3>Transformation SLR</h3>
+                        <p>Dérivation du Schéma Logique Relationnel selon les règles MERISE.</p>
+                    </div>
+                    <div class="method-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Implémentation SQL</h3>
+                        <p>Scripts CREATE/DROP et requêtes de test avec validation des contraintes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="technologies">
+                <h2>Technologies & Outils Utilisés</h2>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <span class="tech-badge">PostgreSQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-badge">MySQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-badge">SQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-badge">Adobe</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-badge">SEA/MCD</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-badge">SLR/MLD</span>
+                    </div>
+                </div>
+            </section>
+            <section class="tasks">
+                <h2>Étapes Principales du Projet</h2>
+                <div class="tasks-list">
+                    <div class="task-item">
+                        <div class="task-icon">1</div>
+                        <div class="task-info">
+                            <h3>SEA / Contraintes / SLR</h3>
+                            <p>Création du Schéma Entité-Association, identification des 9 règles de gestion, formalisation des contraintes d'intégrité et dérivation du SLR normalisé. Rendu: Document PDF.</p>
+                        </div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-icon">2</div>
+                        <div class="task-info">
+                            <h3>CREATE / DROP / TEST</h3>
+                            <p>Implémentation du schéma en SQL (create.sql, drop.sql). Écriture de requêtes INSERT pour tester les contraintes (primaires, étrangères, domaines). Rendu: Fichier ZIP.</p>
+                        </div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-icon">3</div>
+                        <div class="task-info">
+                            <h3>Requêtes / Mises à jour / Schéma</h3>
+                            <p>Exécution de 8 requêtes SELECT complexes (JOINs, COUNT DISTINCT), 7 opérations UPDATE/DELETE, et modification du schéma (ajout colonne prixlocation). Rendu: Fichier ZIP avec etape3_1.sql, etape3_2.sql, etape3_3.sql.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="challenges">
+                <h2>Entités & Règles de Gestion Clés</h2>
+                <div class="challenge-item">
+                    <h3><i class="fas fa-users"></i> Adhérents & Bureau</h3>
+                    <p>Gestion des adhérents avec fonction (président, vice-président, trésorier, secrétaire, membre actif). Le bureau se compose d'adhérents spécifiques. Chaque adhérent a une année d'adhésion.</p>
+                </div>
+                <div class="challenge-item">
+                    <h3><i class="fas fa-money-bill"></i> Cotisations Annuelles</h3>
+                    <p>Suivi des cotisations payées par adhérent et par année depuis son adhésion. Enregistrement du statut paiement pour les rappels. Montants peuvent varier par adhérent.</p>
+                </div>
+                <div class="challenge-item">
+                    <h3><i class="fas fa-sailboat"></i> Bateaux & Équipages</h3>
+                    <p>Bateaux propriétaires (adhérents) ou loués (agences). Chaque bateau peut participer à plusieurs activités avec équipage de 5-9 adhérents (dont un chef de bord/skipper).</p>
+                </div>
+                <div class="challenge-item">
+                    <h3><i class="fas fa-chart-line"></i> Activités & Régates</h3>
+                    <p>Sorties ou rallyes avec port de départ/arrivée. Rallyes composés de plusieurs régates numérotées. Résultats (classement, points) enregistrés après le rallye.</p>
+                </div>
+            </section>
+
+            <section class="learning">
+                <h2>Apprentissages Clés</h2>
+                <div class="learning-grid">
+                    <div class="learning-card">
+                        <h3>Modélisation MERISE</h3>
+                        <p>Transformation des règles métier en SEA puis en SLR normalisé avec dérivation selon règles MERISE.</p>
+                    </div>
+                    <div class="learning-card">
+                        <h3>Contraintes d'Intégrité</h3>
+                        <p>Formalisation et implémentation des contraintes de domaine, PK/FK, et règles métier complexes.</p>
+                    </div>
+                    <div class="learning-card">
+                        <h3>SQL Avancé</h3>
+                        <p>Requêtes complexes avec JOINs multiples, COUNT DISTINCT, sous-requêtes, GROUP BY et ORDER BY.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="benefits">
+                <h2>Effets Positifs</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h3> <i class="fas fa-brain"></i> Pensée Analytique</h3>
+                        <p>Développement de la capacité à décomposer des problèmes complexes et identifier les relations entre les données.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>  <i class="fas fa-shield-alt"></i> Intégrité des Données</h3>
+                        <p>Compréhension des mécanismes de protection et de validation des données pour éviter les incohérences.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3> <i class="fas fa-tachometer-alt"></i> Optimisation des Performances</h3>
+                        <p>Maîtrise de la conception pour créer des structures efficaces et des requêtes rapides.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3> <i class="fas fa-briefcase"></i> Compétences Professionnelles</h3>
+                        <p>Expertise demandée par les entreprises pour la gestion de données en production.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3><i class="fas fa-puzzle-piece"></i> Résolution de Problèmes</h3>
+                        <p>Aptitude à concevoir des solutions scalables et maintenables pour des systèmes réels.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3> <i class="fas fa-chart-bar"></i> Intelligence Métier</h3>
+                        <p>Capacité à transformer les règles métier en structures logiques et exploitables.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="navigation-links">
+            <a href="Project.html" class="btn-back">
+                <i class="fas fa-arrow-left"></i> Retour aux Projets
+            </a>
+            <a href="Contact.html" class="btn-contact">
+                En savoir plus <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="quick-contact-links">
+            <h2>Liens rapides</h2>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/mamadoubarry" class="social-link linkedin" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/hassimiou07" class="social-link github" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/mamadoubarry" class="social-link twitter" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="mailto:mamadou.barry@example.com" class="social-link email" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+33612345678" class="social-link phone" title="Téléphone">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+        </div>
+        <p>&copy; 2026 Mamadou BARRY. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
