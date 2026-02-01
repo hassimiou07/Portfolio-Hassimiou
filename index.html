@@ -3,127 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mamadou BARRY - Portfolio IT & Développement</title>
-    <link rel="stylesheet" href="Css/Style-Index.css">
+    <title>Mamadou BARRY - Développeur IT & Cybersécurité</title>
+    <link rel="stylesheet" href="Css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="Img/Portfolio.jpg">
+    <script src="js/translations.js"></script>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
+                <img src="Img/hassimiou.jpeg" alt="" srcset="">
                 <h1>BARRY Mamadou</h1>
             </div>
-            <input type="checkbox" id="menuCheckbox" class="menu-checkbox">
-            <label for="menuCheckbox" class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-            <nav id="navMenu">
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="About.html">À propos</a></li>
-                    <li><a href="Project.html">Projets</a></li>
-                    <li><a href="Contact.html">Contact</a></li>
-                </ul>
+            <nav>
+                <div class="language-switcher">
+                    <button id="langBtn" class="lang-toggle">
+                        <span>FR</span>
+                        <i class="fas fa-globe"></i>
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
 
-    <div class="hero-section">
-        <div class="content-center">
-            <div class="terminal-line">
-                <span class="terminal-prompt">$ </span>
-                <span class="terminal-command">sudo install Portfolio</span>
-                <span class="cursor"></span>
+    <div class="card-container">
+        <div class="business-card">
+            <div class="card-photo">
+                <img src="Img/hassimiou.jpeg" alt="Mamadou BARRY">
             </div>
-            <div class="typewriter">
-                <h3>> Mamadou's portfolio installation complete, Enjoy your reading.</h3>
+            <div class="card-content">
+                <div class="card-info">
+                    <h1>Mamadou BARRY</h1>
+                    <p class="status" data-en="IT Student | Pentester & Security" data-fr="Étudiant IT | Pentester Sécurité">Étudiant IT | Pentester Sécurité</p>
+                </div>
+                <div class="tech-stack">
+                    <div class="tech-icon" title="HTML5">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <div class="tech-icon" title="CSS3">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <div class="tech-icon" title="Java">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <div class="tech-icon" title="PostgreSQL">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="tech-icon" title="Linux">
+                        <i class="fab fa-linux"></i>
+                    </div>
+                    <div class="tech-icon" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="tech-icon" title="VS Code">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="portfolio.html" class="btn btn-primary" data-en="View Portfolio" data-fr="Voir Portfolio">Voir Portfolio</a>
+                    <button class="btn btn-secondary" id="cvBtn" data-en="Download CV" data-fr="Télécharger CV">Télécharger CV</button>
+                    <a href="Contact.html" class="btn btn-tertiary" data-en="Contact" data-fr="Contact">Contact</a>
+                </div>
+
+                <div id="cvModal" class="cv-modal">
+                    <div class="cv-modal-content">
+                        <span class="cv-modal-close">&times;</span>
+                        <h2 data-en="Choose CV Format" data-fr="Choisir le format du CV">Choisir le format du CV</h2>
+                        <p data-en="How would you like to view my CV?" data-fr="Comment souhaitez-vous consulter mon CV ?">Comment souhaitez-vous consulter mon CV ?</p>
+                        <div class="cv-options">
+                            <a href="CV.html" target="_blank" class="cv-option-btn cv-html">
+                                <i class="fab fa-html5"></i>
+                                <span data-en="View as HTML" data-fr="Voir en HTML">Voir en HTML</span>
+                                <small data-en="Online view" data-fr="Consultation en ligne">Consultation en ligne</small>
+                            </a>
+                            <a href="cv.pdf" target="_blank" download class="cv-option-btn cv-pdf">
+                                <i class="fas fa-file-pdf"></i>
+                                <span data-en="Download as PDF" data-fr="Télécharger en PDF">Télécharger en PDF</span>
+                                <small data-en="Print & Save" data-fr="Imprimer & Sauvegarder">Imprimer & Sauvegarder</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-social">
+                    <a href="https://www.linkedin.com/in/hassimiou-barry-712016383/" class="social-icon linkedin" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/hassimiou07" class="social-icon github" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com/mamadoubarry" class="social-icon twitter" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="mailto:mamadou.barry@example.com" class="social-icon email" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
             </div>
-            <p class="description">Découvrez mon travail, mes compétences, et mes services.</p>
         </div>
     </div>
 
-    <section class="quick-access">
-        <h2 class="dash">Dashboard</h2>
-        <div class="quick-container">
-            <div class="quick-card">
-                <i class="fas fa-user"></i>
-                <h3>À Propos</h3>
-                <p>Découvrez mon profil, mes expériences et mes compétences</p>
-                <a href="About.html" class="btn-link">Explorer →</a>
-            </div>
-            <div class="quick-card">
-                <i class="fas fa-project-diagram"></i>
-                <h3>Mes Projets</h3>
-                <p>6 projets SAE et professionnels démontrant mon expertise</p>
-                <a href="Project.html" class="btn-link">Voir les projets →</a>
-            </div>
-            <div class="quick-card">
-                <i class="fas fa-envelope"></i>
-                <h3>Me Contacter</h3>
-                <p>Parlons de vos projets et collaborations potentielles</p>
-                <a href="Contact.html" class="btn-link">Démarrer →</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="highlights">
-        <h2>Points Forts</h2>
-        <div class="highlights-grid">
-            <div class="highlight-item">
-                <div class="highlight-icon">
-                    <i class="fas fa-code"></i>
-                </div>
-                <h3>Développement</h3>
-                <p>HTML, CSS, Java, PostgreSQL</p>
-            </div>
-            <div class="highlight-item">
-                <div class="highlight-icon">
-                    <i class="fas fa-server"></i>
-                </div>
-                <h3>Infrastructure</h3>
-                <p>Linux, Réseaux, Bases de Données</p>
-            </div>
-            <div class="highlight-item">
-                <div class="highlight-icon">
-                    <i class="fas fa-shield-alt"></i>
-                </div>
-                <h3>Sécurité</h3>
-                <p>Cybersécurité, Gestion des accès</p>
-            </div>
-            <div class="highlight-item">
-                <div class="highlight-icon">
-                    <i class="fas fa-tasks"></i>
-                </div>
-                <h3>Gestion</h3>
-                <p>Gestion de projet, Exigences, Communication</p>
-            </div>
-        </div>
-    </section>
     <footer>
-        <div class="quick-contact-links">
-            <h2>Liens rapides</h2>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/mamadoubarry" class="social-link linkedin" title="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/hassimiou07" class="social-link github" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://twitter.com/mamadoubarry" class="social-link twitter" title="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="mailto:barryhassimmiou306@gmail.com" class="social-link email" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="tel:+33749980936" class="social-link phone" title="Téléphone">
-                    <i class="fas fa-phone"></i>
-                </a>
-            </div>
-        </div>
-        <p>&copy; 2026 Mamadou BARRY. Tous droits réservés.</p>
+        <p data-en="Designed & Built by Mamadou BARRY © 2026" data-fr="© 2026 Mamadou BARRY. Tous droits réservés.">© 2026 Mamadou BARRY. Tous droits réservés.</p>
     </footer>
+
+    <script>
+        // CV Modal Handler
+        const cvBtn = document.getElementById('cvBtn');
+        const cvModal = document.getElementById('cvModal');
+        const cvModalClose = document.querySelector('.cv-modal-close');
+
+        // Open modal
+        cvBtn.addEventListener('click', () => {
+            cvModal.style.display = 'flex';
+        });
+
+        // Close modal
+        cvModalClose.addEventListener('click', () => {
+            cvModal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (event) => {
+            if (event.target === cvModal) {
+                cvModal.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>

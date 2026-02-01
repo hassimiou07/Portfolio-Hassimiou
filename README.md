@@ -1022,7 +1022,7 @@ animation: float 3s ease-in-out infinite;
 - 📍 **Location** : Grenoble, France
 - 🎓 **Étude** : IUT2 GRENOBLE - Informatique
 - 🔗 **GitHub** : [hassimiou07](https://github.com/hassimiou07)
-- 💼 **LinkedIn** : [mamadoubarry](https://linkedin.com/in/mamadoubarry)
+- 💼 **LinkedIn** : [hassimiou-barry-712016383](https://www.linkedin.com/in/hassimiou-barry-712016383/)
 - 📧 **Email** : mamadou.barry@example.com
 
 ---

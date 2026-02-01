@@ -11,11 +11,13 @@
     <header>
         <div class="container">
             <div class="logo">
+                <img src="Img/hassimiou.jpeg" alt="" srcset="">
                 <h1>BARRY Mamadou</h1>
             </div>
             <nav>
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="About.html">À propos</a></li>
                     <li><a href="Project.html">Projets</a></li>
                     <li><a href="Contact.html">Contact</a></li>
@@ -23,21 +25,106 @@
             </nav>
         </div>
     </header>
-
     <div class="about-container">
         <div class="about-header">
-            <h1>À propos de moi</h1>
-            <div class="underline"></div>
+             <img src="Img/hassimiou.jpeg" alt="" srcset="" class="hassim">
+            <h1 class="underline">À propos de moi</h1>
         </div>
-
         <div class="about-content">
             <div class="about-text">
-                <h2>Qui suis-je ?</h2>
+                <h2>Qui suis-je </h2>
                 <p>
                     Bonjour! Je suis <span>Mamadou BARRY</span>, un Etudiant IT passionné de cybersécurité, 
                     réseaux informatiques et de développement web. Je poursuis actuellement mes études à <span>IUT2 GRENOBLE</span> 
-                    en première année de BUT informatique. Je combine une expérience pratique en IT avec des compétences modernes en développement.
+                    en première année de BUT informatique. Je combine une expérience pratique en IT avec des compétences modernes en développement, J'aimerai à l'avenir etre Pentester éthique, En cybersécurité.    
                 </p>
+            </div>
+                <div class="about-skills">
+                <h2>Compétences & Technologies</h2>
+                <div class="skills-grid">
+                    <div class="skill-card flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>Développement Web</h3>
+                                <p>HTML, CSS</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <i class="fab fa-html5"></i>
+                                <i class="fab fa-css3-alt"></i>
+                                <progress id="progress" class="progress" value="80" max="100"></progress>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>Programmation Système</h3>
+                                <p>Java POO, Algorithmique</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <i class="fab fa-java"></i>
+                                <progress id="progress" class="progress" value="65" max="100"></progress>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>Bases de Données</h3>
+                                <p>PostgreSQL, SQL</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <i class="fas fa-database"></i>
+                                <progress id="progress" class="progress" value="60" max="100"></progress>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>Langage Assembleur</h3>
+                                <p>Motorola 68000</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <i class="fas fa-microchip"></i>
+                                <progress id="progress" class="progress" value="55" max="100"></progress>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>Outils & Environnement</h3>
+                                <p>Git, VS Code, Figma</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <i class="fab fa-git-alt"></i>
+                                <i class="fab fa-figma"></i>
+                                <progress id="progress" class="progress" value="90" max="100"></progress>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>Linux & Terminal</h3>
+                                <p>Système Linux, Shell</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <i class="fab fa-linux"></i>
+                                <progress id="progress" class="progress" value="80" max="100"></progress>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-text">
                 <h2>Parcours Éducatif</h2>
                 
                 <div class="education-timeline">
@@ -55,152 +142,57 @@
                                 <span>PostgreSQL</span>
                                 <span>Linux</span>
                                 <span>Réseaux</span>
+                                <span>Html & Css</span>
+                                <span>Communication</span>
                             </div>
                         </div>
                     </div>
-
+                    <div class="timeline-item certification">
+                        <div class="timeline-marker">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Certification PIX</h3>
+                            <p class="institution">Plateforme PIX</p>
+                            <p class="duration">2024 - 2025</p>
+                            <p class="description">Certification officielle en compétences numériques. Validation des compétences informatiques et numériques à travers une évaluation complète couvrant les domaines clés de la culture numérique.</p>
+                            <div class="timeline-tags">
+                                <span>Numérique</span>
+                                <span>Compétences Digitales</span>
+                                <span>Certification Officielle</span><br>
+                            </div>
+                            <a href="Certif/pix.pdf" target="_blank" class="btn-link certificate">Voir la certification</a>
+                        </div>
+                    </div>
                     <div class="timeline-item">
                         <div class="timeline-marker">
                             <i class="fas fa-book"></i>
                         </div>
                         <div class="timeline-content">
-                            <h3>Lycée - Baccalauréat</h3>
-                            <p class="institution">Lycee Blaise Pascal, Guinée</p>
+                            <h3>Lycée - Baccalauréat générale </h3>
+                            <p class="institution">Lycée Blaise Pascal, Guinée</p>
                             <p class="duration">2024 - 2025</p>
+                            <p class="description">Obtention du Baccalauréat général avec succès. Formation générale solide combinant disciplines scientifiques et technologiques, constituant une base solide pour mes études supérieures en informatique.</p>
                             <div class="timeline-tags">
                                 <span>Mathématiques</span>
                                 <span>SVT</span>
-                                <span>Informatique</span>
+                                <span>Numérique et Sciences Informatiques</span>
+                                <span>Histoire Géographie</span>
                             </div>
                         </div>
                     </div>
-
                     <div class="timeline-item">
                         <div class="timeline-marker">
                             <i class="fas fa-school"></i>
                         </div>
                         <div class="timeline-content">
                             <h3>Collège</h3>
-                            <p class="institution">DNB</p>
+                            <p class="institution">Diplome National du Brevet </p>
                             <p class="duration">2020 - 2021</p>
                             <p class="description">Formation générale solide avec développement des compétences fondamentales. Premiers contacts avec l'informatique et la programmation.</p>
                             <div class="timeline-tags">
                                 <span>Fondamentaux</span>
                                 <span>Initiation IT</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <h2 class="experience">Expérience Professionnelle</h2>
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3>Great Expert Team (Guinée)</h3>
-                        <span class="duration">1 mois • Stage de 3ème</span>
-                    </div>
-                    <div class="experience-details">
-                        <p><strong>Domaine:</strong> Implémentation Sécurité Physique & Logique</p>
-                        <ul>
-                            <li>Installation et configuration de systèmes de caméras de surveillance</li>
-                            <li>Portes automatiques avec contrôle d'accès RFID</li>
-                            <li>Systèmes de déverrouillage biométrique par reconnaissance faciale</li>
-                            <li>Systèmes de portails automatisés avec protocoles sécurité avancés</li>
-                            <li>Configuration et dépannage au niveau terminal</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3>Compagnie des Bauxites de Guinée (CBG)</h3>
-                        <span class="duration">1 mois • Stage de Terminale</span>
-                    </div>
-                    <div class="experience-details">
-                        <p><strong>Domaine:</strong> Réseautique Entreprise & Gestion Systèmes</p>
-                        <ul>
-                            <li>Architecture VLAN et LAN pour organisation de 3000+ employés</li>
-                            <li>Interconnexions réseau inter-villes et routage données</li>
-                            <li>Extraction, maintenance et optimisation des systèmes</li>
-                            <li>Protocoles cybersécurité et sécurité systèmes ferroviaires</li>
-                            <li>Planification sauvegarde données et récupération sinistre</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-                        <div class="about-skills">
-                <h2>Compétences & Technologies</h2>
-                <div class="skills-grid">
-                    <div class="skill-card flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <h3>Développement Web</h3>
-                                <p>HTML, CSS</p>
-                            </div>
-                            <div class="flip-card-back">
-                                <i class="fab fa-html5"></i>
-                                <i class="fab fa-css3-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-card flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <h3>Programmation Système</h3>
-                                <p>Java POO, Algorithmique</p>
-                            </div>
-                            <div class="flip-card-back">
-                                <i class="fab fa-java"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-card flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <h3>Bases de Données</h3>
-                                <p>PostgreSQL, SQL</p>
-                            </div>
-                            <div class="flip-card-back">
-                                <i class="fas fa-database"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-card flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <h3>Langage Assembleur</h3>
-                                <p>Motorola 68000</p>
-                            </div>
-                            <div class="flip-card-back">
-                                <i class="fas fa-microchip"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-card flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <h3>Outils & Environnement</h3>
-                                <p>Git, VS Code, Figma</p>
-                            </div>
-                            <div class="flip-card-back">
-                                <i class="fab fa-git-alt"></i>
-                                <i class="fab fa-figma"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-card flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <h3>Linux & Terminal</h3>
-                                <p>Système Linux, Shell</p>
-                            </div>
-                            <div class="flip-card-back">
-                                <i class="fab fa-linux"></i>
                             </div>
                         </div>
                     </div>
@@ -212,7 +204,7 @@
         <div class="quick-contact-links">
             <h2>Liens rapides</h2>
             <div class="social-links">
-                <a href="https://linkedin.com/in/mamadoubarry" class="social-link linkedin" title="LinkedIn">
+                <a href="https://www.linkedin.com/in/hassimiou-barry-712016383/" class="social-link linkedin" title="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
                 <a href="https://github.com/hassimiou07" class="social-link github" title="GitHub">

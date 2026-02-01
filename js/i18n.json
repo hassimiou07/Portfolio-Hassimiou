@@ -1,0 +1,176 @@
+{
+  "fr": {
+    "nav": {
+      "home": "Accueil",
+      "portfolio": "Portfolio",
+      "about": "À propos",
+      "projects": "Projets",
+      "contact": "Contact"
+    },
+    "hero": {
+      "command": "sudo install Portfolio",
+      "completion": "> Installation du portfolio de Mamadou complétée, bonne lecture.",
+      "description": "Découvrez mon travail, mes compétences, et mes services."
+    },
+    "dashboard": {
+      "title": "Tableau de bord",
+      "about_title": "À Propos",
+      "about_desc": "Découvrez mon profil, mes expériences et mes compétences",
+      "about_btn": "Explorer",
+      "projects_title": "Mes Projets",
+      "projects_desc": "Des projets démontrant mon expérience",
+      "projects_btn": "Voir les projets",
+      "contact_title": "Me Contacter",
+      "contact_desc": "Collaborons en vue de stages, d'alternance ou de projets",
+      "contact_btn": "Démarrer"
+    },
+    "highlights": {
+      "title": "Points Forts",
+      "dev_title": "Développement",
+      "dev_desc": "HTML, CSS, Java, PostgreSQL",
+      "infra_title": "Infrastructure",
+      "infra_desc": "Linux, Réseaux, Bases de Données",
+      "sec_title": "Sécurité",
+      "sec_desc": "Cybersécurité, Gestion des accès",
+      "mgmt_title": "Gestion",
+      "mgmt_desc": "Gestion de projet, Communication"
+    },
+    "footer": {
+      "quick_links": "Liens rapides"
+    },
+    "about": {
+      "title": "À propos de moi",
+      "whoami": "Qui suis-je",
+      "education": "Parcours Éducatif",
+      "experience": "Expérience Professionnelle",
+      "skills": "Compétences",
+      "intro": "Bonjour! Je suis",
+      "student": "un Étudiant IT passionné de cybersécurité, réseaux informatiques et de développement web",
+      "studies": "Je poursuis actuellement mes études à",
+      "year1_but": "en première année de BUT informatique"
+    },
+    "projects": {
+      "title": "Mes Projets",
+      "sae1_title": "Linux & Installation IntelliJ",
+      "sae1_category": "Projet SAE",
+      "sae1_desc": "Installation et configuration complète d'un environnement Debian avec KDE/Plasma. Installation de JDK, Git et IntelliJ IDEA par 3 différentes méthodes.",
+      "sae2_title": "Base de Données Le Tourmentin",
+      "sae2_category": "Projet SAE",
+      "sae2_desc": "Conception et implémentation d'une base de données pour gérer une association nautique. Modélisation MERISE, schéma relationnel normalisé et requêtes SQL complexes.",
+      "sae3_title": "Chatbot Connaissance Générale",
+      "sae3_category": "Projet SAE",
+      "sae3_desc": "Développement d'un chatbot intelligent en Java capable de répondre à des questions de culture générale. Utilise des index de contenu et de forme pour des réponses optimisées.",
+      "sae4_title": "Site Institutionnel HARDIS GROUPE",
+      "sae4_category": "Projet Professionnel",
+      "sae4_desc": "Création d'un site web responsif et écologique présentant HARDIS GROUPE de manière accessible aux jeunes. HTML/CSS avec design minimaliste et performance optimisée."
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "subtitle": "Découvrez ma sélection de projets",
+      "back_link": "Retour"
+    },
+    "contact": {
+      "title": "Me contacter",
+      "description": "Discutons de votre projet, besoin ou opportunité de collaboration",
+      "name_label": "Nom Complet",
+      "name_placeholder": "Votre nom",
+      "email_label": "Adresse Email",
+      "email_placeholder": "votre.email@exemple.com",
+      "subject_label": "Sujet",
+      "subject_placeholder": "De quoi s'agit-il?",
+      "message_label": "Message",
+      "message_placeholder": "Partagez vos pensées...",
+      "send_btn": "Envoyer le message",
+      "methods_title": "Comment me joindre",
+      "email": "Email",
+      "response_time": "Temps de réponse: Sous 24 heures",
+      "phone": "Téléphone"
+    }
+  },
+  "en": {
+    "nav": {
+      "home": "Home",
+      "portfolio": "Portfolio",
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "hero": {
+      "command": "sudo install Portfolio",
+      "completion": "> Mamadou's portfolio installation complete, Enjoy your reading.",
+      "description": "Discover my work, my skills, and my services."
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "about_title": "About",
+      "about_desc": "Discover my profile, experiences and skills",
+      "about_btn": "Explore",
+      "projects_title": "My Projects",
+      "projects_desc": "Projects demonstrating my experience",
+      "projects_btn": "View projects",
+      "contact_title": "Contact Me",
+      "contact_desc": "Let's collaborate on internships, apprenticeships or projects",
+      "contact_btn": "Get started"
+    },
+    "highlights": {
+      "title": "Highlights",
+      "dev_title": "Development",
+      "dev_desc": "HTML, CSS, Java, PostgreSQL",
+      "infra_title": "Infrastructure",
+      "infra_desc": "Linux, Networks, Databases",
+      "sec_title": "Security",
+      "sec_desc": "Cybersecurity, Access Management",
+      "mgmt_title": "Management",
+      "mgmt_desc": "Project Management, Communication"
+    },
+    "footer": {
+      "quick_links": "Quick links"
+    },
+    "about": {
+      "title": "About me",
+      "whoami": "Who am I",
+      "education": "Educational Path",
+      "experience": "Professional Experience",
+      "skills": "Skills",
+      "intro": "Hello! I am",
+      "student": "an IT student passionate about cybersecurity, computer networks and web development",
+      "studies": "I am currently pursuing my studies at",
+      "year1_but": "in first year of IT degree program (BUT informatique)"
+    },
+    "projects": {
+      "title": "My Projects",
+      "sae1_title": "Linux & IntelliJ Installation",
+      "sae1_category": "SAE Project",
+      "sae1_desc": "Complete installation and configuration of a Debian environment with KDE/Plasma. Installation of JDK, Git and IntelliJ IDEA via 3 different methods.",
+      "sae2_title": "Le Tourmentin Database",
+      "sae2_category": "SAE Project",
+      "sae2_desc": "Design and implementation of a database to manage a sailing association. MERISE modeling, normalized relational schema and complex SQL queries.",
+      "sae3_title": "General Knowledge Chatbot",
+      "sae3_category": "SAE Project",
+      "sae3_desc": "Development of an intelligent chatbot in Java capable of answering general knowledge questions. Uses content and form indexes for optimized responses.",
+      "sae4_title": "HARDIS GROUPE Institutional Website",
+      "sae4_category": "Professional Project",
+      "sae4_desc": "Creation of a responsive and eco-friendly website presenting HARDIS GROUPE in an accessible way to young people. HTML/CSS with minimalist design and optimized performance."
+    },    "portfolio": {
+      "title": "Portfolio",
+      "subtitle": "Discover my selection of projects",
+      "back_link": "Back"
+    },    "contact": {
+      "title": "Contact me",
+      "description": "Let's discuss your project, need or collaboration opportunity",
+      "name_label": "Full Name",
+      "name_placeholder": "Your name",
+      "email_label": "Email Address",
+      "email_placeholder": "your.email@example.com",
+      "subject_label": "Subject",
+      "subject_placeholder": "What's this about?",
+      "message_label": "Message",
+      "message_placeholder": "Share your thoughts...",
+      "send_btn": "Send message",
+      "methods_title": "How to reach me",
+      "email": "Email",
+      "response_time": "Response time: Within 24 hours",
+      "phone": "Phone"
+    }
+  }
+}
