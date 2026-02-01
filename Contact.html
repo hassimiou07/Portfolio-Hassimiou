@@ -21,6 +21,12 @@
                     <li><a href="Project.html" data-en="Projects" data-fr="Projets">Projets</a></li>
                     <li><a href="Contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
                 </ul>
+                <div class="language-switcher">
+                    <button id="langBtn" class="lang-toggle" title="Toggle Language">
+                        <span>FR</span>
+                        <i class="fas fa-globe"></i>
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
@@ -38,22 +44,22 @@
                     <form class="contact-form">
                         <div class="form-group">
                             <label for="name" data-en="Your name" data-fr="Votre nom">Votre nom</label>
-                            <input type="text" id="name" name="name" required placeholder="Barry Mamadou Hassimiou">
+                            <input type="text" id="name" name="name" required placeholder="Barry Mamadou Hassimiou" data-placeholder-en="Barry Mamadou Hassimiou" data-placeholder-fr="Barry Mamadou Hassimiou">
                         </div>
 
                         <div class="form-group">
                             <label for="email" data-en="Your email" data-fr="Votre email">Votre email</label>
-                            <input type="email" id="email" name="email" required placeholder="barryhassimmiou306@exemple.com">
+                            <input type="email" id="email" name="email" required placeholder="barryhassimmiou306@exemple.com" data-placeholder-en="barryhassimmiou306@example.com" data-placeholder-fr="barryhassimmiou306@exemple.com">
                         </div>
 
                         <div class="form-group">
                             <label for="subject" data-en="Subject" data-fr="Sujet">Sujet</label>
-                            <input type="text" id="subject" name="subject" required placeholder="De quoi s'agit-il?">
+                            <input type="text" id="subject" name="subject" required placeholder="De quoi s'agit-il?" data-placeholder-en="What is it about?" data-placeholder-fr="De quoi s'agit-il?">
                         </div>
 
                         <div class="form-group">
                             <label for="message" data-en="Message" data-fr="Message">Message</label>
-                            <textarea id="message" name="message" rows="6" required placeholder="Partagez vos pensées..."></textarea>
+                            <textarea id="message" name="message" rows="6" required placeholder="Partagez vos pensées..." data-placeholder-en="Share your thoughts..." data-placeholder-fr="Partagez vos pensées..."></textarea>
                         </div>
 
                         <button type="submit" class="submit-btn" data-en="Send message" data-fr="Envoyer le message">Envoyer le message</button>
@@ -134,41 +140,52 @@
     </footer>
 
     <script>
-        // Traduction dynamique pour la page Contact
+        // Système de traduction complet pour Contact.html
         function updateLanguage(lang) {
-            // Éléments texte simples à traduire
+            // Traduire tous les éléments avec data-en et data-fr
             const elements = document.querySelectorAll('[data-en][data-fr]');
             elements.forEach(element => {
-                // Ne traduire que si l'élément n'a pas d'enfants (sauf pour du texte pur)
-                const hasChildren = element.children.length > 0;
+                const text = lang === 'en' ? element.getAttribute('data-en') : element.getAttribute('data-fr');
                 
-                // Exceptions: traduire même s'il y a des enfants pour ces balises
-                const tagsToTranslateWithChildren = ['h1', 'h2', 'h3', 'label', 'button', 'span'];
-                const shouldTranslate = !hasChildren || tagsToTranslateWithChildren.includes(element.tagName.toLowerCase());
-                
-                if (shouldTranslate) {
-                    const text = lang === 'en' ? element.getAttribute('data-en') : element.getAttribute('data-fr');
-                    if (text && !element.querySelector('a') && !element.querySelector('i')) {
+                if (text) {
+                    // Pour les balises sans enfants HTML
+                    if (!element.querySelector('a') && !element.querySelector('i') && !element.querySelector('span')) {
                         element.textContent = text;
                     }
                 }
             });
+
+            // Traduire les placeholders d'input
+            document.querySelectorAll('[data-placeholder-en][data-placeholder-fr]').forEach(input => {
+                const placeholder = lang === 'en' ? input.getAttribute('data-placeholder-en') : input.getAttribute('data-placeholder-fr');
+                if (placeholder) {
+                    input.placeholder = placeholder;
+                }
+            });
+
+            // Sauvegarder la langue
             localStorage.setItem('language', lang);
+            document.documentElement.lang = lang;
         }
 
-        // Attendre que le DOM soit chargé
+        // Initialiser la traduction au chargement
         document.addEventListener('DOMContentLoaded', () => {
-            // Récupérer la langue sauvegardée
             const savedLanguage = localStorage.getItem('language') || 'fr';
             updateLanguage(savedLanguage);
 
-            // Bouton de changement de langue
+            // Mettre à jour l'affichage du bouton de langue
             const langBtn = document.getElementById('langBtn');
             if (langBtn) {
-                langBtn.addEventListener('click', () => {
+                const langSpan = langBtn.querySelector('span');
+                langSpan.textContent = savedLanguage.toUpperCase();
+
+                // Ajouter l'event listener pour le changement de langue
+                langBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
                     const currentLang = localStorage.getItem('language') || 'fr';
                     const newLang = currentLang === 'fr' ? 'en' : 'fr';
-                    langBtn.querySelector('span').textContent = newLang.toUpperCase();
+                    
+                    langSpan.textContent = newLang.toUpperCase();
                     updateLanguage(newLang);
                 });
             }
