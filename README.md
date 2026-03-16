@@ -15,12 +15,15 @@ Portfolio moderne d'un étudiant en informatique à **IUT2 GRENOBLE**, démontra
 ## ✨ Caractéristiques
 
 - **Design Cyberpunk** : Thème vert néon moderne et immersif
+- **Curseur Personnalisé** : Cercle qui suit la souris avec glow dynamique
 - **Animations Fluides** : Effets terminal, typewriter, transitions élégantes
 - **Responsive Design** : Optimisé pour mobile, tablette, desktop
+- **Pages Compétences** : 6 pages détail avec projets associés
 - **Pages Détail** : 6 pages complètes pour chaque projet SAE
 - **Timeline Éducatif** : Parcours académique structuré avec dates
 - **Footer Riche** : Liens rapides et coordonnées de contact
 - **Performance** : Code optimisé et chargement rapide
+- **Navigation Cohérente** : Même menu sur toutes les pages
 
 ## 📁 Structure du Projet
 
@@ -28,15 +31,24 @@ Portfolio moderne d'un étudiant en informatique à **IUT2 GRENOBLE**, démontra
 Portfolio/
 ├── index.html                 # Accueil - Hero section + Quick Access
 ├── About.html                 # À propos - Profil + Expériences + Timeline
-├── Project.html               # Projets - Grille 6 projets SAE
+├── Skills.html                # Compétences - 6 cartes interactives
 ├── Contact.html               # Contact - Formulaire + Méthodes contact
 ├── SAE1.html → SAE6.html      # Pages détail pour chaque projet
+├── Skills/                    # Dossier des pages compétences
+│   ├── skill1.html            # Développement Web - Projets associés
+│   ├── skill2.html            # Programmation Java
+│   ├── skill3.html            # Bases de Données
+│   ├── skill4.html            # Cybersécurité
+│   ├── skill5.html            # Systèmes & Réseaux
+│   └── skill6.html            # Outils & DevOps
 ├── Css/
-│   ├── Style-Index.css        # Styles accueil (Hero, Quick Cards, CTA)
-│   ├── About.css              # Styles À propos (Timeline, Expériences)
-│   ├── project.css            # Styles Projets (Grille, Cards)
-│   ├── contact.css            # Styles Contact (Formulaire, Liens)
-│   └── project-detail.css     # Styles Pages détail projets
+│   ├── Style-Index.css        # Styles accueil
+│   ├── About.css              # Styles À propos
+│   ├── Skills.css             # Styles page Compétences
+│   ├── project.css            # Styles Projets
+│   └── contact.css            # Styles Contact
+├── js/
+│   └── cursor.js              # Script curseur personnalisé
 ├── Img/                       # Dossier pour images et assets
 ├── README.md                  # Documentation (ce fichier)
 └── .git/                      # Dépôt Git
@@ -75,7 +87,28 @@ Portfolio/
 - **Quick Links** : 5 icônes sociaux circulaires
 - **Responsive** : Formulaire empilé sur mobile
 
-### 5. **SAE1.html → SAE6.html** - Pages Détail Projets
+### 5. **Skills.html** - Page Compétences
+- **Grille de Compétences** : 6 cartes en 3 colonnes
+- **Cartes Interactives** : 
+  - 1. Développement Web (HTML, CSS, JavaScript)
+  - 2. Programmation Java (POO, Algorithmique)
+  - 3. Bases de Données (PostgreSQL, SQL)
+  - 4. Cybersécurité (Pentest, Sécurité Réseau)
+  - 5. Systèmes & Réseaux (Linux, Configuration Réseau)
+  - 6. Outils & DevOps (Git, VS Code, Figma)
+- **Liens Vers Détail** : Chaque carte link vers skill1-6.html
+- **Curseur Personnalisé** : Effet de suivi de souris avec cercle glow
+- **Designs Responsive** : 3 col → 2 col → 1 col
+
+### 6. **skill1.html → skill6.html** - Pages Détail Compétences
+- **Titre et Description** : Compétence spécifique avec description
+- **Bouton Retour** : Lien `← Retour aux compétences` vers Skills.html
+- **Grille de Projets** : 2-3 projets/SAE associés à la compétence
+- **Cartes Projet** : Icône, titre, catégorie, description, tags
+- **Navigation** : Lien vers Project.html dans le menu principal
+- **Design** : Cohérent avec le reste du portfolio
+
+### 7. **SAE1.html → SAE6.html** - Pages Détail Projets
 
 ### 1. **index.html** - Page d'accueil
 
@@ -291,7 +324,59 @@ Portfolio/
 
 ---
 
-## 🎨 Fichiers CSS
+## � Fonctionnalités Spéciales
+
+### **Curseur Personnalisé Animé**
+Le portfolio utilise un curseur personnalisé qui suit la souris avec un effet visuel distinctive :
+
+**Script :** `js/cursor.js`
+- Crée deux éléments : point central + cercle extérieur
+- Suit la position de la souris en temps réel
+- Agrandissement au hover sur éléments interactifs
+- Curseur masqué : `cursor: none` dans le CSS
+
+**CSS :** `Css/Skills.css` (et autres fichiers)
+```css
+.mouse-cursor {
+  width: 8px;
+  height: 8px;
+  background: #16a167;
+  box-shadow: 0 0 8px #00f7ff;
+}
+
+.mouse-cursor-outer {
+  width: 35px;
+  height: 35px;
+  border: 2px solid #27ca6b;
+  transition: all 0.25s ease;
+}
+
+.mouse-cursor-outer.active {
+  width: 55px;
+  height: 55px;
+  border: 2px solid #00f7ff;
+  box-shadow: 0 0 40px rgba(0, 247, 255, 0.4);
+}
+```
+
+### **Bouton Retour aux Compétences**
+Sur chaque page skill (skill1-6.html), un bouton de retour est présent :
+
+**HTML :**
+```html
+<div class="back-button-container">
+  <a href="../Skills.html" class="back-button">← Retour aux compétences</a>
+</div>
+```
+
+**CSS Styling :**
+- Transparent, texte vert avec opacity réduite
+- Hover : text-shadow glow et déplacement léger
+- Centré et bien espacé pour une meilleure intégration
+
+---
+
+## �🎨 Fichiers CSS
 
 ### **Conception générale (Toutes les pages)**
 
@@ -436,7 +521,83 @@ a:hover {
 
 ---
 
-### **3. project.css** - Page des projets
+### **3. skills.css** - Page des compétences
+
+**Cartes compétences :**
+```css
+.skill-box {
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.05), rgba(0, 255, 204, 0.05));
+  border: 2px solid rgba(0, 255, 136, 0.3);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: slideInUp 0.8s ease-out both;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.skill-box:hover {
+  transform: translateY(-8px);
+  border-color: #00ff88;
+  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+}
+```
+
+**Icônes animées :**
+```css
+.skill-icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00ff88, #00ffcc);
+  animation: slideInUp 0.8s ease-out both;
+}
+
+.skill-box i {
+  font-size: 2.5rem;
+  color: #00ff88;
+  transition: all 0.3s ease;
+}
+
+.skill-box:hover i {
+  transform: scale(1.2) rotateY(360deg);
+  filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.6));
+}
+```
+
+**Grid responsive :**
+```css
+.skills-grid-full {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 1200px) {
+  .skills-grid-full {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid-full {
+    grid-template-columns: 1fr;
+  }
+}
+```
+
+---
+
+### **4. project.css** - Page des projets
 
 **Grid projets :**
 ```css
@@ -1052,3 +1213,22 @@ Ce portfolio est libre d'utilisation pour usage personnel et éducatif.
 | **Compatibilité** | Chrome, Firefox, Safari, Edge |
 
 Merci de consulter ce README pour mieux comprendre la structure et le fonctionnement du portfolio ! 🎉
+
+---
+
+## 📝 Récentes Mises à Jour (Mars 2026)
+
+### **Nouvelles Pages Compétences**
+- ✅ Création de `Skills.html` comme page d'accueil des compétences
+- ✅ 6 pages détail (`skill1-6.html`) avec projets associés
+- ✅ Navigation cohérente sur toutes les pages
+
+### **Amélioration UX**
+- ✅ Curseur personnalisé qui suit la souris (effect glow)
+- ✅ Bouton "Retour aux compétences" sur chaque page skill
+- ✅ Menu de navigation identique partout
+
+### **Optimisations CSS**
+- ✅ Suppression des styles doublons
+- ✅ Harmonisation des effects hover
+- ✅ Meilleure intégration visuelle sur Skills.html
