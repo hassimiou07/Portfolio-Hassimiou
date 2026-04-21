@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+-+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="Css/Style-Index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="Img/Portfolio.jpg">
-    <script src="js/translations.js"></script>
     <script src="js/cursor.js" defer></script>
 </head>
 <body>
@@ -25,78 +24,85 @@
             </label>
             <nav id="navMenu">
                 <ul>
-                    <li><a href="index.html" data-en="Home" data-fr="Accueil">Accueil</a></li>
-                    <li><a href="portfolio.html" data-en="Portfolio" data-fr="Portfolio">Portfolio</a></li>
-                    <li><a href="About.html" data-en="About" data-fr="À propos">À propos</a></li>
-                    <li><a href="Skills.html" data-en="Skills" data-fr="Compétences">Compétences</a></li>
-                    <li><a href="Contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="About.html">À propos</a></li>
+                    <li><a href="Skills.html">Compétences</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
                 </ul>
-                <div class="language-switcher">
-                    <button id="langBtn" class="lang-toggle" title="Toggle Language">
-                        <span>FR</span>
-                        <i class="fas fa-globe"></i>
-                    </button>
-                </div>
             </nav>
         </div>
     </header>
-
     <div class="hero-section">
         <div class="hero-left">
             <div class="content-center">
                 <div class="terminal-line">
-                    <span class="terminal-prompt">$ </span>
-                    <span class="terminal-command">sudo install Portfolio</span>
+                    <span class="terminal-command">$ apt install Portfolio</span>
                     <span class="cursor"></span>
                 </div>
-                <div class="typewriter">
-                    <h3>> Mamadou's portfolio installation complete, Enjoy your reading.</h3>
+            </div>
+            <div class="card-container" id="cardContainer" style="opacity: 0;">
+                <div class="business-card">
+                    <div class="card-photo">
+                        <img src="Img/me.png" alt="Mamadou BARRY">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-info">
+                            <h1>Mamadou BARRY</h1>
+                            <p class="status">Étudiant IT | Pentester Sécurité</p>
+                        </div>
+                        <div class="tech-stack">
+                            <div class="tech-icon" title="HTML5">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="tech-icon" title="CSS3">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <div class="tech-icon" title="Java">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <div class="tech-icon" title="PostgreSQL">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="tech-icon" title="Linux">
+                                <i class="fab fa-linux"></i>
+                            </div>
+                            <div class="tech-icon" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="tech-icon" title="VS Code">
+                                <i class="fas fa-code"></i>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-secondary" id="cvBtn">Télécharger CV</button>
+                            <a href="Contact.html" class="btn btn-tertiary">Contact</a>
+                        </div>
+                        <div class="card-social">
+                            <a href="https://www.linkedin.com/in/hassimiou-barry-712016383/" class="social-icon linkedin" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/hassimiou07" class="social-icon github" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://twitter.com/mamadoubarry" class="social-icon twitter" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="mailto:mamadou.barry@example.com" class="social-icon email" title="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <p class="description">Découvrez mon travail, mes compétences, et mes services.</p>
             </div>
         </div>
-        <div class="hero-right">
-            <div class="orbit-container">
-                <div class="orbit-center">
-                    <i class="fas fa-terminal"></i>
-                </div>
-                <div class="orbit-icon icon-1" title="HTML">
-                    <i class="fab fa-html5"></i>
-                </div>
-                <div class="orbit-icon icon-2" title="CSS">
-                    <i class="fab fa-css3-alt"></i>
-                </div>
-                <div class="orbit-icon icon-3" title="Java">
-                    <i class="fab fa-java"></i>
-                </div>
-                <div class="orbit-icon icon-4" title="Linux">
-                    <i class="fab fa-linux"></i>
-                </div>
-                <div class="orbit-icon icon-5" title="Git">
-                    <i class="fab fa-git-alt"></i>
-                </div>
-                <div class="orbit-icon icon-6" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </div>
-                <div class="orbit-icon icon-7" title="VS Code">
-                    <i class="fas fa-code"></i>
-                </div>
-                <div class="orbit-icon icon-8" title="Figma">
-                    <i class="fab fa-figma"></i>
-                </div>
-                <div class="orbit-icon icon-9" title="IntelliJ">
-                    <i class="fas fa-cube"></i>
-                </div>
-                <div class="orbit-icon icon-10" title="Wireframe">
-                    <i class="fas fa-th"></i>
-                </div>
-            </div>
         </div>
     </div>
 
+
     <!-- Scroll Indicator -->
     <div class="scroll-indicator">
-        <span data-en="Scroll to explore" data-fr="Découvrez plus">Découvrez plus</span>
+        <span>Découvrez plus</span>
         <div class="scroll-arrow">
             <i class="fas fa-chevron-down"></i>
         </div>
@@ -125,40 +131,6 @@
             </div>
         </div>
     </section>
-
-    <section class="highlights">
-        <h2>Points Forts</h2>
-        <div class="highlights-grid">
-            <div class="highlight-item">
-                <div class="highlight-icon">
-                    <i class="fas fa-code"></i>
-                </div>
-                <h3>Développement</h3>
-                <p>HTML, CSS, Java, PostgreSQL</p>
-            </div>
-            <div class="highlight-item">
-                <div class="highlight-icon">
-                    <i class="fas fa-server"></i>
-                </div>
-                <h3>Infrastructure</h3>
-                <p>Linux, Réseaux, Bases de Données</p>
-            </div>
-            <div class="highlight-item">
-                <div class="highlight-icon">
-                    <i class="fas fa-shield-alt"></i>
-                </div>
-                <h3>Sécurité</h3>
-                <p>Cybersécurité, Gestion des accès</p>
-            </div>
-            <div class="highlight-item">
-                <div class="highlight-icon">
-                    <i class="fas fa-tasks"></i>
-                </div>
-                <h3>Gestion</h3>
-                <p>Gestion de projet, Communication</p>
-            </div>
-        </div>
-    </section>
     <footer>
         <div class="quick-contact-links">
             <h2>Liens rapides</h2>
@@ -184,12 +156,46 @@
     </footer>
 
     <script>
+        // Show card container after terminal animation completes
+        document.addEventListener('DOMContentLoaded', () => {
+            const cardContainer = document.getElementById('cardContainer');
+            
+            // Afficher la card après 3 secondes (quand le texte du terminal est terminé)
+            setTimeout(() => {
+                cardContainer.style.transition = 'opacity 0.8s ease-in';
+                cardContainer.style.opacity = '1';
+            }, 3000);
+        });
+
         // Scroll indicator fade out
         const scrollIndicator = document.querySelector('.scroll-indicator');
         
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) {
                 scrollIndicator.style.animation = 'fadeOut 0.5s ease-out forwards';
+            }
+        });
+    </script>
+    <script>
+        // CV Modal Handler
+        const cvBtn = document.getElementById('cvBtn');
+        const cvModal = document.getElementById('cvModal');
+        const cvModalClose = document.querySelector('.cv-modal-close');
+
+        // Open modal
+        cvBtn.addEventListener('click', () => {
+            cvModal.style.display = 'flex';
+        });
+
+        // Close modal
+        cvModalClose.addEventListener('click', () => {
+            cvModal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (event) => {
+            if (event.target === cvModal) {
+                cvModal.style.display = 'none';
             }
         });
     </script>

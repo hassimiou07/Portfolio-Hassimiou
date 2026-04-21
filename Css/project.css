@@ -129,55 +129,7 @@ a:hover {
     text-shadow: 0 0 10px rgba(0, 255, 136, 0.8);
 }
 
-/* ============ LANGUAGE SWITCHER ============ */
-.language-switcher {
-    display: flex;
-    align-items: center;
-    margin-left: 30px;
-}
-
-.lang-toggle {
-    background: transparent;
-    border: 2px solid #00ff88;
-    color: #00ff88;
-    padding: 8px 12px;
-    border-radius: 5px;
-    font-size: 11px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    letter-spacing: 1px;
-}
-
-.lang-toggle:hover {
-    background: #00ff88;
-    color: #0a0e27;
-    box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
-    text-shadow: none;
-}
-
-.lang-toggle i {
-    font-size: 12px;
-}
-
-@media (max-width: 1024px) {
-    .container { padding: 0 40px; gap: 50px; }
-    .logo h1 { font-size: 20px; }
-    ul { gap: 35px; }
-    a { font-size: 11px; }
-}
-
-@media (max-width: 768px) {
-    .container { padding: 0 25px; }
-    .logo { gap: 12px; }
-    .logo img { width: 50px; height: 50px; }
-    .logo h1 { font-size: 18px; letter-spacing: 1px; }
-    ul { gap: 20px; }
-    a { font-size: 10px; letter-spacing: 1px; }
-}
+/* ============ PROJECTS SECTION ============ */
 .projects-container {
     flex: 1;
     max-width: 1200px;
