@@ -129,21 +129,6 @@ a:hover {
     text-shadow: 0 0 10px rgba(0, 255, 136, 0.8);
 }
 
-.hassim {
-    width: 220px;
-    margin-top: 10%;
-    height: 220px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    border: 2px solid #00ff88;
-    box-shadow: 0 0 30px rgba(0, 255, 136, 0.6), inset 0 0 20px rgba(0, 255, 136, 0.1);
-    background: rgba(0, 255, 136, 0.05);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    animation: photoFloat 3s ease-in-out infinite, glow 3s ease-in-out infinite;
-    transition: all 0.3s ease;
-}
-
 @media (max-width: 1024px) {
     .container { padding: 0 40px; gap: 50px; }
     .logo h1 { font-size: 20px; }
@@ -167,14 +152,7 @@ a:hover {
     width: 100%;
 }
 
-.about-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 60px;
-    gap: 60px;
-    justify-content: center;
-    animation: fadeInDown 0.8s ease;
-}
+
 
 .about-header-left {
     display: flex;
@@ -197,11 +175,6 @@ a:hover {
     margin-top: 0;
 }
 
-.underline {
-    border-bottom: 5px double #00ff88;
-    max-width: max-content;
-    padding: 10px;
-}
 .about-content {
     display: grid;
     grid-template-columns: 1fr;
@@ -498,6 +471,102 @@ button{
     align-items: center;
     accent-color: #00ff88;
 }
+
+/* ============================================
+   OTHER SKILLS / INTERESTS STYLES
+   ============================================ */
+
+.other {
+    margin-top: 80px;
+    padding: 60px 30px;
+    background: rgba(0, 255, 136, 0.03);
+    border-top: 2px solid #00ff88;
+    border-bottom: 2px solid #00ff88;
+}
+
+.other-header {
+    margin-bottom: 50px;
+    text-align: center;
+    animation: fadeInDown 0.8s ease;
+}
+
+.other-header h2,
+.underline-other {
+    font-size: 28px;
+    color: #00ff88;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    border-left: 3px solid #00ff88;
+    padding-left: 15px;
+}
+
+.other-subtitle {
+    font-size: 16px;
+    color: #b0ffb0;
+    margin: 0;
+}
+
+.skills-grid-other {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-box-other {
+    background: rgba(0, 255, 136, 0.08);
+    border: 2px solid #00ff88;
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    cursor: pointer;
+    animation: fadeInUp 0.8s ease;
+}
+
+.skill-box-other:hover {
+    background: rgba(0, 255, 136, 0.15);
+    box-shadow: 0 10px 40px rgba(0, 255, 136, 0.3), inset 0 0 20px rgba(0, 255, 136, 0.1);
+    transform: translateY(-8px);
+    border-color: #00ffcc;
+}
+
+.skill-icon-other {
+    font-size: 50px;
+    color: #00ff88;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.skill-box-other:hover .skill-icon-other {
+    color: #00ffcc;
+    transform: scale(1.2) rotate(5deg);
+    text-shadow: 0 0 20px rgba(0, 255, 200, 0.6);
+}
+
+.skill-box-other h3 {
+    font-size: 18px;
+    color: #00ff88;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.skill-box-other:hover h3 {
+    color: #00ffcc;
+}
+
+.skill-box-other p {
+    font-size: 14px;
+    color: #b0ffb0;
+    margin: 0;
+    line-height: 1.6;
+}
+
 footer {
     text-align: center;
     padding: 40px 20px;
@@ -662,6 +731,10 @@ footer p {
     }
 
     .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid-other {
         grid-template-columns: 1fr;
     }
 
