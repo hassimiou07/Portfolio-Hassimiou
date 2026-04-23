@@ -181,6 +181,7 @@ a:hover {
     position: relative;
     flex-direction: column;
     text-decoration: none;
+    width: 70vh;
 }
 
 .project-card:hover {
