@@ -37,7 +37,6 @@
             </div>
             <div class="detail-title">
                 <h1>Chatbot de Culture Générale</h1>
-                <p class="category">SAE S1.01 - Projet Chatbot</p>
                 <p class="course">Java – 2025/2026</p>
             </div>
         </div>
@@ -55,19 +54,6 @@
                     support des synonymes, contexte conversationnel, et capacité d'apprentissage interactif.
                 </p>
             </section>
-
-            <section class="objectives">
-                <h2>Objectifs du Projet</h2>
-                <ul>
-                    <li>Implémenter une recherche thématique rapide via index sur le contenu</li>
-                    <li>Sélectionner les réponses par cohérence de forme via index sur les formes</li>
-                    <li>Gérer les synonymes et variantes avec un thésaurus</li>
-                    <li>Supporter les réponses en contexte (questions incomplètes)</li>
-                    <li>Intégrer les nombres dans la détection de formes</li>
-                    <li>Permettre l'apprentissage interactif de nouvelles réponses</li>
-                </ul>
-            </section>
-
             <section class="methodology">
                 <h2>Architecture & Approche</h2>
                 <div class="method-grid">
@@ -117,55 +103,6 @@
                     </div>
                 </div>
             </section>
-
-            <section class="tasks">
-                <h2>Étapes Principales</h2>
-                <div class="tasks-list">
-                    <div class="task-item">
-                        <div class="task-icon">P1</div>
-                        <div class="task-info">
-                            <h3>Partie 1 : Étapes 1 & 2 (Index & Formes)</h3>
-                            <p>Classe Index pour stockage et recherche. Index sur contenu pour recherche thématique. Index sur formes pour sélection cohérente. Algorithmes de fusion et recherche dichotomique.</p>
-                        </div>
-                    </div>
-                    <div class="task-item">
-                        <div class="task-icon">P2.1</div>
-                        <div class="task-info">
-                            <h3>Partie 2.1 : Thésaurus & Synonymes</h3>
-                            <p>Fichier thesaurus.txt avec mappages mot→forme canonique. Intégration dans tous les index et traitements. Support variantes (peint/peinte, nomme/appellent, articles).</p>
-                        </div>
-                    </div>
-                    <div class="task-item">
-                        <div class="task-icon">P2.2</div>
-                        <div class="task-info">
-                            <h3>Partie 2.2 : Réponses en Contexte</h3>
-                            <p>Méthode repondreEnContexte() pour questions incomplètes. Utilise contexte thématique précédent. Support "En quelle année ?" → prolonge question sur invention du téléphone.</p>
-                        </div>
-                    </div>
-                    <div class="task-item">
-                        <div class="task-icon">P2.3</div>
-                        <div class="task-info">
-                            <h3>Partie 2.3 : Nombres dans Formes</h3>
-                            <p>Détection des nombres et remplacement par "NUM". Distinction entre "Où ?" et "Quand ?" selon présence d'année. Amélioration précision des réponses.</p>
-                        </div>
-                    </div>
-                    <div class="task-item">
-                        <div class="task-icon">P2.4</div>
-                        <div class="task-info">
-                            <h3>Partie 2.4 : Apprentissage Interactif</h3>
-                            <p>Ajout dynamique de connaissances sans éditer fichiers. Détecte si réponse/forme existe. Persiste en fichier. Trois cas : nouvelle forme, nouvelle réponse, ou les deux.</p>
-                        </div>
-                    </div>
-                    <div class="task-item">
-                        <div class="task-icon">P2.5</div>
-                        <div class="task-info">
-                            <h3>Partie 2.5 : Enrichissement & Spécialisation</h3>
-                            <p>Expansion base réponses. Spécialisation sur domaine (cours, FAQ, sujet). Formulations multiples. Méta-questions ("Quelles questions puis-je te poser ?").</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <section class="challenges">
                 <h2>Défis & Solutions Clés</h2>
                 <div class="challenge-item">
@@ -185,47 +122,6 @@
                     <p>Chatbot initial limité à base pré-chargée. Solution: API interactif permettant enrichissement base en temps réel avec persistance fichier.</p>
                 </div>
             </section>
-
-            <section class="learning">
-                <h2>Apprentissages Clés</h2>
-                <div class="learning-grid">
-                    <div class="learning-card">
-                        <h3>Structures d'Index</h3>
-                        <p>Conception et implémentation d'index pour accélérer recherche. Choix entre approches (hash, arbre, table inversée).</p>
-                    </div>
-                    <div class="learning-card">
-                        <h3>Algorithmes d'Intersection</h3>
-                        <p>Fusion efficace de listes, recherche dichotomique, algorithmes probabilistes pour sélection optimale parmi alternatives.</p>
-                    </div>
-                    <div class="learning-card">
-                        <h3>Traitement Langage Naturel</h3>
-                        <p>Extraction mots-clés, tokenization, gestion synonymes, contextualisation basique, approches statistiques vs approches linguistiques.</p>
-                    </div>
-                </div>
-            </section>
-
-        <section class="results">
-            <h2>Compétences Acquises</h2>
-            <div class="skills-grid">
-            <div class="skill-card">
-                <h3><i class="fas fa-bolt"></i> Optimisation Algorithmique</h3>
-                <p>Passage d'une recherche naïves ur l'ensemble du fichier à une approche indexée. Réduction drastique du coût de recherche sur bases Volumineuses.</p>
-            </div>
-            <div class="skill-card">
-                <h3><i class="fas fa-database"></i> Structures d'Index</h3>
-                <p>Conception et implémentation d'index inversés pour stocker mappages mot-clé → réponses. Accélération jusqu'à 100x sur recherche thématique comparé à balayage séquentiel fichier.</p>
-            </div>
-            <div class="skill-card">
-                <h3><i class="fas fa-search"></i> Recherche sur Fichiers Volumineux</h3>
-                <p>Gestion efficace de fichiers texte contenant milliers de réponses. Indexation au démarrage, puis requêtes ultra-rapides sans relecture fichier complet.</p>
-            </div>
-            <div class="skill-card">
-                <h3><i class="fas fa-code"></i> Analyse de Complexité</h3>
-                <p>Calcul asymptotique on est arrivée a la conclusion que avec index, le facteur d'accélération etait superieur a x3000.</p>
-            </div>
-            </div>
-        </section>
-
         <div class="navigation-links">
             <a href="../Skills.html" class="btn-back">
                 <i class="fas fa-arrow-left"></i> Retour aux Projets

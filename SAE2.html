@@ -36,9 +36,8 @@
                 <i class="fas fa-ship"></i>
             </div>
             <div class="detail-title">
-                <h1>Base de Données Le Tourmentin</h1>
-                <p class="category">SAE S1.04 - Création d'une Base de Données</p>
-                <p class="course">SQL -- R1.05  2025/2026</p>
+                <h1>DB :  Le Tourmentin</h1>
+                <p class="course">SQL - 2025 / 2026</p>
             </div>
         </div>
         <div class="detail-content">
@@ -55,16 +54,28 @@
                     ses adhérents croissants, les bateaux disponibles, les rallyés organisés et les participations.
                 </p>
             </section>
-
-            <section class="objectives">
-                <h2>Objectifs du Projet</h2>
-                <ul>
-                    <li>Analyser les besoins et élaborer les règles de gestion d'une association</li>
-                    <li>Concevoir un SEA (Schéma Entité-Association) conforme aux règles MERISE</li>
-                    <li>Transformer le SEA en SLR (Schéma Logique Relationnel) normalisé</li>
-                    <li>Identifier et formaliser les contraintes d'intégrité (PK, FK, domaines)</li>
-                    <li>Implémenter la base de données en PostgreSQL/MySQL</li>
-                </ul>
+            <section class="technologies">
+                <h2>Technologies & Outils Utilisés</h2>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <span class="tech-badge">PostgreSQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-badge">MySQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-badge">SQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-badge">Adobe</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-badge">SEA/MCD</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-badge">SLR/MLD</span>
+                    </div>
+                </div>
             </section>
 
             <section class="methodology">
@@ -93,121 +104,7 @@
                 </div>
             </section>
 
-            <section class="technologies">
-                <h2>Technologies & Outils Utilisés</h2>
-                <div class="tech-grid">
-                    <div class="tech-item">
-                        <span class="tech-badge">PostgreSQL</span>
-                    </div>
-                    <div class="tech-item">
-                        <span class="tech-badge">MySQL</span>
-                    </div>
-                    <div class="tech-item">
-                        <span class="tech-badge">SQL</span>
-                    </div>
-                    <div class="tech-item">
-                        <span class="tech-badge">Adobe</span>
-                    </div>
-                    <div class="tech-item">
-                        <span class="tech-badge">SEA/MCD</span>
-                    </div>
-                    <div class="tech-item">
-                        <span class="tech-badge">SLR/MLD</span>
-                    </div>
-                </div>
-            </section>
-            <section class="tasks">
-                <h2>Étapes Principales du Projet</h2>
-                <div class="tasks-list">
-                    <div class="task-item">
-                        <div class="task-icon">1</div>
-                        <div class="task-info">
-                            <h3>SEA / Contraintes / SLR</h3>
-                            <p>Création du Schéma Entité-Association, identification des 9 règles de gestion, formalisation des contraintes d'intégrité et dérivation du SLR normalisé. Rendu: Document PDF.</p>
-                        </div>
-                    </div>
-                    <div class="task-item">
-                        <div class="task-icon">2</div>
-                        <div class="task-info">
-                            <h3>CREATE / DROP / TEST</h3>
-                            <p>Implémentation du schéma en SQL (create.sql, drop.sql). Écriture de requêtes INSERT pour tester les contraintes (primaires, étrangères, domaines). Rendu: Fichier ZIP.</p>
-                        </div>
-                    </div>
-                    <div class="task-item">
-                        <div class="task-icon">3</div>
-                        <div class="task-info">
-                            <h3>Requêtes / Mises à jour / Schéma</h3>
-                            <p>Exécution de 8 requêtes SELECT complexes (JOINs, COUNT DISTINCT), 7 opérations UPDATE/DELETE, et modification du schéma (ajout colonne prixlocation). Rendu: Fichier ZIP avec etape3_1.sql, etape3_2.sql, etape3_3.sql.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="challenges">
-                <h2>Entités & Règles de Gestion Clés</h2>
-                <div class="challenge-item">
-                    <h3><i class="fas fa-users"></i> Adhérents & Bureau</h3>
-                    <p>Gestion des adhérents avec fonction (président, vice-président, trésorier, secrétaire, membre actif). Le bureau se compose d'adhérents spécifiques. Chaque adhérent a une année d'adhésion.</p>
-                </div>
-                <div class="challenge-item">
-                    <h3><i class="fas fa-money-bill"></i> Cotisations Annuelles</h3>
-                    <p>Suivi des cotisations payées par adhérent et par année depuis son adhésion. Enregistrement du statut paiement pour les rappels. Montants peuvent varier par adhérent.</p>
-                </div>
-                <div class="challenge-item">
-                    <h3><i class="fas fa-sailboat"></i> Bateaux & Équipages</h3>
-                    <p>Bateaux propriétaires (adhérents) ou loués (agences). Chaque bateau peut participer à plusieurs activités avec équipage de 5-9 adhérents (dont un chef de bord/skipper).</p>
-                </div>
-                <div class="challenge-item">
-                    <h3><i class="fas fa-chart-line"></i> Activités & Régates</h3>
-                    <p>Sorties ou rallyes avec port de départ/arrivée. Rallyes composés de plusieurs régates numérotées. Résultats (classement, points) enregistrés après le rallye.</p>
-                </div>
-            </section>
-
-            <section class="learning">
-                <h2>Apprentissages Clés</h2>
-                <div class="learning-grid">
-                    <div class="learning-card">
-                        <h3>Modélisation MERISE</h3>
-                        <p>Transformation des règles métier en SEA puis en SLR normalisé avec dérivation selon règles MERISE.</p>
-                    </div>
-                    <div class="learning-card">
-                        <h3>Contraintes d'Intégrité</h3>
-                        <p>Formalisation et implémentation des contraintes de domaine, PK/FK, et règles métier complexes.</p>
-                    </div>
-                    <div class="learning-card">
-                        <h3>SQL Avancé</h3>
-                        <p>Requêtes complexes avec JOINs multiples, COUNT DISTINCT, sous-requêtes, GROUP BY et ORDER BY.</p>
-                    </div>
-                </div>
-            </section>
-            <section class="benefits">
-                <h2>Effets Positifs</h2>
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <h3> <i class="fas fa-brain"></i> Pensée Analytique</h3>
-                        <p>Développement de la capacité à décomposer des problèmes complexes et identifier les relations entre les données.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h3>  <i class="fas fa-shield-alt"></i> Intégrité des Données</h3>
-                        <p>Compréhension des mécanismes de protection et de validation des données pour éviter les incohérences.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h3> <i class="fas fa-tachometer-alt"></i> Optimisation des Performances</h3>
-                        <p>Maîtrise de la conception pour créer des structures efficaces et des requêtes rapides.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h3> <i class="fas fa-briefcase"></i> Compétences Professionnelles</h3>
-                        <p>Expertise demandée par les entreprises pour la gestion de données en production.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h3><i class="fas fa-puzzle-piece"></i> Résolution de Problèmes</h3>
-                        <p>Aptitude à concevoir des solutions scalables et maintenables pour des systèmes réels.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h3> <i class="fas fa-chart-bar"></i> Intelligence Métier</h3>
-                        <p>Capacité à transformer les règles métier en structures logiques et exploitables.</p>
-                    </div>
-                </div>
-            </section>
+           
         </div>
         <div class="navigation-links">
             <a href="../Skills.html" class="btn-back">
