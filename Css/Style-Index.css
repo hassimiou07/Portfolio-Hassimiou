@@ -182,33 +182,7 @@ a:hover {
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
-.hero-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 120px 30px 60px 30px;
-    width: 100%;
-    gap: 60px;
-    height: 100vh;
-}
 
-.hero-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    gap: 40px;
-}
-
-.orbit-container {
-    position: relative;
-    width: 350px;
-    height: 350px;
-    pointer-events: none;
-    overflow: hidden;
-}
 
 
 
@@ -607,24 +581,48 @@ footer p {
 /* ============================================
    BUSINESS CARD STYLES
    ============================================ */
+
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 120px 30px 30px 30px;
+    width: 100%;
+    gap: 30px;
+    min-height: auto;
+    height: auto;
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 20px;
+}
+
 .card-container {
-    flex: 1;
+    flex: 0 1 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    
+    margin-bottom: 40px;
 }
 
 .business-card {
     border: 1px solid rgba(0, 255, 136, 0.25);
     border-radius: 20px;
-    padding: 25px;
-    width: 70%;
-    height: 50vh;
+    padding: 20px;
+    width: 90%;
     max-width: 1000px;
+    min-height: auto;
+    height: auto;
     display: flex;
-    gap: 120px;
+    gap: 40px;
     align-items: center;
     justify-content: center;
     animation: slideUp 0.9s ease-out;
@@ -632,7 +630,21 @@ footer p {
     box-shadow: 0 0 60px rgba(0, 255, 136, 0.12), inset 0 0 40px rgba(0, 255, 136, 0.04), 0 20px 60px rgba(0, 0, 0, 0.4);
     transition: all 0.5s ease-out;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
+}
+
+.card-photo img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 255, 136, 0.6);
+    object-fit: cover;
+    box-shadow: 0 10px 40px rgba(0, 255, 136, 0.2);
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 1;
+    animation: float 3s ease-in-out infinite;
+    flex-shrink: 0;
 }
 .business-card::before {
     content: '';
@@ -1024,67 +1036,40 @@ footer p {
         font-size: 14px;
     }
 
-    .quick-container {
-        grid-template-columns: 1fr;
+    .business-card {
+        flex-direction: column;
+        gap: 40px;
+        padding: 30px 20px;
+        width: 90%;
+        min-height: auto;
     }
 
-    .highlights-grid {
-        grid-template-columns: 1fr;
+    .card-photo img {
+        width: 200px;
+        height: 200px;
     }
 
-    .highlights h2,
-    .cta-section h2 {
+    .card-content {
+        text-align: center;
+    }
+
+    .card-info h1 {
         font-size: 28px;
     }
 
-    .quick-card,
-    .highlight-item {
-        padding: 20px;
+    .status {
+        font-size: 12px;
     }
 
-    .quick-card i,
-    .highlight-icon {
-        font-size: 35px;
+    .tech-stack {
+        justify-content: center;
     }
 
-    .quick-card h3,
-    .highlight-item h3 {
-        font-size: 18px;
+    .card-actions {
+        justify-content: center;
     }
 
-    .cta-section {
-        padding: 40px 20px;
-    }
-
-    .container {
-        padding: 0 15px;
-    }
-    .menu-toggle {
-        display: flex;
-    }
-
-    nav {
-        position: absolute;
-        top: 65px;
-        left: 0;
-        right: 0;
-        background-color: rgba(10, 14, 39, 0.98);
-        border-bottom: 2px solid #00ff88;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-    }
-
-    .menu-checkbox:checked ~ nav {
-        max-height: 300px;
-    }
-
-    nav ul {
-        padding: 16px 29px;
-    }
-
-    nav li {
-        border-bottom: 1px solid rgba(0, 255, 136, 0.2);
-        padding: 15px 0;
+    .card-social {
+        justify-content: center;
     }
 }
