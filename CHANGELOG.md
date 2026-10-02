@@ -1,4 +1,4 @@
-# 📋 AMÉLIORATIONS APPORTÉES - Portfolio Mamadou BARRY
+# 📋 AMÉLIORATIONS APPORTÉES - Portfolio Hassimiou BARRY
 
 ## 🎯 Résumé des Modifications
 
@@ -294,4 +294,4 @@ index.html (Accueil)
 **Version** : 2.0 - Complete Redesign  
 **Date** : Janvier 2026  
 **Auteur** : GitHub Copilot  
-**Stagiaire** : Mamadou BARRY - IUT2 GRENOBLE
+**Stagiaire** : Hassimiou BARRY - IUT2 GRENOBLE

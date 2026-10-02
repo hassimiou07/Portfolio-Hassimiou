@@ -1,4 +1,4 @@
-# Portfolio - Mamadou BARRY 🚀
+# Portfolio - Hassimiou BARRY 🚀
 
 Un portfolio web professionnel et moderne présentant mes projets, compétences et services.
 
@@ -116,7 +116,7 @@ Portfolio/
 ```html
 <header>
   <div class="container">
-    <div class="logo"><h1>BARRY Mamadou</h1></div>
+    <div class="logo"><h1>BARRY Hassimiou</h1></div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -284,7 +284,7 @@ Portfolio/
       <div class="method-icon"><i class="fas fa-envelope"></i></div>
       <div class="method-info">
         <h3>Email</h3>
-        <p><a href="mailto:mamadou.barry@example.com">mamadou.barry@example.com</a></p>
+        <p><a href="mailto:mamadou.barry1@etu.univ-grenoble-alpes.fr">mamadou.barry1@etu.univ-grenoble-alpes.fr</a></p>
         <small>Response time: Within 24 hours</small>
       </div>
     </div>
@@ -305,7 +305,7 @@ Portfolio/
 ```
 
 **7 Moyens de contact :**
-1. 📧 **Email** - mamadou.barry@example.com
+1. 📧 **Email** - mamadou.barry1@etu.univ-grenoble-alpes.fr
 2. ☎️ **Phone** - +33 6 12 34 56 78
 3. 💼 **LinkedIn** - Profil LinkedIn
 4. 💻 **GitHub** - @hassimiou07
@@ -1179,12 +1179,12 @@ animation: float 3s ease-in-out infinite;
 
 ## 👨‍💻 Auteur
 
-**Mamadou BARRY**
+**Hassimiou BARRY**
 - 📍 **Location** : Grenoble, France
 - 🎓 **Étude** : IUT2 GRENOBLE - Informatique
 - 🔗 **GitHub** : [hassimiou07](https://github.com/hassimiou07)
 - 💼 **LinkedIn** : [hassimiou-barry-712016383](https://www.linkedin.com/in/hassimiou-barry-712016383/)
-- 📧 **Email** : mamadou.barry@example.com
+- 📧 **Email** : mamadou.barry1@etu.univ-grenoble-alpes.fr
 
 ---
 
