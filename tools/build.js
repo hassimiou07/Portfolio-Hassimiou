@@ -19,6 +19,8 @@ function write(rel, html) {
 
 const compById = Object.fromEntries(D.competences.map((c) => [c.id, c]));
 const projById = Object.fromEntries(D.projects.map((p) => [p.id, p]));
+const ordered = D.groups.flatMap((g) => D.projects.filter((p) => p.group === g.id));
+if (ordered.length !== D.projects.length) throw new Error('Chaque projet doit avoir un `group` valide.');
 
 /* ---------- Gabarit commun ---------- */
 
@@ -126,7 +128,7 @@ function projectCard(p, root) {
         <h3 class="card__title">${esc(p.title)}</h3>
         <p class="card__sub">${esc(p.subtitle)}</p>
         <p class="card__text">${esc(p.summary)}</p>
-        ${tags(p.stack)}
+        ${tags(p.stack.slice(0, 4))}
         <p class="card__comps"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> ${p.competences.map((id) => esc(compById[id].title)).join(' · ')}</p>
       </div>`;
   return p.page
@@ -185,25 +187,21 @@ function detailPage(p) {
       <header class="detail__head">
         <div class="detail__media">${media(p, root)}</div>
         <div>
-          <p class="card__kind">${esc([p.kind, p.period].filter(Boolean).join(' · '))}</p>
+          <p class="card__kind${/en cours/i.test(p.kind) ? ' is-live' : ''}">${esc([p.kind, p.period].filter(Boolean).join(' · '))}</p>
           <h1>${esc(p.title)}</h1>
           <p class="lead">${esc(p.subtitle)}</p>
           ${links ? `<div class="btn-row">${links}</div>` : ''}
         </div>
       </header>
+      <dl class="facts">
+        <div><dt>Technologies</dt><dd>${tags(p.stack)}</dd></div>
+        <div><dt>Compétences</dt><dd><div class="chips">${compChips}</div></dd></div>
+      </dl>
       <section class="block">
         <h2>Vue d'ensemble</h2>
         ${p.overview.map((t) => `<p>${esc(t)}</p>`).join('')}
       </section>
       ${(p.sections || []).map((s) => renderSection(s, root)).join('\n      ')}
-      <section class="block">
-        <h2>Technologies et outils</h2>
-        ${tags(p.stack)}
-      </section>
-      <section class="block">
-        <h2>Compétences travaillées</h2>
-        <div class="chips">${compChips}</div>
-      </section>
       <p class="back"><a href="${root}${isLab ? 'Pentest.html' : 'Projects.html'}"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ${isLab ? 'Retour au pentest' : 'Tous les projets'}</a></p>
     </article>`;
   write(p.page, layout({
@@ -247,8 +245,13 @@ function projectsPage() {
         <button type="button" class="chip chip--btn" data-filter="pentest" data-label="Pentest" aria-pressed="false">Pentest</button>
       </div>
       <p class="muted filters__count" id="filter-count" aria-live="polite"></p>
-      <div class="grid grid--3" id="project-grid">
-        ${D.projects.map((p) => projectCard(p, '')).join('\n        ')}
+      <div id="project-grid">
+        ${D.groups.map((g) => `<section class="proj-group" aria-labelledby="g-${g.id}">
+          <div class="group__head"><h3 class="group__title" id="g-${g.id}">${esc(g.title)}</h3><span class="group__note">${esc(g.note)}</span></div>
+          <div class="grid grid--3">
+            ${ordered.filter((p) => p.group === g.id).map((p) => projectCard(p, '')).join('\n            ')}
+          </div>
+        </section>`).join('\n        ')}
       </div>
     </section>`;
   write('Projects.html', layout({
@@ -509,7 +512,7 @@ function homePage() {
       location: P.location, bio: P.bio,
     },
     competences: D.competences.map((c) => ({ title: c.title, summary: c.summary, file: c.file })),
-    projects: D.projects.map((p) => ({ title: p.title, subtitle: p.subtitle, kind: p.kind, period: p.period, page: p.page || '' })),
+    projects: ordered.map((p) => ({ title: p.title, subtitle: p.subtitle, kind: p.kind, period: p.period, page: p.page || '' })),
     skillGroups: D.skillGroups.map((g) => ({ title: g.title, items: g.items })),
   };
   const json = JSON.stringify(data).replace(/</g, '\\u003c');
@@ -527,26 +530,35 @@ function homePage() {
           <input id="cmd" name="cmd" type="text" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Commande">
         </form>
       </div>
-      <div class="terminal__chips" id="chips" aria-label="Raccourcis de commandes">
-        ${['help', 'about', 'projects', 'pentest', 'contact', 'cv'].map((c) => `<button type="button" class="chip chip--btn" data-cmd="${c}">${c}</button>`).join('\n        ')}
-      </div>
     </section>
     <noscript>
-      <p class="container noscript">Ce terminal demande JavaScript. Utilisez le menu pour naviguer : À propos, Compétences, Projets, Pentest, Contact.</p>
+      <p class="container noscript">Ce terminal demande JavaScript. Utilisez le menu pour naviguer : À propos, Projets, Pentest, Contact.</p>
     </noscript>
     <script type="application/json" id="site-data">${json}</script>
     <template id="card-tpl">
       <article class="id-card">
-        <img class="id-card__photo" src="${P.photo}" alt="Portrait de ${esc(P.name)}" width="104" height="104">
-        <div class="id-card__main">
-          <h2 class="id-card__name">${esc(P.name)}</h2>
-          <p class="id-card__status">${esc(P.status)}</p>
-          <p class="id-card__search"><i class="fa-solid fa-circle" aria-hidden="true"></i> ${esc(P.searching)}</p>
-          ${tags(stack)}
-          <div class="id-card__actions">
-            <a class="btn btn--sm" href="${P.cv}" download><i class="fa-solid fa-download" aria-hidden="true"></i> Télécharger CV</a>
-            <a class="btn btn--ghost btn--sm" href="Contact.html">Contact</a>
+        <div class="id-card__top">
+          <span class="id-card__file"><i class="fa-solid fa-id-card" aria-hidden="true"></i> carte-de-visite.card</span>
+          <span class="id-card__live"><i class="fa-solid fa-circle" aria-hidden="true"></i> Recherche un stage</span>
+        </div>
+        <div class="id-card__body">
+          <img class="id-card__photo" src="${P.photo}" alt="Portrait de ${esc(P.name)}" width="116" height="116">
+          <div class="id-card__main">
+            <h2 class="id-card__name">${esc(P.name)}</h2>
+            <p class="id-card__role">${esc(P.tagline)}</p>
+            <ul class="id-card__facts">
+              <li><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> BUT2 Informatique · IUT2 Grenoble</li>
+              <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> ${esc(P.location)}</li>
+              <li><i class="fa-solid fa-bullseye" aria-hidden="true"></i> ${esc(P.searching)}</li>
+              <li><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> ${esc(P.availability)}</li>
+            </ul>
           </div>
+        </div>
+        ${tags(stack)}
+        <div class="id-card__actions">
+          <a class="btn btn--sm" href="${P.cv}" download><i class="fa-solid fa-download" aria-hidden="true"></i> Télécharger CV</a>
+          <a class="btn btn--ghost btn--sm" href="Projects.html">Voir les projets</a>
+          <a class="btn btn--ghost btn--sm" href="Contact.html">Contact</a>
           ${socialLinks('')}
         </div>
       </article>

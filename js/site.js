@@ -43,6 +43,7 @@
         b.classList.toggle('is-active', active);
         b.setAttribute('aria-pressed', String(active));
       });
+      grid.querySelectorAll('.proj-group').forEach((g) => { g.hidden = !g.querySelector('.card:not([hidden])'); });
       const noun = `${shown} projet${shown > 1 ? 's' : ''}`;
       if (count) count.textContent = filter === 'all' ? noun : `${labels[filter]} : ${noun}`;
     };

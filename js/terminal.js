@@ -8,7 +8,6 @@
   const screen = document.getElementById('screen');
   const form = document.getElementById('prompt');
   const input = document.getElementById('cmd');
-  const chips = document.getElementById('chips');
   const skipBtn = document.getElementById('skip');
   const PS1 = 'visiteur@portfolio:~$';
 
@@ -112,7 +111,7 @@
     await sleep(300);
     showCard();
     await sleep(500);
-    line('Tapez help pour lister les commandes, ou utilisez les raccourcis en bas.', 'dim');
+    line('Tapez help pour lister les commandes, ou utilisez le menu en haut.', 'dim');
     gap();
   }
 
@@ -284,14 +283,5 @@
       e.preventDefault();
       commands.clear();
     }
-  });
-
-  chips.addEventListener('click', async (e) => {
-    const btn = e.target.closest('[data-cmd]');
-    if (!btn) return;
-    if (booting) skip();
-    await bootDone;
-    run(btn.dataset.cmd);
-    if (window.matchMedia('(pointer: fine)').matches) input.focus({ preventScroll: true });
   });
 })();

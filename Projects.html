@@ -103,8 +103,11 @@
         <button type="button" class="chip chip--btn" data-filter="pentest" data-label="Pentest" aria-pressed="false">Pentest</button>
       </div>
       <p class="muted filters__count" id="filter-count" aria-live="polite"></p>
-      <div class="grid grid--3" id="project-grid">
-        <a class="card" data-comp="realiser collaborer administrer" href="projects/blaiseconnect.html"><div class="card__media"><i class="fa-solid fa-school" aria-hidden="true"></i></div>
+      <div id="project-grid">
+        <section class="proj-group" aria-labelledby="g-equipe">
+          <div class="group__head"><h3 class="group__title" id="g-equipe">Réalisations en équipe</h3><span class="group__note">Applications développées à plusieurs</span></div>
+          <div class="grid grid--3">
+            <a class="card" data-comp="realiser collaborer administrer" href="projects/blaiseconnect.html"><div class="card__media"><i class="fa-solid fa-school" aria-hidden="true"></i></div>
       <div class="card__body">
         <p class="card__kind">Projet d'équipe</p>
         <h3 class="card__title">BlaiseConnect</h3>
@@ -113,7 +116,7 @@
         <ul class="tags"><li>React</li><li>FastAPI</li><li>PostgreSQL</li><li>Docker</li></ul>
         <p class="card__comps"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Réaliser · Collaborer · Administrer</p>
       </div><span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
-        <a class="card" data-comp="realiser collaborer" href="projects/genevent.html"><div class="card__media"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i></div>
+            <a class="card" data-comp="realiser collaborer" href="projects/genevent.html"><div class="card__media"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i></div>
       <div class="card__body">
         <p class="card__kind">Projet universitaire · 2026</p>
         <h3 class="card__title">GenEvent</h3>
@@ -122,61 +125,12 @@
         <ul class="tags"><li>Java</li><li>JavaFX</li><li>Maven</li><li>GitLab</li></ul>
         <p class="card__comps"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Réaliser · Collaborer</p>
       </div><span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
-        <article class="card card--static" data-comp="realiser gerer collaborer"><div class="card__media"><i class="fa-solid fa-hands-holding-circle" aria-hidden="true"></i></div>
-      <div class="card__body">
-        <p class="card__kind is-live">Projet universitaire · en cours · 2026 – 2027</p>
-        <h3 class="card__title">Application client-serveur sécurisée</h3>
-        <p class="card__sub">Plateforme pour les aidants familiaux</p>
-        <p class="card__text">Création en équipe (6 à 7 étudiants) d'une application client-serveur sécurisée s'appuyant sur une base de données : recueil du besoin, modélisation, architecture, développement et tests.</p>
-        <ul class="tags"><li>Client-serveur</li><li>Base de données</li><li>Sécurité</li></ul>
-        <p class="card__comps"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Réaliser · Gérer · Collaborer</p>
-      </div></article>
-        <article class="card card--static" data-comp="administrer"><div class="card__media"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></div>
-      <div class="card__body">
-        <p class="card__kind is-live">Projet universitaire · en cours · 2026 – 2027</p>
-        <h3 class="card__title">Déployer et sécuriser des services dans un réseau</h3>
-        <p class="card__sub">Projet réseau</p>
-        <p class="card__text">Déploiement et sécurisation de services dans un réseau.</p>
-        <ul class="tags"><li>Réseau</li><li>Sécurité</li><li>Déploiement</li></ul>
-        <p class="card__comps"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Administrer</p>
-      </div></article>
-        <a class="card" data-comp="realiser optimiser" href="SAE3.html"><div class="card__media"><i class="fa-solid fa-robot" aria-hidden="true"></i></div>
-      <div class="card__body">
-        <p class="card__kind">Projet universitaire · 2025 – 2026</p>
-        <h3 class="card__title">Chatbot de culture générale</h3>
-        <p class="card__sub">Java · indexation et thésaurus</p>
-        <p class="card__text">Un chatbot capable de répondre à des questions de culture générale grâce à une recherche en entonnoir : thème d'abord, forme de la question ensuite.</p>
-        <ul class="tags"><li>Java</li><li>Indexation</li><li>Thésaurus</li><li>Algorithmes</li></ul>
-        <p class="card__comps"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Réaliser · Optimiser</p>
-      </div><span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
-        <a class="card" data-comp="gerer" href="SAE2.html"><div class="card__media"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
-      <div class="card__body">
-        <p class="card__kind">Projet universitaire · 2025 – 2026</p>
-        <h3 class="card__title">Base de données Le Tourmentin</h3>
-        <p class="card__sub">SQL · modélisation et implémentation</p>
-        <p class="card__text">Conception et implémentation de la base de données d'une association maritime : adhérents, bateaux, activités, équipages et cotisations.</p>
-        <ul class="tags"><li>PostgreSQL</li><li>MySQL</li><li>SQL</li><li>Modélisation</li></ul>
-        <p class="card__comps"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Gérer</p>
-      </div><span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
-        <a class="card" data-comp="collaborer realiser" href="SAE4.html"><div class="card__media"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></div>
-      <div class="card__body">
-        <p class="card__kind">Projet universitaire · 2025 – 2026</p>
-        <h3 class="card__title">Site web institutionnel HARDIS GROUPE</h3>
-        <p class="card__sub">HTML et CSS · site pour la génération Alpha</p>
-        <p class="card__text">Un site institutionnel complémentaire pour une ESN, pensé pour présenter l'entreprise à des élèves de 3ème en recherche de stage, loin du jargon technique.</p>
-        <ul class="tags"><li>HTML5</li><li>CSS3</li><li>Responsive</li><li>Whimsical</li></ul>
-        <p class="card__comps"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Collaborer · Réaliser</p>
-      </div><span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
-        <a class="card" data-comp="administrer" href="SAE1.html"><div class="card__media"><i class="fa-linux fa-brands" aria-hidden="true"></i></div>
-      <div class="card__body">
-        <p class="card__kind">Projet universitaire · Novembre 2025</p>
-        <h3 class="card__title">Installation Debian 13 et IntelliJ IDEA</h3>
-        <p class="card__sub">Linux · environnement de développement</p>
-        <p class="card__text">Installer et valider un environnement de développement complet sur Debian 13, avec IntelliJ IDEA installé de trois façons : archive, snap et flatpak.</p>
-        <ul class="tags"><li>Debian 13</li><li>KDE Plasma</li><li>JDK</li><li>Git</li><li>Snap</li><li>Flatpak</li></ul>
-        <p class="card__comps"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Administrer</p>
-      </div><span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
-        <a class="card" data-comp="tester pentest" href="Pentest/metasploit.html"><div class="card__media"><img class="card__logo" src="Img/metasploit.svg" alt="" loading="lazy"></div>
+          </div>
+        </section>
+        <section class="proj-group" aria-labelledby="g-securite">
+          <div class="group__head"><h3 class="group__title" id="g-securite">Cybersécurité</h3><span class="group__note">Labs et entraînement en environnement autorisé</span></div>
+          <div class="grid grid--3">
+            <a class="card" data-comp="tester pentest" href="Pentest/metasploit.html"><div class="card__media"><img class="card__logo" src="Img/metasploit.svg" alt="" loading="lazy"></div>
       <div class="card__body">
         <p class="card__kind">Lab pentest · 2024</p>
         <h3 class="card__title">Tests avec Metasploit</h3>
@@ -185,7 +139,7 @@
         <ul class="tags"><li>Metasploit</li><li>Metasploitable</li><li>Validation de vulnérabilité</li></ul>
         <p class="card__comps"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Tester</p>
       </div><span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
-        <a class="card" data-comp="tester pentest" href="Pentest/ghidra.html"><div class="card__media"><img class="card__logo" src="Img/ghidra.png" alt="" loading="lazy"></div>
+            <a class="card" data-comp="tester pentest" href="Pentest/ghidra.html"><div class="card__media"><img class="card__logo" src="Img/ghidra.png" alt="" loading="lazy"></div>
       <div class="card__body">
         <p class="card__kind">Lab pentest</p>
         <h3 class="card__title">Reverse engineering</h3>
@@ -194,7 +148,7 @@
         <ul class="tags"><li>Ghidra</li><li>Analyse statique</li><li>Désassemblage</li></ul>
         <p class="card__comps"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Tester</p>
       </div><span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
-        <a class="card" data-comp="tester pentest" href="Pentest/root-me.html"><div class="card__media"><img class="card__logo" src="Img/rootme.svg" alt="" loading="lazy"></div>
+            <a class="card" data-comp="tester pentest" href="Pentest/root-me.html"><div class="card__media"><img class="card__logo" src="Img/rootme.svg" alt="" loading="lazy"></div>
       <div class="card__body">
         <p class="card__kind">Entraînement</p>
         <h3 class="card__title">Challenges Root-Me</h3>
@@ -203,6 +157,72 @@
         <ul class="tags"><li>Root-Me</li><li>Web</li><li>Réseau</li><li>Analyse de fichiers</li></ul>
         <p class="card__comps"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Tester</p>
       </div><span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+          </div>
+        </section>
+        <section class="proj-group" aria-labelledby="g-encours">
+          <div class="group__head"><h3 class="group__title" id="g-encours">En cours</h3><span class="group__note">2026 – 2027</span></div>
+          <div class="grid grid--3">
+            <article class="card card--static" data-comp="realiser gerer collaborer"><div class="card__media"><i class="fa-solid fa-hands-holding-circle" aria-hidden="true"></i></div>
+      <div class="card__body">
+        <p class="card__kind is-live">Projet universitaire · en cours · 2026 – 2027</p>
+        <h3 class="card__title">Application client-serveur sécurisée</h3>
+        <p class="card__sub">Plateforme pour les aidants familiaux</p>
+        <p class="card__text">Création en équipe (6 à 7 étudiants) d'une application client-serveur sécurisée s'appuyant sur une base de données : recueil du besoin, modélisation, architecture, développement et tests.</p>
+        <ul class="tags"><li>Client-serveur</li><li>Base de données</li><li>Sécurité</li></ul>
+        <p class="card__comps"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Réaliser · Gérer · Collaborer</p>
+      </div></article>
+            <article class="card card--static" data-comp="administrer"><div class="card__media"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></div>
+      <div class="card__body">
+        <p class="card__kind is-live">Projet universitaire · en cours · 2026 – 2027</p>
+        <h3 class="card__title">Déployer et sécuriser des services dans un réseau</h3>
+        <p class="card__sub">Projet réseau</p>
+        <p class="card__text">Déploiement et sécurisation de services dans un réseau.</p>
+        <ul class="tags"><li>Réseau</li><li>Sécurité</li><li>Déploiement</li></ul>
+        <p class="card__comps"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Administrer</p>
+      </div></article>
+          </div>
+        </section>
+        <section class="proj-group" aria-labelledby="g-but1">
+          <div class="group__head"><h3 class="group__title" id="g-but1">Projets universitaires de BUT1</h3><span class="group__note">2025 – 2026</span></div>
+          <div class="grid grid--3">
+            <a class="card" data-comp="realiser optimiser" href="SAE3.html"><div class="card__media"><i class="fa-solid fa-robot" aria-hidden="true"></i></div>
+      <div class="card__body">
+        <p class="card__kind">Projet universitaire · 2025 – 2026</p>
+        <h3 class="card__title">Chatbot de culture générale</h3>
+        <p class="card__sub">Java · indexation et thésaurus</p>
+        <p class="card__text">Un chatbot capable de répondre à des questions de culture générale grâce à une recherche en entonnoir : thème d'abord, forme de la question ensuite.</p>
+        <ul class="tags"><li>Java</li><li>Indexation</li><li>Thésaurus</li><li>Algorithmes</li></ul>
+        <p class="card__comps"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Réaliser · Optimiser</p>
+      </div><span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+            <a class="card" data-comp="gerer" href="SAE2.html"><div class="card__media"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+      <div class="card__body">
+        <p class="card__kind">Projet universitaire · 2025 – 2026</p>
+        <h3 class="card__title">Base de données Le Tourmentin</h3>
+        <p class="card__sub">SQL · modélisation et implémentation</p>
+        <p class="card__text">Conception et implémentation de la base de données d'une association maritime : adhérents, bateaux, activités, équipages et cotisations.</p>
+        <ul class="tags"><li>PostgreSQL</li><li>MySQL</li><li>SQL</li><li>Modélisation</li></ul>
+        <p class="card__comps"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Gérer</p>
+      </div><span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+            <a class="card" data-comp="collaborer realiser" href="SAE4.html"><div class="card__media"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></div>
+      <div class="card__body">
+        <p class="card__kind">Projet universitaire · 2025 – 2026</p>
+        <h3 class="card__title">Site web institutionnel HARDIS GROUPE</h3>
+        <p class="card__sub">HTML et CSS · site pour la génération Alpha</p>
+        <p class="card__text">Un site institutionnel complémentaire pour une ESN, pensé pour présenter l'entreprise à des élèves de 3ème en recherche de stage, loin du jargon technique.</p>
+        <ul class="tags"><li>HTML5</li><li>CSS3</li><li>Responsive</li><li>Whimsical</li></ul>
+        <p class="card__comps"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Collaborer · Réaliser</p>
+      </div><span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+            <a class="card" data-comp="administrer" href="SAE1.html"><div class="card__media"><i class="fa-linux fa-brands" aria-hidden="true"></i></div>
+      <div class="card__body">
+        <p class="card__kind">Projet universitaire · Novembre 2025</p>
+        <h3 class="card__title">Installation Debian 13 et IntelliJ IDEA</h3>
+        <p class="card__sub">Linux · environnement de développement</p>
+        <p class="card__text">Installer et valider un environnement de développement complet sur Debian 13, avec IntelliJ IDEA installé de trois façons : archive, snap et flatpak.</p>
+        <ul class="tags"><li>Debian 13</li><li>KDE Plasma</li><li>JDK</li><li>Git</li></ul>
+        <p class="card__comps"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Administrer</p>
+      </div><span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+          </div>
+        </section>
       </div>
     </section>
   </main>

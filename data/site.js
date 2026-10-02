@@ -134,11 +134,19 @@ const timeline = [
   },
 ];
 
+// Groupes d'affichage de la page Projets (dans cet ordre).
+const groups = [
+  { id: `equipe`, title: `Réalisations en équipe`, note: `Applications développées à plusieurs` },
+  { id: `securite`, title: `Cybersécurité`, note: `Labs et entraînement en environnement autorisé` },
+  { id: `encours`, title: `En cours`, note: `2026 – 2027` },
+  { id: `but1`, title: `Projets universitaires de BUT1`, note: `2025 – 2026` },
+];
+
 // Projets. `competences` pilote les pages de compétences et le filtre de Projects.html.
 // `page` = page de détail (facultatif). `section` : steps | cards | list | table.
 const projects = [
   {
-    id: `blaiseconnect`, page: `projects/blaiseconnect.html`,
+    id: `blaiseconnect`, group: `equipe`, page: `projects/blaiseconnect.html`,
     title: `BlaiseConnect`, subtitle: `Plateforme web de gestion scolaire`,
     kind: `Projet d'équipe`, period: ``, icon: `fa-school`,
     competences: [`realiser`, `collaborer`, `administrer`],
@@ -174,7 +182,7 @@ const projects = [
     ],
   },
   {
-    id: `genevent`, page: `projects/genevent.html`,
+    id: `genevent`, group: `equipe`, page: `projects/genevent.html`,
     title: `GenEvent`, subtitle: `Application de gestion d'évènements`,
     kind: `Projet universitaire`, period: `2026`, icon: `fa-calendar-check`,
     competences: [`realiser`, `collaborer`],
@@ -206,7 +214,7 @@ const projects = [
     ],
   },
   {
-    id: `aidants`,
+    id: `aidants`, group: `encours`,
     title: `Application client-serveur sécurisée`, subtitle: `Plateforme pour les aidants familiaux`,
     kind: `Projet universitaire · en cours`, period: `2026 – 2027`, icon: `fa-hands-holding-circle`,
     competences: [`realiser`, `gerer`, `collaborer`],
@@ -214,7 +222,7 @@ const projects = [
     summary: `Création en équipe (6 à 7 étudiants) d'une application client-serveur sécurisée s'appuyant sur une base de données : recueil du besoin, modélisation, architecture, développement et tests.`,
   },
   {
-    id: `reseau`,
+    id: `reseau`, group: `encours`,
     title: `Déployer et sécuriser des services dans un réseau`, subtitle: `Projet réseau`,
     kind: `Projet universitaire · en cours`, period: `2026 – 2027`, icon: `fa-network-wired`,
     competences: [`administrer`],
@@ -222,7 +230,7 @@ const projects = [
     summary: `Déploiement et sécurisation de services dans un réseau.`,
   },
   {
-    id: `chatbot`, page: `SAE3.html`,
+    id: `chatbot`, group: `but1`, page: `SAE3.html`,
     title: `Chatbot de culture générale`, subtitle: `Java · indexation et thésaurus`,
     kind: `Projet universitaire`, period: `2025 – 2026`, icon: `fa-robot`,
     competences: [`realiser`, `optimiser`],
@@ -246,7 +254,7 @@ const projects = [
     ],
   },
   {
-    id: `tourmentin`, page: `SAE2.html`,
+    id: `tourmentin`, group: `but1`, page: `SAE2.html`,
     title: `Base de données Le Tourmentin`, subtitle: `SQL · modélisation et implémentation`,
     kind: `Projet universitaire`, period: `2025 – 2026`, icon: `fa-database`,
     competences: [`gerer`],
@@ -269,7 +277,7 @@ const projects = [
     ],
   },
   {
-    id: `hardis`, page: `SAE4.html`,
+    id: `hardis`, group: `but1`, page: `SAE4.html`,
     title: `Site web institutionnel HARDIS GROUPE`, subtitle: `HTML et CSS · site pour la génération Alpha`,
     kind: `Projet universitaire`, period: `2025 – 2026`, icon: `fa-laptop-code`,
     competences: [`collaborer`, `realiser`],
@@ -300,7 +308,7 @@ const projects = [
     ],
   },
   {
-    id: `debian`, page: `SAE1.html`,
+    id: `debian`, group: `but1`, page: `SAE1.html`,
     title: `Installation Debian 13 et IntelliJ IDEA`, subtitle: `Linux · environnement de développement`,
     kind: `Projet universitaire`, period: `Novembre 2025`, icon: `fa-linux fa-brands`,
     competences: [`administrer`],
@@ -343,7 +351,7 @@ const projects = [
     ],
   },
   {
-    id: `metasploit`, page: `Pentest/metasploit.html`,
+    id: `metasploit`, group: `securite`, page: `Pentest/metasploit.html`,
     title: `Tests avec Metasploit`, subtitle: `Pentest en environnement isolé`,
     kind: `Lab pentest`, period: `2024`, icon: ``, logo: `Img/metasploit.svg`,
     competences: [`tester`], tags: [`pentest`],
@@ -373,7 +381,7 @@ const projects = [
     ],
   },
   {
-    id: `ghidra`, page: `Pentest/ghidra.html`,
+    id: `ghidra`, group: `securite`, page: `Pentest/ghidra.html`,
     title: `Reverse engineering`, subtitle: `Analyse de programmes avec Ghidra`,
     kind: `Lab pentest`, period: ``, icon: ``, logo: `Img/ghidra.png`,
     competences: [`tester`], tags: [`pentest`],
@@ -394,7 +402,7 @@ const projects = [
     ],
   },
   {
-    id: `rootme`, page: `Pentest/root-me.html`,
+    id: `rootme`, group: `securite`, page: `Pentest/root-me.html`,
     title: `Challenges Root-Me`, subtitle: `Entraînement pratique en cybersécurité`,
     kind: `Entraînement`, period: ``, icon: ``, logo: `Img/rootme.svg`,
     competences: [`tester`], tags: [`pentest`],
@@ -458,4 +466,4 @@ const pentest = {
   ],
 };
 
-module.exports = { profile, nav, competences, skillGroups, experiences, timeline, projects, pentest };
+module.exports = { profile, nav, competences, skillGroups, experiences, timeline, groups, projects, pentest };
