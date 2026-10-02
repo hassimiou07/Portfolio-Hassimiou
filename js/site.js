@@ -1,4 +1,4 @@
-// Comportements communs : menu mobile, filtre des projets, formulaire de contact.
+// Comportements communs : menu mobile, filtre compétences/projets, formulaire de contact.
 (() => {
   'use strict';
 
@@ -24,8 +24,14 @@
     const buttons = Array.from(document.querySelectorAll('[data-filter]'));
     const cards = Array.from(grid.querySelectorAll('.card'));
     const count = document.getElementById('filter-count');
+    const anchor = document.getElementById('projets');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const labels = {};
+    buttons.forEach((b) => { labels[b.dataset.filter] = b.dataset.label || b.textContent.trim(); });
+    let current = 'all';
 
     const apply = (filter) => {
+      current = filter;
       let shown = 0;
       cards.forEach((card) => {
         const match = filter === 'all' || (card.dataset.comp || '').split(' ').includes(filter);
@@ -37,16 +43,25 @@
         b.classList.toggle('is-active', active);
         b.setAttribute('aria-pressed', String(active));
       });
-      if (count) count.textContent = `${shown} projet${shown > 1 ? 's' : ''}`;
+      const noun = `${shown} projet${shown > 1 ? 's' : ''}`;
+      if (count) count.textContent = filter === 'all' ? noun : `${labels[filter]} : ${noun}`;
     };
 
     buttons.forEach((b) => b.addEventListener('click', () => {
-      apply(b.dataset.filter);
-      history.replaceState(null, '', b.dataset.filter === 'all' ? location.pathname : `#${b.dataset.filter}`);
+      const wanted = b.dataset.filter;
+      const next = wanted === current && wanted !== 'all' ? 'all' : wanted;
+      apply(next);
+      history.replaceState(null, '', next === 'all' ? location.pathname : `#${next}`);
+      if (b.classList.contains('card--filter') && next !== 'all' && anchor) {
+        anchor.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      }
     }));
 
     const initial = location.hash.slice(1);
     apply(buttons.some((b) => b.dataset.filter === initial) ? initial : 'all');
+    if (initial && initial !== 'projets' && current !== 'all' && anchor) {
+      window.addEventListener('load', () => anchor.scrollIntoView({ behavior: 'auto', block: 'start' }));
+    }
   }
 
   const form = document.getElementById('contact-form');

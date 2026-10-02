@@ -118,7 +118,7 @@
 
   /* ---------- Commandes ---------- */
   const PAGES = {
-    about: 'About.html', skills: 'Skills.html', competences: 'Skills.html', projects: 'Projects.html',
+    about: 'About.html', skills: 'Projects.html', competences: 'Projects.html', projects: 'Projects.html',
     projets: 'Projects.html', pentest: 'Pentest.html', contact: 'Contact.html', cv: 'CV.html', accueil: 'index.html',
   };
   const history = [];
@@ -128,8 +128,8 @@
     help() {
       kv([
         ['about', 'qui je suis'],
-        ['skills', 'mes compétences et technologies'],
-        ['projects', 'la liste de mes projets'],
+        ['skills', 'mes technologies'],
+        ['projects', 'mes compétences et mes projets'],
         ['pentest', 'ma section pentest éthique'],
         ['contact', 'me joindre'],
         ['cv', 'télécharger mon CV (PDF)'],
@@ -152,7 +152,7 @@
     skills() {
       data.skillGroups.forEach((g) => kv([[g.title, g.items.join(', ')]]));
       gap();
-      line(link('Skills.html', 'Voir les compétences du BUT et leurs projets'));
+      line(link('Projects.html', 'Voir les compétences du BUT et leurs projets'));
     },
     projects() {
       const list = el('div', { class: 'plist' });
@@ -162,7 +162,7 @@
       });
       out.appendChild(list);
       gap();
-      line(link('Projects.html', 'Voir tous les projets, avec filtres'));
+      line(link('Projects.html', 'Voir les compétences et tous les projets'));
     },
     pentest() {
       line("Objectif : devenir pentester éthique. Labs en environnement isolé et autorisé.");
@@ -192,7 +192,7 @@
     },
     ls() {
       const list = el('div', { class: 'plist' });
-      [['about', 'About.html'], ['skills', 'Skills.html'], ['projects', 'Projects.html'], ['pentest', 'Pentest.html'], ['contact', 'Contact.html']].forEach(([n, h]) => list.append(el('div', {}, link(h, `${n}/`))));
+      [['about', 'About.html'], ['projects', 'Projects.html'], ['pentest', 'Pentest.html'], ['contact', 'Contact.html']].forEach(([n, h]) => list.append(el('div', {}, link(h, `${n}/`))));
       list.append(el('div', {}, link(P.cv, 'cv.pdf')));
       out.appendChild(list);
     },

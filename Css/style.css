@@ -163,8 +163,21 @@ a.card:hover { transform: translateY(-3px); border-color: var(--green); box-shad
 .card__count { font-family: var(--mono); font-size: 0.8rem; color: var(--green); margin: 12px 0 0; }
 .card__more { padding: 0 20px 18px; font-family: var(--mono); font-size: 0.84rem; color: var(--green); }
 .card--static .card__body { padding-bottom: 20px; }
-.card--skill .card__media, .card--link .card__media { height: 96px; }
+.card--skill .card__media, .card--link .card__media { height: 84px; }
 .card[hidden] { display: none; }
+.card__comps { font-family: var(--mono); font-size: 0.76rem; color: var(--muted); margin: 14px 0 0; }
+.card__comps i { color: var(--green); margin-right: 6px; }
+
+/* Cartes de compétences : boutons de filtre */
+.card--filter { width: 100%; text-align: left; font: inherit; color: var(--text); cursor: pointer; padding: 0; }
+.card--filter > span, .card--filter .card__body > span { display: block; }
+.card--filter .card__media { display: grid; }
+.card--filter .card__title { font-family: var(--mono); font-weight: 700; font-size: 1.08rem; margin-bottom: 6px; }
+.card--filter .card__text { margin-bottom: 0; }
+.card--filter:hover { transform: translateY(-3px); border-color: var(--green); box-shadow: var(--shadow); }
+.card--filter.is-active { border-color: var(--green); box-shadow: 0 0 0 3px var(--green-dim), var(--shadow); }
+.card--filter.is-active .card__media { background: linear-gradient(135deg, rgba(61, 220, 151, 0.22), rgba(92, 200, 255, 0.12)); }
+#projets { scroll-margin-top: calc(var(--topbar-h) + 14px); }
 
 .tile {
   background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px;

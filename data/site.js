@@ -41,13 +41,12 @@ const profile = {
 const nav = [
   { label: `Accueil`, href: `index.html`, id: `home` },
   { label: `À propos`, href: `About.html`, id: `about` },
-  { label: `Compétences`, href: `Skills.html`, id: `skills` },
   { label: `Projets`, href: `Projects.html`, id: `projects` },
   { label: `Pentest`, href: `Pentest.html`, id: `pentest` },
   { label: `Contact`, href: `Contact.html`, id: `contact` },
 ];
 
-// Référentiel BUT : une page par compétence, qui liste automatiquement les projets associés.
+// Référentiel BUT : ces compétences servent de filtres sur Projects.html (`file` = ancienne adresse, redirigée).
 const competences = [
   {
     id: `tester`, title: `Tester`, icon: `fa-user-secret`, file: `Skills/Pentest.html`,

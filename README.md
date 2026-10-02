@@ -34,13 +34,15 @@ Les pages HTML sont **générées** à partir d'un fichier de données, pour que
    puis ouvrir http://localhost:8765
 4. Publier : `git add -A`, `git commit`, `git push`. GitHub Pages met le site à jour en une ou deux minutes.
 
-Les fichiers `.html` à la racine et dans `Skills/`, `projects/` et `Pentest/` sont écrasés à chaque génération : ne pas les modifier à la main.
+Les fichiers `.html` à la racine et dans `projects/`, `Pentest/` et `Skills/` sont écrasés à chaque génération : ne pas les modifier à la main.
+
+Les compétences et les projets sont réunis sur `Projects.html`. Les anciennes pages `Skills.html` et `Skills/*.html` ne sont plus que des redirections vers cette page, pour ne casser aucun ancien lien.
 
 ## Ajouter un projet
 
 Ajouter un objet dans la liste `projects` de `data/site.js` :
 
-- `competences` : les compétences du BUT travaillées (`tester`, `administrer`, `realiser`, `optimiser`, `gerer`, `collaborer`). Le projet apparaît automatiquement sur ces pages.
+- `competences` : les compétences du BUT travaillées (`tester`, `administrer`, `realiser`, `optimiser`, `gerer`, `collaborer`). Le projet apparaît automatiquement dans le filtre de chacune de ces compétences sur `Projects.html`.
 - `tags: ['pentest']` : le projet apparaît aussi dans la section Pentest.
 - `page` : chemin de la page de détail (facultatif). Sans `page`, le projet s'affiche en simple carte.
 - `sections` : blocs de la page de détail (`cards`, `list`, `steps` avec images, `table`).

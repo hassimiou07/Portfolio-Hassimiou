@@ -127,6 +127,7 @@ function projectCard(p, root) {
         <p class="card__sub">${esc(p.subtitle)}</p>
         <p class="card__text">${esc(p.summary)}</p>
         ${tags(p.stack)}
+        <p class="card__comps"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> ${p.competences.map((id) => esc(compById[id].title)).join(' · ')}</p>
       </div>`;
   return p.page
     ? `<a class="card" data-comp="${comp}" href="${root}${p.page}">${inner}<span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>`
@@ -177,7 +178,7 @@ function detailPage(p) {
     .map((l) => `<a class="btn btn--ghost btn--sm" href="${l.href}" target="_blank" rel="noopener"><i class="${l.icon}" aria-hidden="true"></i> ${esc(l.label)}</a>`)
     .join('');
   const compChips = p.competences
-    .map((id) => `<a class="chip" href="${root}${compById[id].file}"><i class="${fa(compById[id].icon)}" aria-hidden="true"></i> ${esc(compById[id].title)}</a>`)
+    .map((id) => `<a class="chip" href="${root}Projects.html#${id}"><i class="${fa(compById[id].icon)}" aria-hidden="true"></i> ${esc(compById[id].title)}</a>`)
     .join('');
   const body = `${crumbs(root, trail)}
     <article class="container detail">
@@ -215,19 +216,35 @@ function detailPage(p) {
 }
 
 function projectsPage() {
-  const filters = [
-    ['all', 'Tous'],
-    ['pentest', 'Pentest'],
-    ...D.competences.map((c) => [c.id, c.title]),
-  ];
+  const compCards = D.competences
+    .map((c) => {
+      const n = D.projects.filter((p) => p.competences.includes(c.id)).length;
+      return `<button type="button" class="card card--skill card--filter" data-filter="${c.id}" data-label="${esc(c.title)}" aria-pressed="false">
+        <span class="card__media"><i class="${fa(c.icon)}" aria-hidden="true"></i></span>
+        <span class="card__body">
+          <span class="card__title">${esc(c.title)}</span>
+          <span class="card__text">${esc(c.summary)}</span>
+          <span class="card__count">${n} projet${n > 1 ? 's' : ''}</span>
+        </span>
+      </button>`;
+    })
+    .join('\n        ');
   const body = `${pageHead({
-    prompt: 'ls ./projets',
-    title: 'Projets',
-    lead: 'Projets universitaires, projets d\'équipe et labs de sécurité. Filtrez par compétence ou ouvrez un projet pour le détail.',
+    prompt: 'ls ./competences ./projets',
+    title: 'Compétences et projets',
+    lead: 'Les six compétences du BUT Informatique, chacune démontrée par des projets. Choisissez une compétence pour filtrer les projets, ou ouvrez un projet pour le détail.',
   })}
-    <section class="container">
-      <div class="filters" role="group" aria-label="Filtrer par compétence">
-        ${filters.map(([id, label], i) => `<button type="button" class="chip chip--btn${i === 0 ? ' is-active' : ''}" data-filter="${id}" aria-pressed="${i === 0}">${esc(label)}</button>`).join('\n        ')}
+    <section class="container block">
+      <h2 id="competences-title">Les six compétences du BUT</h2>
+      <div class="grid grid--3" role="group" aria-labelledby="competences-title">
+        ${compCards}
+      </div>
+    </section>
+    <section class="container block" id="projets">
+      <h2>Projets</h2>
+      <div class="filters" role="group" aria-label="Autres filtres">
+        <button type="button" class="chip chip--btn is-active" data-filter="all" data-label="Tous les projets" aria-pressed="true">Tous les projets</button>
+        <button type="button" class="chip chip--btn" data-filter="pentest" data-label="Pentest" aria-pressed="false">Pentest</button>
       </div>
       <p class="muted filters__count" id="filter-count" aria-live="polite"></p>
       <div class="grid grid--3" id="project-grid">
@@ -235,62 +252,28 @@ function projectsPage() {
       </div>
     </section>`;
   write('Projects.html', layout({
-    rel: 'Projects.html', title: 'Projets', active: 'projects', body,
-    description: 'Projets de Hassimiou BARRY : BlaiseConnect, GenEvent, projets universitaires et labs de pentest.',
+    rel: 'Projects.html', title: 'Compétences et projets', active: 'projects', body,
+    description: 'Les six compétences du BUT Informatique de Hassimiou BARRY et les projets qui les démontrent : BlaiseConnect, GenEvent, projets universitaires et labs de pentest.',
   }));
 }
 
-/* ---------- Compétences ---------- */
+/* ---------- Anciennes adresses (compétences) : redirections vers Projects.html ---------- */
 
-function skillsPage() {
-  const cards = D.competences
-    .map((c) => {
-      const n = D.projects.filter((p) => p.competences.includes(c.id)).length;
-      return `<a class="card card--skill" href="${c.file}">
-        <div class="card__media"><i class="${fa(c.icon)}" aria-hidden="true"></i></div>
-        <div class="card__body">
-          <h3 class="card__title">${esc(c.title)}</h3>
-          <p class="card__text">${esc(c.summary)}</p>
-          <p class="card__count">${n} projet${n > 1 ? 's' : ''}</p>
-        </div>
-        <span class="card__more">Voir les projets <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
-      </a>`;
-    })
-    .join('\n      ');
-  const body = `${pageHead({
-    prompt: 'ls ./competences',
-    title: 'Compétences',
-    lead: 'Les six compétences du BUT Informatique. Ouvrez-en une pour voir les projets qui la démontrent.',
-  })}
-    <section class="container">
-      <div class="grid grid--3">
-      ${cards}
-      </div>
+function redirectPage(rel, target) {
+  const url = `${depthRoot(rel)}${target}`;
+  const body = `    <section class="container page-head">
+      <p class="prompt"><span class="prompt__ps">$</span> cd ${esc(rel.replace(/\.html$/, ''))}</p>
+      <h1>Page déplacée</h1>
+      <p class="lead">Les compétences et les projets sont maintenant réunis sur une seule page.</p>
+      <p><a class="btn" href="${url}">Voir compétences et projets</a></p>
     </section>`;
-  write('Skills.html', layout({
-    rel: 'Skills.html', title: 'Compétences', active: 'skills', body,
-    description: 'Les six compétences du BUT Informatique de Hassimiou BARRY et les projets qui les démontrent.',
-  }));
+  const html = layout({ rel, title: 'Page déplacée', body, description: 'Cette page a été déplacée vers Compétences et projets.' });
+  write(rel, html.replace('</title>', `</title>\n  <meta http-equiv="refresh" content="0; url=${url}">\n  <meta name="robots" content="noindex">`));
+}
 
-  D.competences.forEach((c) => {
-    const root = depthRoot(c.file);
-    const list = D.projects.filter((p) => p.competences.includes(c.id));
-    const extra = c.id === 'tester'
-      ? `<p class="callout"><i class="fa-solid fa-user-secret" aria-hidden="true"></i> Cette compétence est le cœur de mon projet : devenir pentester éthique. <a href="${root}Pentest.html">Voir la section Pentest</a> pour la méthodologie, les outils et les labs.</p>`
-      : '';
-    const body2 = `${crumbs(root, [['Compétences', 'Skills.html'], [c.title]])}
-    ${pageHead({ prompt: `cd ./competences/${c.id}`, title: c.title, lead: c.summary })}
-    <section class="container">
-      ${extra}
-      <div class="grid grid--3">
-        ${list.map((p) => projectCard(p, root)).join('\n        ')}
-      </div>
-    </section>`;
-    write(c.file, layout({
-      rel: c.file, title: c.title, active: 'skills', body: body2,
-      description: `${c.summary} Projets de Hassimiou BARRY pour la compétence « ${c.title} ».`,
-    }));
-  });
+function redirects() {
+  redirectPage('Skills.html', 'Projects.html');
+  D.competences.forEach((c) => redirectPage(c.file, `Projects.html#${c.id}`));
 }
 
 /* ---------- Pentest ---------- */
@@ -305,6 +288,7 @@ function pentestPages() {
     </section>
     <section class="container block">
       <h2>Mes labs</h2>
+      <p class="callout"><i class="fa-solid fa-user-secret" aria-hidden="true"></i> Ces labs démontrent la compétence « Tester » du BUT. <a href="Projects.html#tester">Voir cette compétence avec tous ses projets</a>.</p>
       <div class="grid grid--3">
         ${labs.map((p) => projectCard(p, '')).join('\n        ')}
       </div>
@@ -544,7 +528,7 @@ function homePage() {
         </form>
       </div>
       <div class="terminal__chips" id="chips" aria-label="Raccourcis de commandes">
-        ${['help', 'about', 'skills', 'projects', 'pentest', 'contact', 'cv'].map((c) => `<button type="button" class="chip chip--btn" data-cmd="${c}">${c}</button>`).join('\n        ')}
+        ${['help', 'about', 'projects', 'pentest', 'contact', 'cv'].map((c) => `<button type="button" class="chip chip--btn" data-cmd="${c}">${c}</button>`).join('\n        ')}
       </div>
     </section>
     <noscript>
@@ -593,7 +577,7 @@ function notFoundPage() {
 
 homePage();
 aboutPage();
-skillsPage();
+redirects();
 projectsPage();
 pentestPages();
 contactPage();
