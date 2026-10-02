@@ -1,451 +1,92 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Hassimiou BARRY</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #fff;
-        }
-        
-        .container {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 40px;
-            background: #fff;
-        }
-        
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            border-bottom: 3px solid #00a86b;
-            padding-bottom: 20px;
-        }
-        
-        .header-photo {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            margin: 0 auto 15px;
-            border: 3px solid #00a86b;
-            display: block;
-            object-fit: cover;
-        }
-        
-        h1 {
-            font-size: 32px;
-            margin-bottom: 5px;
-            color: #000;
-        }
-        
-        .subtitle {
-            font-size: 18px;
-            color: #00a86b;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            font-size: 13px;
-        }
-        
-        .contact-info span {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        a {
-            color: #00a86b;
-            text-decoration: none;
-        }
-        
-        section {
-            margin-bottom: 35px;
-        }
-        
-        h2 {
-            font-size: 16px;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #00a86b;
-            color: #000;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-        
-        h3 {
-            font-size: 14px;
-            font-weight: 700;
-            margin-bottom: 3px;
-            color: #000;
-        }
-        
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 8px;
-        }
-        
-        .company {
-            font-weight: 600;
-            color: #00a86b;
-            font-size: 13px;
-        }
-        
-        .duration {
-            font-size: 12px;
-            color: #666;
-            font-style: italic;
-        }
-        
-        .description {
-            font-size: 13px;
-            color: #555;
-            margin-bottom: 5px;
-        }
-        
-        ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-            font-size: 13px;
-            color: #555;
-        }
-        
-        li {
-            margin-bottom: 5px;
-            list-style-type: disc;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-        
-        .skill-item {
-            background: #89d890;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 12px;
-            font-weight: 600;
-            text-align: center;
-            border: 2px solid #00a86b;
-        }
-        
-        .education-item {
-            margin-bottom: 18px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .education-item:last-child {
-            border-bottom: none;
-        }
-        
-        .tags {
-            display: flex;
-            gap: 8px;
-            margin-top: 10px;
-        }
-        
-        .tag {
-            background: #e8f5e9;
-            color: #00a86b;
-            padding: 4px 10px;
-            border-radius: 15px;
-            font-size: 11px;
-            font-weight: 600;
-            border: 3px solid #00a86b;
-        }
-        
-        .certification-link {
-            display: inline-block;
-            margin-top: 8px;
-            padding: 8px 15px;
-            background: #00a86b;
-            color: white;
-            border-radius: 5px;
-            font-size: 12px;
-            font-weight: 600;
-        }
-        
-        .certification-link:hover {
-            background: #008a5b;
-        }
-
-        .back-button {
-            display: inline-block;
-            margin-bottom: 30px;
-            padding: 12px 25px;
-            background: #00a86b;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            border: 2px solid #00a86b;
-        }
-
-        .back-button:hover {
-            background: #008a5b;
-            transform: translateX(-5px);
-        }
-        
-        @media print {
-            body {
-                padding: 0;
-                margin: 0;
-            }
-            
-            .container {
-                max-width: 100%;
-                padding: 20px;
-            }
-            
-            a {
-                color: #00a86b;
-            }
-            
-            section {
-                page-break-inside: avoid;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV · Hassimiou BARRY</title>
+  <meta name="description" content="CV de Hassimiou BARRY, étudiant en BUT2 Informatique, en recherche de stage DevSecOps pour avril 2027.">
+  <meta name="theme-color" content="#070b10">
+  <link rel="canonical" href="https://hassimiou07.github.io/Portfolio-Hassimiou/CV.html">
+  <link rel="icon" href="Img/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CV · Hassimiou BARRY">
+  <meta property="og:description" content="CV de Hassimiou BARRY, étudiant en BUT2 Informatique, en recherche de stage DevSecOps pour avril 2027.">
+  <meta property="og:url" content="https://hassimiou07.github.io/Portfolio-Hassimiou/CV.html">
+  <meta property="og:image" content="https://hassimiou07.github.io/Portfolio-Hassimiou/Img/hassimiou.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="Css/style.css">
 </head>
-<body>
-    <div class="container">
-        <a href="index.html" class="back-button">Retour</a>
-        <header>
-            <img src="Img/hassimiou.jpeg" alt="Hassimiou BARRY" class="header-photo">
-            <h1>Hassimiou BARRY</h1>
-            <p class="subtitle">Étudiant BUT2 Informatique | DevSecOps &amp; Cybersécurité</p>
-            <div class="contact-info">
-                <span> mamadou.barry1@etu.univ-grenoble-alpes.fr</span>
-                <span> +33 7 49 98 09 36</span>
-                <span> <a href="https://www.linkedin.com/in/hassimiou-barry-712016383/">LinkedIn</a></span>
-                <span> <a href="https://github.com/hassimiou07">GitHub</a></span>
-                <span> Grenoble, France</span>
-            </div>
-        </header>
-
-        <section>
-            <h2>Profil</h2>
-            <p class="description">
-                Étudiant en 2ème année de BUT Informatique à l'IUT2 Grenoble, orienté DevSecOps et cybersécurité.
-                À la recherche d'un stage en avril 2027 (du 19 avril au 25 juin 2027, prolongation possible pour l'été).
-            </p>
-        </section>
-
-        <section>
-            <h2>Expériences professionnelles</h2>
-
-            <div class="education-item">
-                <div class="job-header">
-                    <div>
-                        <h3>Réseautique Entreprise &amp; Gestion Systèmes</h3>
-                        <p class="company">Compagnie des Bauxites de Guinée (CBG)</p>
-                    </div>
-                    <span class="duration">1 mois - Stage Terminale</span>
-                </div>
-                <ul>
-                    <li>Architecture VLAN et LAN pour plus de 3000 employés</li>
-                    <li>Interconnexions réseau inter-villes et routage de données</li>
-                    <li>Optimisation et maintenance des systèmes</li>
-                    <li>Protocoles de cybersécurité sur systèmes critiques</li>
-                </ul>
-            </div>
-
-            <div class="education-item">
-                <div class="job-header">
-                    <div>
-                        <h3>Implémentation Sécurité Physique &amp; Logique</h3>
-                        <p class="company">Great Expert Team (Guinée)</p>
-                    </div>
-                    <span class="duration">1 mois - Stage 3ème</span>
-                </div>
-                <ul>
-                    <li>Installation et configuration de systèmes de surveillance (caméras CCTV)</li>
-                    <li>Implémentation de contrôle d'accès RFID et biométrique</li>
-                    <li>Configuration de portails automatisés avec protocoles de sécurité avancés</li>
-                    <li>Dépannage et maintenance au niveau terminal</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h2>Projets</h2>
-
-            <div class="education-item">
-                <div class="job-header">
-                    <div>
-                        <h3>BlaiseConnect - Plateforme web de gestion scolaire</h3>
-                        <p class="company"><a href="https://github.com/Gaston667/blaise-connect">Dépôt GitHub</a></p>
-                    </div>
-                    <span class="duration">React, FastAPI, PostgreSQL</span>
-                </div>
-                <p class="description">
-                    Co-développement en équipe d'un portail pour un établissement français à l'international (élèves, familles, enseignants, notes).
-                    Sécurité des échanges HTTP, gestion des rôles et accès (admin/élève), déploiement Docker documenté pour la production.
-                </p>
-            </div>
-
-            <div class="education-item">
-                <div class="job-header">
-                    <div>
-                        <h3>Pentest en environnement isolé</h3>
-                        <p class="company">Projet personnel</p>
-                    </div>
-                    <span class="duration">2024</span>
-                </div>
-                <p class="description">
-                    Cible volontairement vulnérable (Metasploitable), identification des services et test de modules Metasploit
-                    dans un cadre autorisé. Validation des vulnérabilités.
-                </p>
-            </div>
-
-            <div class="education-item">
-                <div class="job-header">
-                    <div>
-                        <h3>GenEvent - Gestion d'évènements</h3>
-                        <p class="company">Projet universitaire - IUT2 Grenoble</p>
-                    </div>
-                    <span class="duration">2026</span>
-                </div>
-                <p class="description">
-                    Application Java, JavaFX, Maven développée en équipe (patron MVC). Logique métier, tests unitaires, Javadoc, interface.
-                    Travail collaboratif avec Git sur GitLab.
-                </p>
-            </div>
-
-            <div class="education-item">
-                <div class="job-header">
-                    <div>
-                        <h3>Projets universitaires en cours</h3>
-                        <p class="company">BUT2 - IUT2 Grenoble</p>
-                    </div>
-                    <span class="duration">2026 - 2027</span>
-                </div>
-                <ul>
-                    <li>Application client-serveur sécurisée : plateforme pour les aidants familiaux, avec base de données, en équipe</li>
-                    <li>Réseau : déploiement et sécurisation de services dans un réseau</li>
-                </ul>
-            </div>
-
-            <div class="education-item">
-                <div class="job-header">
-                    <div>
-                        <h3>Projets universitaires</h3>
-                        <p class="company">BUT1 - IUT2 Grenoble</p>
-                    </div>
-                    <span class="duration">2025 - 2026</span>
-                </div>
-                <p class="description">
-                    Installation de Debian 13 en machine virtuelle, base de données de l'association maritime Le Tourmentin (PostgreSQL),
-                    chatbot de culture générale en Java, site web institutionnel en HTML/CSS.
-                </p>
-            </div>
-        </section>
-
-        <section>
-            <h2>Formation</h2>
-
-            <div class="education-item">
-                <div class="job-header">
-                    <div>
-                        <h3>BUT Informatique - 2ème année</h3>
-                        <p class="company">IUT2 / UGA Grenoble</p>
-                    </div>
-                    <span class="duration">2026 - 2027</span>
-                </div>
-            </div>
-
-            <div class="education-item">
-                <div class="job-header">
-                    <div>
-                        <h3>Baccalauréat général</h3>
-                        <p class="company">Lycée Blaise Pascal, Guinée</p>
-                    </div>
-                    <span class="duration">2024 - 2025</span>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Compétences techniques</h2>
-
-            <h3 style="margin-top: 15px; margin-bottom: 10px;">Langages</h3>
-            <div class="skills-grid">
-                <div class="skill-item">Java</div>
-                <div class="skill-item">C / C++</div>
-                <div class="skill-item">PHP</div>
-                <div class="skill-item">JavaScript</div>
-                <div class="skill-item">HTML5 / CSS3</div>
-                <div class="skill-item">SQL</div>
-            </div>
-
-            <h3 style="margin-top: 15px; margin-bottom: 10px;">Outils &amp; systèmes</h3>
-            <div class="skills-grid">
-                <div class="skill-item">Linux</div>
-                <div class="skill-item">React</div>
-                <div class="skill-item">PostgreSQL</div>
-                <div class="skill-item">Git</div>
-                <div class="skill-item">Docker</div>
-            </div>
-
-            <h3 style="margin-top: 15px; margin-bottom: 10px;">Sécurité</h3>
-            <div class="skills-grid">
-                <div class="skill-item">Metasploit</div>
-                <div class="skill-item">Burp Suite</div>
-                <div class="skill-item">Pentesting</div>
-                <div class="skill-item">Cryptographie</div>
-            </div>
-
-            <h3 style="margin-top: 15px; margin-bottom: 10px;">Méthodes</h3>
-            <div class="skills-grid">
-                <div class="skill-item">Agiles</div>
-                <div class="skill-item">En cascade</div>
-                <div class="skill-item">Architecture MVC</div>
-                <div class="skill-item">Tests unitaires</div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Langues</h2>
-            <div class="tags">
-                <span class="tag">Français (langue maternelle)</span>
-                <span class="tag">Anglais (avancé)</span>
-                <span class="tag">Fulani (avancé)</span>
-                <span class="tag">Sosso (avancé)</span>
-                <span class="tag">Espagnol (B1)</span>
-            </div>
-        </section>
-
-        <section>
-            <h2>Qualités &amp; centres d'intérêt</h2>
-            <ul>
-                <li><strong>Qualités :</strong> curiosité, discipline, sens du relationnel</li>
-                <li><strong>Centres d'intérêt :</strong> basketball, arts martiaux, musique, lecture</li>
-            </ul>
-        </section>
+<body class="cv-page">
+  <a class="skip" href="#main">Aller au contenu</a>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="index.html" aria-label="Accueil">
+        <span class="brand__ps">$</span><span class="brand__user">hassimiou</span><span class="brand__at">@</span><span class="brand__host">portfolio</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu"><i class="fa-solid fa-bars"></i></button>
+      <nav class="nav" id="site-nav" aria-label="Navigation principale">
+        <a class="nav__link" href="index.html">Accueil</a>
+        <a class="nav__link" href="About.html">À propos</a>
+        <a class="nav__link" href="Skills.html">Compétences</a>
+        <a class="nav__link" href="Projects.html">Projets</a>
+        <a class="nav__link" href="Pentest.html">Pentest</a>
+        <a class="nav__link" href="Contact.html">Contact</a>
+        <a class="btn btn--sm" href="cv.pdf" download><i class="fa-solid fa-download" aria-hidden="true"></i> CV</a>
+      </nav>
     </div>
+  </header>
+  <main id="main">
+<section class="container cv-wrap">
+      <div class="cv-actions no-print">
+        <a class="btn" href="cv.pdf" download><i class="fa-solid fa-download" aria-hidden="true"></i> Télécharger le PDF</a>
+        <button class="btn btn--ghost" type="button" onclick="window.print()"><i class="fa-solid fa-print" aria-hidden="true"></i> Imprimer</button>
+      </div>
+      <article class="cv">
+        <header class="cv__head">
+          <h1>Hassimiou BARRY</h1>
+          <p class="cv__role">Stagiaire DevSecOps · stage avril 2027</p>
+          <p class="cv__contact">mamadou.barry1@etu.univ-grenoble-alpes.fr · +33 7 49 98 09 36 · Grenoble, France<br>
+            <a href="https://github.com/hassimiou07">GitHub</a> · <a href="https://www.linkedin.com/in/hassimiou-barry-712016383/">LinkedIn</a> · <a href="https://hassimiou07.github.io/Portfolio-Hassimiou/">Portfolio</a></p>
+        </header>
+        <section><h2>Profil</h2><p>Étudiant en 2ème année de BUT Informatique à l'IUT2 Grenoble, orienté DevSecOps et cybersécurité. Disponible : du 19 avril au 25 juin 2027, prolongation possible pour l'été.</p></section>
+        <section><h2>Expériences professionnelles</h2>
+          <div class="cv__item"><div class="cv__row"><h3>Réseautique Entreprise et Gestion Systèmes</h3><span>1 mois · stage de Terminale</span></div><p class="muted">Compagnie des Bauxites de Guinée (CBG)</p><ul><li>Architecture VLAN et LAN pour plus de 3000 employés</li><li>Interconnexions réseau inter-villes et routage de données</li><li>Optimisation et maintenance des systèmes</li><li>Protocoles de cybersécurité sur systèmes critiques</li></ul></div><div class="cv__item"><div class="cv__row"><h3>Implémentation Sécurité Physique et Logique</h3><span>1 mois · stage de 3ème</span></div><p class="muted">Great Expert Team, Guinée</p><ul><li>Installation et configuration de systèmes de surveillance (caméras CCTV)</li><li>Contrôle d'accès RFID et biométrique</li><li>Configuration de portails automatisés avec protocoles de sécurité avancés</li><li>Dépannage et maintenance au niveau terminal</li></ul></div>
+        </section>
+        <section><h2>Projets</h2>
+          <div class="cv__item"><div class="cv__row"><h3>BlaiseConnect · Plateforme web de gestion scolaire</h3><span>Projet d'équipe</span></div><p>Co-développement d'un portail de gestion scolaire, une sorte de Pronote pour l'école internationale française dont je suis issu : élèves, familles, enseignants, classes et notes.</p></div><div class="cv__item"><div class="cv__row"><h3>Tests avec Metasploit · Pentest en environnement isolé</h3><span>2024</span></div><p>Mettre en place une cible volontairement vulnérable, identifier les services concernés et tester un module adapté, dans un environnement isolé et autorisé.</p></div><div class="cv__item"><div class="cv__row"><h3>GenEvent · Application de gestion d'évènements</h3><span>2026</span></div><p>Application Java développée en équipe selon le patron MVC. J'ai travaillé sur la logique métier, les tests unitaires, la Javadoc et l'interface.</p></div>
+          <div class="cv__item"><div class="cv__row"><h3>Projets universitaires en cours</h3><span>2026 – 2027</span></div><ul><li>Application client-serveur sécurisée, avec base de données, en équipe</li><li>Déploiement et sécurisation de services dans un réseau</li></ul></div>
+          <div class="cv__item"><div class="cv__row"><h3>Projets universitaires de BUT1</h3><span>2025 – 2026</span></div><p>Installation de Debian 13 en machine virtuelle, base de données de l'association maritime Le Tourmentin (PostgreSQL), chatbot de culture générale en Java, site web institutionnel en HTML/CSS.</p></div>
+        </section>
+        <section><h2>Compétences</h2>
+          <ul class="cv__skills"><li><strong>Développement web :</strong> HTML5, CSS3, JavaScript, PHP, React</li><li><strong>Back-end et données :</strong> Java (POO), C / C++, FastAPI, SQL, PostgreSQL</li><li><strong>Systèmes et réseaux :</strong> Linux, Shell, Architecture des réseaux</li><li><strong>DevOps et outils :</strong> Git, GitHub, GitLab, Docker, IntelliJ IDEA, VS Code, Figma</li><li><strong>Sécurité :</strong> Metasploit, Burp Suite, Ghidra, Root-Me, Cryptographie</li><li><strong>Méthodes :</strong> Agile, En cascade, Architecture MVC, Tests unitaires</li></ul>
+        </section>
+        <section><h2>Formation</h2>
+          <div class="cv__item"><div class="cv__row"><h3>BUT Informatique, 2ème année · IUT2 / UGA Grenoble</h3><span>2026 – 2027</span></div></div>
+          <div class="cv__item"><div class="cv__row"><h3>Baccalauréat général · Lycée Blaise Pascal, Guinée</h3><span>2024 – 2025</span></div></div>
+        </section>
+        <section class="cv__cols">
+          <div><h2>Langues</h2><ul><li>Français · langue maternelle</li><li>Anglais · avancé</li><li>Fulani · avancé</li><li>Sosso · avancé</li><li>Espagnol · B1</li></ul></div>
+          <div><h2>Qualités</h2><ul><li>Curiosité</li><li>Discipline</li><li>Sens du relationnel</li></ul></div>
+          <div><h2>Centres d'intérêt</h2><ul><li>Basketball</li><li>Arts martiaux</li><li>Musique</li><li>Lecture</li></ul></div>
+        </section>
+      </article>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2026 Hassimiou BARRY · Grenoble, France</p>
+      <ul class="social">
+        <li><a href="https://github.com/hassimiou07" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/hassimiou-barry-712016383/" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="mailto:mamadou.barry1@etu.univ-grenoble-alpes.fr" aria-label="E-mail" title="E-mail"><i class="fa-solid fa-envelope"></i></a></li>
+        <li><a href="tel:+33749980936" aria-label="Téléphone" title="Téléphone"><i class="fa-solid fa-phone"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="js/site.js" defer></script>
+
 </body>
 </html>

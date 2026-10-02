@@ -1,143 +1,111 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base de Données Le Tourmentin - Portfolio Hassimiou BARRY</title>
-    <link rel="stylesheet" href="Css/project-detail.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <script src="js/cursor.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Base de données Le Tourmentin · Hassimiou BARRY</title>
+  <meta name="description" content="Conception et implémentation de la base de données d'une association maritime : adhérents, bateaux, activités, équipages et cotisations.">
+  <meta name="theme-color" content="#070b10">
+  <link rel="canonical" href="https://hassimiou07.github.io/Portfolio-Hassimiou/SAE2.html">
+  <link rel="icon" href="Img/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Base de données Le Tourmentin · Hassimiou BARRY">
+  <meta property="og:description" content="Conception et implémentation de la base de données d'une association maritime : adhérents, bateaux, activités, équipages et cotisations.">
+  <meta property="og:url" content="https://hassimiou07.github.io/Portfolio-Hassimiou/SAE2.html">
+  <meta property="og:image" content="https://hassimiou07.github.io/Portfolio-Hassimiou/Img/hassimiou.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="Css/style.css">
 </head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                                <img src="Img/hassimiou.jpeg" alt="" srcset="">
-                <h1>BARRY Hassimiou</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="About.html">À propos</a></li>
-                    <li><a href="Skills.html">Compétences</a></li>
-                    <li><a href="Contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <div class="project-detail-container">
-        <div class="breadcrumb">
-            <a href="Skills.html">Compétences</a> > <a href="Skills/skill4.html"> Gerer </a><span>  > Base de Données Le Tourmentin</span>
-        </div>
-
-        <div class="detail-header">
-            <div class="detail-icon">
-                <i class="fas fa-ship"></i>
-            </div>
-            <div class="detail-title">
-                <h1>DB :  Le Tourmentin</h1>
-                <p class="course">SQL - 2025 / 2026</p>
-            </div>
-        </div>
-        <div class="detail-content">
-            <section class="overview">
-                <h2>Vue d'ensemble</h2>
-                <p>
-                    Conception et implémentation d'une base de données pour l'association "Le Tourmentin", 
-                    qui organise des activités maritimes (sorties et rallyes de voiliers). Le projet inclut 
-                    la modélisation complète des adhérents, bateaux, activités, équipages et cotisations, 
-                    avec normalisation et mise en place de contraintes d'intégrité.
-                </p>
-                <p>
-                    <strong>Contexte :</strong> L'association doit informatiser sa gestion pour mieux gérer 
-                    ses adhérents croissants, les bateaux disponibles, les rallyés organisés et les participations.
-                </p>
-            </section>
-            <section class="technologies">
-                <h2>Technologies & Outils Utilisés</h2>
-                <div class="tech-grid">
-                    <div class="tech-item">
-                        <span class="tech-badge">PostgreSQL</span>
-                    </div>
-                    <div class="tech-item">
-                        <span class="tech-badge">MySQL</span>
-                    </div>
-                    <div class="tech-item">
-                        <span class="tech-badge">SQL</span>
-                    </div>
-                    <div class="tech-item">
-                        <span class="tech-badge">Adobe</span>
-                    </div>
-                    <div class="tech-item">
-                        <span class="tech-badge">SEA/MCD</span>
-                    </div>
-                    <div class="tech-item">
-                        <span class="tech-badge">SLR/MLD</span>
-                    </div>
-                </div>
-            </section>
-
-            <section class="methodology">
-                <h2>Méthodologie & Approche</h2>
-                <div class="method-grid">
-                    <div class="method-card">
-                        <i class="fas fa-list-check"></i>
-                        <h3>Analyse des Règles de Gestion</h3>
-                        <p>Lecture et compréhension des 9 règles métier définissant le système.</p>
-                    </div>
-                    <div class="method-card">
-                        <i class="fas fa-diagram-project"></i>
-                        <h3>Modélisation SEA</h3>
-                        <p>Création du Schéma Entité-Association avec entités, associations et cardinalités.</p>
-                    </div>
-                    <div class="method-card">
-                        <i class="fas fa-sitemap"></i>
-                        <h3>Transformation SLR</h3>
-                        <p>Dérivation du Schéma Logique Relationnel selon les règles MERISE.</p>
-                    </div>
-                    <div class="method-card">
-                        <i class="fas fa-code"></i>
-                        <h3>Implémentation SQL</h3>
-                        <p>Scripts CREATE/DROP et requêtes de test avec validation des contraintes.</p>
-                    </div>
-                </div>
-            </section>
-
-           
-        </div>
-        <div class="navigation-links">
-            <a href="Skills.html" class="btn-back">
-                <i class="fas fa-arrow-left"></i> Retour aux Projets
-            </a>
-            <a href="Contact.html" class="btn-contact">
-                En savoir plus <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
+<body class="">
+  <a class="skip" href="#main">Aller au contenu</a>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="index.html" aria-label="Accueil">
+        <span class="brand__ps">$</span><span class="brand__user">hassimiou</span><span class="brand__at">@</span><span class="brand__host">portfolio</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu"><i class="fa-solid fa-bars"></i></button>
+      <nav class="nav" id="site-nav" aria-label="Navigation principale">
+        <a class="nav__link" href="index.html">Accueil</a>
+        <a class="nav__link" href="About.html">À propos</a>
+        <a class="nav__link" href="Skills.html">Compétences</a>
+        <a class="nav__link is-active" href="Projects.html" aria-current="page">Projets</a>
+        <a class="nav__link" href="Pentest.html">Pentest</a>
+        <a class="nav__link" href="Contact.html">Contact</a>
+        <a class="btn btn--sm" href="cv.pdf" download><i class="fa-solid fa-download" aria-hidden="true"></i> CV</a>
+      </nav>
     </div>
-
-    <footer>
-        <div class="quick-contact-links">
-            <h2>Liens rapides</h2>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/hassimiou-barry-712016383/" class="social-link linkedin" title="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/hassimiou07" class="social-link github" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://twitter.com/mamadoubarry" class="social-link twitter" title="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="mailto:mamadou.barry1@etu.univ-grenoble-alpes.fr" class="social-link email" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="tel:+33749980936" class="social-link phone" title="Téléphone">
-                    <i class="fas fa-phone"></i>
-                </a>
-            </div>
+  </header>
+  <main id="main">
+<nav class="crumbs container" aria-label="Fil d'Ariane"><a href="Projects.html">Projets</a><span class="crumbs__sep" aria-hidden="true">/</span><span aria-current="page">Base de données Le Tourmentin</span></nav>
+    <article class="container detail">
+      <header class="detail__head">
+        <div class="detail__media"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+        <div>
+          <p class="card__kind">Projet universitaire · 2025 – 2026</p>
+          <h1>Base de données Le Tourmentin</h1>
+          <p class="lead">SQL · modélisation et implémentation</p>
+          
         </div>
-        <p>&copy; 2026 Hassimiou BARRY. Tous droits réservés.</p>
-    </footer>
+      </header>
+      <section class="block">
+        <h2>Vue d'ensemble</h2>
+        <p>Conception et implémentation d'une base de données pour l'association « Le Tourmentin », qui organise des activités maritimes (sorties et rallyes de voiliers). Le projet inclut la modélisation complète des adhérents, bateaux, activités, équipages et cotisations, avec normalisation et mise en place de contraintes d'intégrité.</p><p>Contexte : l'association doit informatiser sa gestion pour mieux suivre ses adhérents de plus en plus nombreux, les bateaux disponibles, les rallyes organisés et les participations. J'ai conçu la structure des données et développé les requêtes pour retrouver facilement les informations importantes et assurer leur cohérence.</p>
+      </section>
+      <section class="block"><h2>Méthodologie</h2><ol class="steps"><li class="step">
+          <span class="step__n" aria-hidden="true">1</span>
+          <div class="step__body">
+            <h3>Analyse des règles de gestion</h3>
+            <p>Lecture et compréhension des 9 règles métier qui définissent le système.</p>
+            
+          </div>
+        </li><li class="step">
+          <span class="step__n" aria-hidden="true">2</span>
+          <div class="step__body">
+            <h3>Modélisation</h3>
+            <p>Schéma entité-association : entités, associations et cardinalités.</p>
+            
+          </div>
+        </li><li class="step">
+          <span class="step__n" aria-hidden="true">3</span>
+          <div class="step__body">
+            <h3>Schéma relationnel</h3>
+            <p>Dérivation du schéma logique relationnel à partir du modèle entité-association.</p>
+            
+          </div>
+        </li><li class="step">
+          <span class="step__n" aria-hidden="true">4</span>
+          <div class="step__body">
+            <h3>Implémentation SQL</h3>
+            <p>Scripts CREATE et DROP, requêtes de test et validation des contraintes.</p>
+            
+          </div>
+        </li></ol></section>
+      <section class="block">
+        <h2>Technologies et outils</h2>
+        <ul class="tags"><li>PostgreSQL</li><li>MySQL</li><li>SQL</li><li>Modélisation</li></ul>
+      </section>
+      <section class="block">
+        <h2>Compétences travaillées</h2>
+        <div class="chips"><a class="chip" href="Skills/skill4.html"><i class="fa-solid fa-database" aria-hidden="true"></i> Gérer</a></div>
+      </section>
+      <p class="back"><a href="Projects.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Tous les projets</a></p>
+    </article>
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2026 Hassimiou BARRY · Grenoble, France</p>
+      <ul class="social">
+        <li><a href="https://github.com/hassimiou07" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/hassimiou-barry-712016383/" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="mailto:mamadou.barry1@etu.univ-grenoble-alpes.fr" aria-label="E-mail" title="E-mail"><i class="fa-solid fa-envelope"></i></a></li>
+        <li><a href="tel:+33749980936" aria-label="Téléphone" title="Téléphone"><i class="fa-solid fa-phone"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="js/site.js" defer></script>
+
 </body>
 </html>

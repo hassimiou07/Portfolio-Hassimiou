@@ -1,270 +1,95 @@
--+
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hassimiou BARRY - Portfolio IT & Développement</title>
-    <link rel="stylesheet" href="Css/Style-Index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="Img/Portfolio.jpg">
-    <script src="js/cursor.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hassimiou BARRY · Portfolio</title>
+  <meta name="description" content="Portfolio de Hassimiou BARRY, étudiant en BUT2 Informatique à Grenoble : cybersécurité, DevSecOps et pentest éthique.">
+  <meta name="theme-color" content="#070b10">
+  <link rel="canonical" href="https://hassimiou07.github.io/Portfolio-Hassimiou/">
+  <link rel="icon" href="Img/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hassimiou BARRY · Portfolio">
+  <meta property="og:description" content="Portfolio de Hassimiou BARRY, étudiant en BUT2 Informatique à Grenoble : cybersécurité, DevSecOps et pentest éthique.">
+  <meta property="og:url" content="https://hassimiou07.github.io/Portfolio-Hassimiou/">
+  <meta property="og:image" content="https://hassimiou07.github.io/Portfolio-Hassimiou/Img/hassimiou.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="Css/style.css">
 </head>
-
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="Img/hassimiou.jpeg" alt="" srcset="">
-                <h1>BARRY Hassimiou</h1>
-            </div>
-            <input type="checkbox" id="menuCheckbox" class="menu-checkbox">
-            <label for="menuCheckbox" class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-            <nav id="navMenu">
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="About.html">À propos</a></li>
-                    <li><a href="Skills.html">Compétences</a></li>
-                    <li><a href="Contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div class="hero-section">
-        <div class="hero-left">
-            <div class="content-center">
-                <div class="terminal-line">
-                    <span class="terminal-command">$ apt install Portfolio</span>
-                    <span class="cursor"></span>
-                </div>
-            </div>
-            <div class="card-container" id="cardContainer" style="opacity: 0;">
-                <div class="business-card">
-                    <div class="card-photo">
-                        <img src="Img/hassimiou.jpeg" alt="Hassimiou BARRY">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-info">
-                            <h1>Hassimiou BARRY</h1>
-                            <p class="status">BUT2 INFORMATIQUE | Grenoble | Pentester Sécurité</p>
-                        </div>
-                        <div class="tech-stack">
-                            <div class="tech-icon" title="Linux">
-                                <i class="fab fa-linux"></i>
-                            </div>
-                            <div class="tech-icon" title="HTML5">
-                                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                    id="Metasploit--Streamline-Simple-Icons" height="24" width="24">
-                                    <desc>
-                                        Metasploit Streamline Icon: https://streamlinehq.com
-                                    </desc>
-                                    <title>Metasploit</title>
-                                    <path
-                                        d="M11.353 0h1.368q4.19 0.218 8.144 1.616 0.217 0.077 0.216 0.309 -0.015 4.033 -0.002 12.102 0 0.81 -0.093 1.173c-0.217 0.845 -0.76 1.635 -1.326 2.325q-0.318 0.388 -1.024 1.046 -2.955 2.75 -6.01 5.094 -0.183 0.14 -0.516 0.335h-0.17q-0.627 -0.42 -0.945 -0.673 -3.992 -3.184 -5.442 -4.459 -1.348 -1.185 -2.169 -2.611c-0.369 -0.64 -0.466 -1.287 -0.465 -2.099q0.01 -6.048 0.002 -12.218c0 -0.183 0.09 -0.264 0.261 -0.325Q7.145 0.227 11.352 0ZM7.474 7.864q0 -0.094 0.069 -0.031l2.797 2.516a0.374 0.372 21.2 0 1 0.122 0.276l-0.006 4.333a0.182 0.182 0 0 0 0.183 0.184l2.524 -0.018a0.11 0.11 89.8 0 0 0.108 -0.11q-0.007 -2.201 0.01 -4.461 0.002 -0.173 0.146 -0.29 1.397 -1.145 2.946 -2.393 0.068 -0.055 0.068 0.032v10.881q0 0.092 0.063 0.024 0.794 -0.865 1.628 -1.838 0.71 -0.83 0.984 -1.87 0.26 -0.989 0.262 -1.997 0.007 -4.754 0.009 -9.768a0.136 0.136 0 0 0 -0.137 -0.136q-1.15 0.004 -2.424 0c-0.287 -0.002 -0.441 -0.022 -0.619 0.149Q14.16 5.317 11.982 7.4a0.046 0.046 0 0 1 -0.062 0Q9.782 5.437 7.769 3.525c-0.234 -0.222 -0.515 -0.381 -0.843 -0.373q-1.09 0.026 -2.33 0.005 -0.184 -0.004 -0.184 0.18 -0.003 4.54 0.005 9.032 0.002 0.536 0.036 1.027c0.076 1.093 0.2 2.126 0.803 3.021 0.574 0.852 1.329 1.656 2.126 2.405q0.023 0.022 0.054 0.026 0.04 0.006 0.04 -0.034z"
-                                        fill="#00ff88" stroke-width="1"></path>
-                                </svg>
-                            </div>
-                            <div class="tech-icon" title="HTML5">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
-                                    viewBox="0 0 48 48">
-                                    <path fill="#b3e5fc"
-                                        d="M44.104,21.491C41.236,20.16,34,13,24,13S6.764,20.16,3.896,21.491C0.564,23.037,0,25,0,26s1,3,5,3 s12.041,5.368,15,5.862c2.922,0.488,4,0.336,4,0.336s1.078,0.152,4-0.336C30.959,34.368,39,29,43,29s5-2,5-3 S47.436,23.037,44.104,21.491z">
-                                    </path>
-                                    <path fill="#81d4fa"
-                                        d="M5,29c4,0,12.041,5.368,15,5.862c2.922,0.488,4,0.336,4,0.336s1.078,0.152,4-0.336 C30.959,34.368,39,29,43,29s5-2,5-3H0C0,27,1,29,5,29z">
-                                    </path>
-                                    <path fill="#e1f5fe"
-                                        d="M38.24,22.439C34.58,19.87,30.851,17.001,24,17v0c0,0-0.001,0-0.001,0s-0.001,0-0.001,0v0 c-6.851,0.001-10.58,2.87-14.24,5.439C6.75,24.549,3.997,25.31,3.997,26c0,1,0.943,0.515,3.009,0.828 C9,27.13,17.998,31.69,23.998,31.692v0c0,0,0.001,0,0.001,0s0.001,0,0.001,0v0c6-0.001,14.998-4.561,16.992-4.863 C43.058,26.515,44.001,27,44.001,26C44.001,25.31,41.248,24.549,38.24,22.439z">
-                                    </path>
-                                    <path fill="#81d4fa"
-                                        d="M33,23c0-1.626-0.438-3.147-1.192-4.464C29.671,17.62,27.173,17,24,17v0c0,0-0.001,0-0.001,0 s-0.001,0-0.001,0v0c-3.171,0-5.669,0.619-7.805,1.535C15.438,19.852,15,21.373,15,23c0,3.725,2.263,6.922,5.49,8.289 c1.228,0.248,2.418,0.402,3.508,0.402v0c0,0,0.001,0,0.001,0s0.001,0,0.001,0v0c1.091,0,2.282-0.154,3.511-0.403 C30.737,29.921,33,26.725,33,23z">
-                                    </path>
-                                    <circle cx="24" cy="23.5" r="3.5" fill="#455a64"></circle>
-                                    <circle cx="24" cy="23.5" r="1" fill="#b3e5fc"></circle>
-                                    <circle cx="28" cy="20" r="1" fill="#e1f5fe"></circle>
-                                    <path fill="#4fc3f7"
-                                        d="M7.908,25.255c-0.21-0.475-0.703-0.771-1.269-0.957C5.085,25.104,3.997,25.566,3.997,26 c0,1,0.943,0.515,3.009,0.828c0.124,0.019,0.276,0.054,0.452,0.104C7.886,26.479,8.191,25.895,7.908,25.255z">
-                                    </path>
-                                    <path fill="#4fc3f7"
-                                        d="M40.09,25.258c0.21-0.475,0.703-0.771,1.269-0.957c1.554,0.807,2.642,1.269,2.642,1.703 c0,1-0.943,0.515-3.009,0.828c-0.124,0.019-0.276,0.054-0.452,0.104C40.111,26.483,39.807,25.899,40.09,25.258z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="tech-icon" title="HTML5">
-                                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                    id="Burpsuite--Streamline-Simple-Icons" height="24" width="24">
-                                    <desc>
-                                        Burpsuite Streamline Icon: https://streamlinehq.com
-                                    </desc>
-                                    <title>Burp Suite</title>
-                                    <path
-                                        d="M0 0v24h24V0Zm11.063 3.357h1.874v2.756L10.41 9.2h2.527v3.748h4.579l-4.578 5.592v2.104h-1.876v-2.758L13.59 14.8h-2.527v-3.75h-4.58l4.58 -5.592Z"
-                                        fill="#00ff88" stroke-width="1"></path>
-                                </svg>
-                            </div>
-                            <div class="tech-icon" title="CSS3">
-                                <i class="fab fa-css3-alt"></i>
-                            </div>
-                            <div class="tech-icon" title="Java">
-                                <i class="fab fa-java"></i>
-                            </div>
-                            <div class="tech-icon" title="PostgreSQL">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <div class="tech-icon" title="VS Code">
-                                <i class="fab fa-html5"></i>
-                            </div>
-                        </div>
-                        <div class="card-actions">
-                            <button class="btn btn-secondary" id="cvBtn">Télécharger CV</button>
-                            <a href="Contact.html" class="btn btn-tertiary">Contact</a>
-                        </div>
-                        <div class="card-social">
-                            <a href="https://www.linkedin.com/in/hassimiou-barry-712016383/"
-                                class="social-icon linkedin" title="LinkedIn">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://github.com/hassimiou07" class="social-icon github" title="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://twitter.com/mamadoubarry" class="social-icon twitter" title="Twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="mailto:mamadou.barry1@etu.univ-grenoble-alpes.fr" class="social-icon email" title="Email">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<body class="home">
+  <a class="skip" href="#main">Aller au contenu</a>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="index.html" aria-label="Accueil">
+        <span class="brand__ps">$</span><span class="brand__user">hassimiou</span><span class="brand__at">@</span><span class="brand__host">portfolio</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu"><i class="fa-solid fa-bars"></i></button>
+      <nav class="nav" id="site-nav" aria-label="Navigation principale">
+        <a class="nav__link is-active" href="index.html" aria-current="page">Accueil</a>
+        <a class="nav__link" href="About.html">À propos</a>
+        <a class="nav__link" href="Skills.html">Compétences</a>
+        <a class="nav__link" href="Projects.html">Projets</a>
+        <a class="nav__link" href="Pentest.html">Pentest</a>
+        <a class="nav__link" href="Contact.html">Contact</a>
+        <a class="btn btn--sm" href="cv.pdf" download><i class="fa-solid fa-download" aria-hidden="true"></i> CV</a>
+      </nav>
     </div>
-    </div>
-
-
-    <!-- Scroll Indicator -->
-    <div class="scroll-indicator">
-        <span>Découvrez plus</span>
-        <div class="scroll-arrow">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </div>
-
-    <section class="quick-access">
-        <h2 class="dash">Dashboard</h2>
-        <div class="quick-container">
-            <div class="quick-card">
-                <i class="fas fa-user"></i>
-                <h3>À Propos</h3>
-                <p>Découvrez mon profil, mes expériences et mes compétences</p>
-                <a href="About.html" class="btn-link">Explorer </a>
-            </div>
-            <div class="quick-card">
-                <i class="fas fa-project-diagram"></i>
-                <h3>Compétences</h3>
-                <p>Des projets démontrant mon expérience</p>
-                <a href="Skills.html" class="btn-link">Voir les compétences </a>
-            </div>
-            <div class="quick-card">
-                <i class="fas fa-envelope"></i>
-                <h3>Me Contacter</h3>
-                <p>Collaborons en vue de stages, d'alternance ou de projets</p>
-                <a href="Contact.html" class="btn-link">Démarrer </a>
-            </div>
-        </div>
+  </header>
+  <main id="main">
+    <section class="terminal" aria-label="Terminal du portfolio">
+      <div class="terminal__bar">
+        <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="terminal__title">visiteur@portfolio: ~</span>
+        <button class="terminal__skip" id="skip" type="button">Passer l'animation</button>
+      </div>
+      <div class="terminal__screen" id="screen">
+        <div id="out" role="log" aria-live="polite" aria-busy="true"></div>
+        <form class="promptline" id="prompt" autocomplete="off" hidden>
+          <label class="promptline__ps" for="cmd">visiteur@portfolio:~$</label>
+          <input id="cmd" name="cmd" type="text" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Commande">
+        </form>
+      </div>
+      <div class="terminal__chips" id="chips" aria-label="Raccourcis de commandes">
+        <button type="button" class="chip chip--btn" data-cmd="help">help</button>
+        <button type="button" class="chip chip--btn" data-cmd="about">about</button>
+        <button type="button" class="chip chip--btn" data-cmd="skills">skills</button>
+        <button type="button" class="chip chip--btn" data-cmd="projects">projects</button>
+        <button type="button" class="chip chip--btn" data-cmd="pentest">pentest</button>
+        <button type="button" class="chip chip--btn" data-cmd="contact">contact</button>
+        <button type="button" class="chip chip--btn" data-cmd="cv">cv</button>
+      </div>
     </section>
-    <footer>
-        <div class="quick-contact-links">
-            <h2>Liens rapides</h2>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/hassimiou-barry-712016383/" class="social-link linkedin"
-                    title="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/hassimiou07" class="social-link github" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://twitter.com/mamadoubarry" class="social-link twitter" title="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="mailto:mamadou.barry1@etu.univ-grenoble-alpes.fr" class="social-link email" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="tel:+33749980936" class="social-link phone" title="Téléphone">
-                    <i class="fas fa-phone"></i>
-                </a>
-            </div>
+    <noscript>
+      <p class="container noscript">Ce terminal demande JavaScript. Utilisez le menu pour naviguer : À propos, Compétences, Projets, Pentest, Contact.</p>
+    </noscript>
+    <script type="application/json" id="site-data">{"profile":{"name":"Hassimiou BARRY","role":"Étudiant BUT2 Informatique","status":"BUT2 INFORMATIQUE | Grenoble | Pentester éthique","email":"mamadou.barry1@etu.univ-grenoble-alpes.fr","phone":"+33 7 49 98 09 36","phoneHref":"+33749980936","github":"https://github.com/hassimiou07","linkedin":"https://www.linkedin.com/in/hassimiou-barry-712016383/","cv":"cv.pdf","searching":"Stage DevSecOps / cybersécurité, avril 2027","availability":"Du 19 avril au 25 juin 2027, prolongation possible pour l'été","location":"Grenoble, France","bio":["Bonjour ! Je suis Hassimiou BARRY, étudiant en 2ème année de BUT Informatique à l'IUT2 de Grenoble. Je suis passionné de cybersécurité, de réseaux et de développement, et je veux devenir pentester éthique.","Je combine une expérience pratique en IT (réseaux d'entreprise, sécurité physique et logique, projets d'équipe) avec des compétences modernes en développement. Je cherche un stage DevSecOps ou cybersécurité pour avril 2027."]},"competences":[{"title":"Tester","summary":"Évaluer la sécurité de systèmes dans un cadre autorisé, identifier les vulnérabilités et proposer des corrections.","file":"Skills/Pentest.html"},{"title":"Administrer","summary":"Installer, configurer, mettre à disposition et maintenir des services et des réseaux.","file":"Skills/skill3.html"},{"title":"Réaliser","summary":"Développer : concevoir, coder, tester et intégrer une solution informatique pour un client.","file":"Skills/skill1.html"},{"title":"Optimiser","summary":"Optimiser des applications selon des critères précis : temps d'exécution, consommation de ressources.","file":"Skills/skill2.html"},{"title":"Gérer","summary":"Concevoir, administrer et exploiter les données de l'entreprise, et mettre à disposition les informations utiles au pilotage.","file":"Skills/skill4.html"},{"title":"Collaborer","summary":"Acquérir, développer et exploiter les aptitudes nécessaires pour travailler efficacement dans une équipe informatique.","file":"Skills/skill6.html"}],"projects":[{"title":"BlaiseConnect","subtitle":"Plateforme web de gestion scolaire","kind":"Projet d'équipe","period":"","page":"projects/blaiseconnect.html"},{"title":"GenEvent","subtitle":"Application de gestion d'évènements","kind":"Projet universitaire","period":"2026","page":"projects/genevent.html"},{"title":"Application client-serveur sécurisée","subtitle":"Plateforme pour les aidants familiaux","kind":"Projet universitaire · en cours","period":"2026 – 2027","page":""},{"title":"Déployer et sécuriser des services dans un réseau","subtitle":"Projet réseau","kind":"Projet universitaire · en cours","period":"2026 – 2027","page":""},{"title":"Chatbot de culture générale","subtitle":"Java · indexation et thésaurus","kind":"Projet universitaire","period":"2025 – 2026","page":"SAE3.html"},{"title":"Base de données Le Tourmentin","subtitle":"SQL · modélisation et implémentation","kind":"Projet universitaire","period":"2025 – 2026","page":"SAE2.html"},{"title":"Site web institutionnel HARDIS GROUPE","subtitle":"HTML et CSS · site pour la génération Alpha","kind":"Projet universitaire","period":"2025 – 2026","page":"SAE4.html"},{"title":"Installation Debian 13 et IntelliJ IDEA","subtitle":"Linux · environnement de développement","kind":"Projet universitaire","period":"Novembre 2025","page":"SAE1.html"},{"title":"Tests avec Metasploit","subtitle":"Pentest en environnement isolé","kind":"Lab pentest","period":"2024","page":"Pentest/metasploit.html"},{"title":"Reverse engineering","subtitle":"Analyse de programmes avec Ghidra","kind":"Lab pentest","period":"","page":"Pentest/ghidra.html"},{"title":"Challenges Root-Me","subtitle":"Entraînement pratique en cybersécurité","kind":"Entraînement","period":"","page":"Pentest/root-me.html"}],"skillGroups":[{"title":"Développement web","items":["HTML5","CSS3","JavaScript","PHP","React"]},{"title":"Back-end et données","items":["Java (POO)","C / C++","FastAPI","SQL","PostgreSQL"]},{"title":"Systèmes et réseaux","items":["Linux","Shell","Architecture des réseaux"]},{"title":"DevOps et outils","items":["Git","GitHub","GitLab","Docker","IntelliJ IDEA","VS Code","Figma"]},{"title":"Sécurité","items":["Metasploit","Burp Suite","Ghidra","Root-Me","Cryptographie"]},{"title":"Méthodes","items":["Agile","En cascade","Architecture MVC","Tests unitaires"]}]}</script>
+    <template id="card-tpl">
+      <article class="id-card">
+        <img class="id-card__photo" src="Img/hassimiou.jpeg" alt="Portrait de Hassimiou BARRY" width="104" height="104">
+        <div class="id-card__main">
+          <h2 class="id-card__name">Hassimiou BARRY</h2>
+          <p class="id-card__status">BUT2 INFORMATIQUE | Grenoble | Pentester éthique</p>
+          <p class="id-card__search"><i class="fa-solid fa-circle" aria-hidden="true"></i> Stage DevSecOps / cybersécurité, avril 2027</p>
+          <ul class="tags"><li>Linux</li><li>Java</li><li>PHP</li><li>JavaScript</li><li>React</li><li>PostgreSQL</li><li>Docker</li><li>Metasploit</li><li>Burp Suite</li></ul>
+          <div class="id-card__actions">
+            <a class="btn btn--sm" href="cv.pdf" download><i class="fa-solid fa-download" aria-hidden="true"></i> Télécharger CV</a>
+            <a class="btn btn--ghost btn--sm" href="Contact.html">Contact</a>
+          </div>
+          <ul class="social">
+        <li><a href="https://github.com/hassimiou07" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/hassimiou-barry-712016383/" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="mailto:mamadou.barry1@etu.univ-grenoble-alpes.fr" aria-label="E-mail" title="E-mail"><i class="fa-solid fa-envelope"></i></a></li>
+        <li><a href="tel:+33749980936" aria-label="Téléphone" title="Téléphone"><i class="fa-solid fa-phone"></i></a></li>
+      </ul>
         </div>
-        <p>&copy; 2026 Hassimiou BARRY. Tous droits réservés.</p>
-    </footer>
+      </article>
+    </template>
+  </main>
 
-    <!-- CV Modal -->
-    <div id="cvModal" class="cv-modal">
-        <div class="cv-modal-content">
-            <span class="cv-modal-close">&times;</span>
-            <h2>Télécharger mon CV</h2>
-            <div class="cv-options">
-                <a href="cv.pdf" download class="cv-download-btn">
-                    <i class="fas fa-file-pdf"></i>
-                    <span>Télécharger en PDF</span>
-                </a>
-                <a href="CV.html" target="_blank" class="cv-download-btn">
-                    <i class="fab fa-html5"></i>
-                    <span>Voir en HTML</span>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Show card container after terminal animation completes
-        document.addEventListener('DOMContentLoaded', () => {
-            const cardContainer = document.getElementById('cardContainer');
-
-            // Afficher la card après 3 secondes (quand le texte du terminal est terminé)
-            setTimeout(() => {
-                cardContainer.style.transition = 'opacity 0.8s ease-in';
-                cardContainer.style.opacity = '1';
-            }, 3000);
-        });
-
-        // Scroll indicator fade out
-        const scrollIndicator = document.querySelector('.scroll-indicator');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                scrollIndicator.style.animation = 'fadeOut 0.5s ease-out forwards';
-            }
-        });
-    </script>
-    <script>
-        // CV Modal Handler
-        const cvBtn = document.getElementById('cvBtn');
-        const cvModal = document.getElementById('cvModal');
-        const cvModalClose = document.querySelector('.cv-modal-close');
-
-        // Open modal
-        cvBtn.addEventListener('click', () => {
-            cvModal.style.display = 'flex';
-        });
-
-        // Close modal
-        cvModalClose.addEventListener('click', () => {
-            cvModal.style.display = 'none';
-        });
-
-        // Close modal when clicking outside
-        window.addEventListener('click', (event) => {
-            if (event.target === cvModal) {
-                cvModal.style.display = 'none';
-            }
-        });
-    </script>
+  <script src="js/site.js" defer></script>
+  <script src="js/terminal.js" defer></script>
 </body>
-
 </html>

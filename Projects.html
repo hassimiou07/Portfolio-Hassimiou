@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projets · Hassimiou BARRY</title>
+  <meta name="description" content="Projets de Hassimiou BARRY : BlaiseConnect, GenEvent, projets universitaires et labs de pentest.">
+  <meta name="theme-color" content="#070b10">
+  <link rel="canonical" href="https://hassimiou07.github.io/Portfolio-Hassimiou/Projects.html">
+  <link rel="icon" href="Img/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projets · Hassimiou BARRY">
+  <meta property="og:description" content="Projets de Hassimiou BARRY : BlaiseConnect, GenEvent, projets universitaires et labs de pentest.">
+  <meta property="og:url" content="https://hassimiou07.github.io/Portfolio-Hassimiou/Projects.html">
+  <meta property="og:image" content="https://hassimiou07.github.io/Portfolio-Hassimiou/Img/hassimiou.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="Css/style.css">
+</head>
+<body class="">
+  <a class="skip" href="#main">Aller au contenu</a>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="index.html" aria-label="Accueil">
+        <span class="brand__ps">$</span><span class="brand__user">hassimiou</span><span class="brand__at">@</span><span class="brand__host">portfolio</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu"><i class="fa-solid fa-bars"></i></button>
+      <nav class="nav" id="site-nav" aria-label="Navigation principale">
+        <a class="nav__link" href="index.html">Accueil</a>
+        <a class="nav__link" href="About.html">À propos</a>
+        <a class="nav__link" href="Skills.html">Compétences</a>
+        <a class="nav__link is-active" href="Projects.html" aria-current="page">Projets</a>
+        <a class="nav__link" href="Pentest.html">Pentest</a>
+        <a class="nav__link" href="Contact.html">Contact</a>
+        <a class="btn btn--sm" href="cv.pdf" download><i class="fa-solid fa-download" aria-hidden="true"></i> CV</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+<section class="page-head container">
+      <p class="prompt"><span class="prompt__ps">$</span> ls ./projets</p>
+      <h1>Projets</h1>
+      <p class="lead">Projets universitaires, projets d'équipe et labs de sécurité. Filtrez par compétence ou ouvrez un projet pour le détail.</p>
+    </section>
+    <section class="container">
+      <div class="filters" role="group" aria-label="Filtrer par compétence">
+        <button type="button" class="chip chip--btn is-active" data-filter="all" aria-pressed="true">Tous</button>
+        <button type="button" class="chip chip--btn" data-filter="pentest" aria-pressed="false">Pentest</button>
+        <button type="button" class="chip chip--btn" data-filter="tester" aria-pressed="false">Tester</button>
+        <button type="button" class="chip chip--btn" data-filter="administrer" aria-pressed="false">Administrer</button>
+        <button type="button" class="chip chip--btn" data-filter="realiser" aria-pressed="false">Réaliser</button>
+        <button type="button" class="chip chip--btn" data-filter="optimiser" aria-pressed="false">Optimiser</button>
+        <button type="button" class="chip chip--btn" data-filter="gerer" aria-pressed="false">Gérer</button>
+        <button type="button" class="chip chip--btn" data-filter="collaborer" aria-pressed="false">Collaborer</button>
+      </div>
+      <p class="muted filters__count" id="filter-count" aria-live="polite"></p>
+      <div class="grid grid--3" id="project-grid">
+        <a class="card" data-comp="realiser collaborer administrer" href="projects/blaiseconnect.html"><div class="card__media"><i class="fa-solid fa-school" aria-hidden="true"></i></div>
+      <div class="card__body">
+        <p class="card__kind">Projet d'équipe</p>
+        <h3 class="card__title">BlaiseConnect</h3>
+        <p class="card__sub">Plateforme web de gestion scolaire</p>
+        <p class="card__text">Co-développement d'un portail de gestion scolaire, une sorte de Pronote pour l'école internationale française dont je suis issu : élèves, familles, enseignants, classes et notes.</p>
+        <ul class="tags"><li>React</li><li>FastAPI</li><li>PostgreSQL</li><li>Docker</li></ul>
+      </div><span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+        <a class="card" data-comp="realiser collaborer" href="projects/genevent.html"><div class="card__media"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i></div>
+      <div class="card__body">
+        <p class="card__kind">Projet universitaire · 2026</p>
+        <h3 class="card__title">GenEvent</h3>
+        <p class="card__sub">Application de gestion d'évènements</p>
+        <p class="card__text">Application Java développée en équipe selon le patron MVC. J'ai travaillé sur la logique métier, les tests unitaires, la Javadoc et l'interface.</p>
+        <ul class="tags"><li>Java</li><li>JavaFX</li><li>Maven</li><li>GitLab</li></ul>
+      </div><span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+        <article class="card card--static" data-comp="realiser gerer collaborer"><div class="card__media"><i class="fa-solid fa-hands-holding-circle" aria-hidden="true"></i></div>
+      <div class="card__body">
+        <p class="card__kind is-live">Projet universitaire · en cours · 2026 – 2027</p>
+        <h3 class="card__title">Application client-serveur sécurisée</h3>
+        <p class="card__sub">Plateforme pour les aidants familiaux</p>
+        <p class="card__text">Création en équipe (6 à 7 étudiants) d'une application client-serveur sécurisée s'appuyant sur une base de données : recueil du besoin, modélisation, architecture, développement et tests.</p>
+        <ul class="tags"><li>Client-serveur</li><li>Base de données</li><li>Sécurité</li></ul>
+      </div></article>
+        <article class="card card--static" data-comp="administrer"><div class="card__media"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></div>
+      <div class="card__body">
+        <p class="card__kind is-live">Projet universitaire · en cours · 2026 – 2027</p>
+        <h3 class="card__title">Déployer et sécuriser des services dans un réseau</h3>
+        <p class="card__sub">Projet réseau</p>
+        <p class="card__text">Déploiement et sécurisation de services dans un réseau.</p>
+        <ul class="tags"><li>Réseau</li><li>Sécurité</li><li>Déploiement</li></ul>
+      </div></article>
+        <a class="card" data-comp="realiser optimiser" href="SAE3.html"><div class="card__media"><i class="fa-solid fa-robot" aria-hidden="true"></i></div>
+      <div class="card__body">
+        <p class="card__kind">Projet universitaire · 2025 – 2026</p>
+        <h3 class="card__title">Chatbot de culture générale</h3>
+        <p class="card__sub">Java · indexation et thésaurus</p>
+        <p class="card__text">Un chatbot capable de répondre à des questions de culture générale grâce à une recherche en entonnoir : thème d'abord, forme de la question ensuite.</p>
+        <ul class="tags"><li>Java</li><li>Indexation</li><li>Thésaurus</li><li>Algorithmes</li></ul>
+      </div><span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+        <a class="card" data-comp="gerer" href="SAE2.html"><div class="card__media"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+      <div class="card__body">
+        <p class="card__kind">Projet universitaire · 2025 – 2026</p>
+        <h3 class="card__title">Base de données Le Tourmentin</h3>
+        <p class="card__sub">SQL · modélisation et implémentation</p>
+        <p class="card__text">Conception et implémentation de la base de données d'une association maritime : adhérents, bateaux, activités, équipages et cotisations.</p>
+        <ul class="tags"><li>PostgreSQL</li><li>MySQL</li><li>SQL</li><li>Modélisation</li></ul>
+      </div><span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+        <a class="card" data-comp="collaborer realiser" href="SAE4.html"><div class="card__media"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></div>
+      <div class="card__body">
+        <p class="card__kind">Projet universitaire · 2025 – 2026</p>
+        <h3 class="card__title">Site web institutionnel HARDIS GROUPE</h3>
+        <p class="card__sub">HTML et CSS · site pour la génération Alpha</p>
+        <p class="card__text">Un site institutionnel complémentaire pour une ESN, pensé pour présenter l'entreprise à des élèves de 3ème en recherche de stage, loin du jargon technique.</p>
+        <ul class="tags"><li>HTML5</li><li>CSS3</li><li>Responsive</li><li>Whimsical</li></ul>
+      </div><span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+        <a class="card" data-comp="administrer" href="SAE1.html"><div class="card__media"><i class="fa-linux fa-brands" aria-hidden="true"></i></div>
+      <div class="card__body">
+        <p class="card__kind">Projet universitaire · Novembre 2025</p>
+        <h3 class="card__title">Installation Debian 13 et IntelliJ IDEA</h3>
+        <p class="card__sub">Linux · environnement de développement</p>
+        <p class="card__text">Installer et valider un environnement de développement complet sur Debian 13, avec IntelliJ IDEA installé de trois façons : archive, snap et flatpak.</p>
+        <ul class="tags"><li>Debian 13</li><li>KDE Plasma</li><li>JDK</li><li>Git</li><li>Snap</li><li>Flatpak</li></ul>
+      </div><span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+        <a class="card" data-comp="tester pentest" href="Pentest/metasploit.html"><div class="card__media"><img class="card__logo" src="Img/metasploit.svg" alt="" loading="lazy"></div>
+      <div class="card__body">
+        <p class="card__kind">Lab pentest · 2024</p>
+        <h3 class="card__title">Tests avec Metasploit</h3>
+        <p class="card__sub">Pentest en environnement isolé</p>
+        <p class="card__text">Mettre en place une cible volontairement vulnérable, identifier les services concernés et tester un module adapté, dans un environnement isolé et autorisé.</p>
+        <ul class="tags"><li>Metasploit</li><li>Metasploitable</li><li>Validation de vulnérabilité</li></ul>
+      </div><span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+        <a class="card" data-comp="tester pentest" href="Pentest/ghidra.html"><div class="card__media"><img class="card__logo" src="Img/ghidra.png" alt="" loading="lazy"></div>
+      <div class="card__body">
+        <p class="card__kind">Lab pentest</p>
+        <h3 class="card__title">Reverse engineering</h3>
+        <p class="card__sub">Analyse de programmes avec Ghidra</p>
+        <p class="card__text">Examiner un programme pour comprendre son fonctionnement, repérer les chaînes et les fonctions importantes, puis analyser son comportement sans son code source.</p>
+        <ul class="tags"><li>Ghidra</li><li>Analyse statique</li><li>Désassemblage</li></ul>
+      </div><span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+        <a class="card" data-comp="tester pentest" href="Pentest/root-me.html"><div class="card__media"><img class="card__logo" src="Img/rootme.svg" alt="" loading="lazy"></div>
+      <div class="card__body">
+        <p class="card__kind">Entraînement</p>
+        <h3 class="card__title">Challenges Root-Me</h3>
+        <p class="card__sub">Entraînement pratique en cybersécurité</p>
+        <p class="card__text">Résoudre des exercices de sécurité en étudiant les indices, en testant des pistes et en documentant la démarche.</p>
+        <ul class="tags"><li>Root-Me</li><li>Web</li><li>Réseau</li><li>Analyse de fichiers</li></ul>
+      </div><span class="card__more">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2026 Hassimiou BARRY · Grenoble, France</p>
+      <ul class="social">
+        <li><a href="https://github.com/hassimiou07" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/hassimiou-barry-712016383/" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="mailto:mamadou.barry1@etu.univ-grenoble-alpes.fr" aria-label="E-mail" title="E-mail"><i class="fa-solid fa-envelope"></i></a></li>
+        <li><a href="tel:+33749980936" aria-label="Téléphone" title="Téléphone"><i class="fa-solid fa-phone"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="js/site.js" defer></script>
+
+</body>
+</html>
