@@ -1,0 +1,5 @@
+/* Généré par tools/build.js à partir de data/site.js : ne pas modifier à la main. */
+html[data-theme="ambre"] { --green: #ffb454; --cyan: #ff7a59; --accent-rgb: 255, 180, 84; --accent2-rgb: 255, 122, 89; }
+html[data-theme="cyan"] { --green: #4dd8ff; --cyan: #7c9cff; --accent-rgb: 77, 216, 255; --accent2-rgb: 124, 156, 255; }
+html[data-theme="violet"] { --green: #b794ff; --cyan: #ff7ad9; --accent-rgb: 183, 148, 255; --accent2-rgb: 255, 122, 217; }
+html[data-theme="rouge"] { --green: #ff6b6b; --cyan: #ffb454; --accent-rgb: 255, 107, 107; --accent2-rgb: 255, 180, 84; }

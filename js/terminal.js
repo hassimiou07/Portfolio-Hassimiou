@@ -123,6 +123,23 @@
   const history = [];
   let histIndex = 0;
 
+  /* Thèmes de couleurs : mémorisés dans localStorage, appliqués sur toutes les pages */
+  const THEMES = data.themes;
+  const DEFAULT_THEME = THEMES.find((x) => x.default).id;
+  const currentTheme = () => document.documentElement.dataset.theme || DEFAULT_THEME;
+  const swatch = (x) => el('span', { class: 'swatch', style: `background: linear-gradient(135deg, ${x.hex} 50%, ${x.hex2} 50%)` });
+  const setTheme = (id) => {
+    const found = THEMES.find((x) => x.id === id);
+    if (!found) return false;
+    if (found.default) delete document.documentElement.dataset.theme;
+    else document.documentElement.dataset.theme = id;
+    try {
+      if (found.default) localStorage.removeItem('theme');
+      else localStorage.setItem('theme', id);
+    } catch (err) { /* stockage indisponible : le thème reste valable sur cette page */ }
+    return true;
+  };
+
   const commands = {
     help() {
       kv([
@@ -134,6 +151,7 @@
         ['cv', 'télécharger mon CV (PDF)'],
         ['open <page>', 'ouvrir une page : about, skills, projects, pentest, contact, cv'],
         ['ls', 'lister les sections'],
+        ['theme <nom>', 'changer les couleurs du site (theme pour la liste)'],
         ['neofetch', 'réafficher la carte de visite'],
         ['clear', "effacer l'écran"],
       ]);
@@ -195,6 +213,27 @@
       list.append(el('div', {}, link(P.cv, 'cv.pdf')));
       out.appendChild(list);
     },
+    theme(args) {
+      const arg = (args[0] || '').toLowerCase();
+      if (!arg || arg === 'list') {
+        line('Thèmes disponibles :');
+        THEMES.forEach((x) => line(el('span', {}, swatch(x), `${x.id.padEnd(8)} ${x.label}${x.id === currentTheme() ? '   <- actuel' : ''}`)));
+        gap();
+        line('Usage : theme <nom> · theme random · theme reset', 'dim');
+        return;
+      }
+      let id = arg;
+      if (arg === 'reset') id = DEFAULT_THEME;
+      if (arg === 'random') {
+        const others = THEMES.filter((x) => x.id !== currentTheme());
+        id = others[Math.floor(Math.random() * others.length)].id;
+      }
+      if (!setTheme(id)) {
+        line(`theme : « ${args[0]} » inconnu. Tapez theme pour voir la liste.`, 'err');
+        return;
+      }
+      line(`✔ Thème « ${id} » appliqué. Il sera conservé sur les autres pages.`, 'ok');
+    },
     neofetch() { showCard(); },
     whoami() { line('visiteur', 'ok'); line('Bienvenue sur mon portfolio.', 'dim'); },
     date() { line(new Date().toLocaleString('fr-FR')); },
@@ -229,7 +268,7 @@
     histIndex = history.length;
     const [name, ...args] = text.split(/\s+/);
     const key = name.toLowerCase();
-    const aliases = { projets: 'projects', competences: 'skills', aide: 'help', '?': 'help', contacts: 'contact' };
+    const aliases = { projets: 'projects', competences: 'skills', aide: 'help', '?': 'help', contacts: 'contact', themes: 'theme', couleur: 'theme', couleurs: 'theme' };
     const fn = commands[aliases[key] || key];
     if (fn && Object.prototype.hasOwnProperty.call(commands, aliases[key] || key)) fn(args);
     else line(`bash: ${name} : commande introuvable. Tapez help.`, 'err');
@@ -275,6 +314,10 @@
       if (second === undefined) {
         const m = Object.keys(commands).filter((c) => c.startsWith(first.toLowerCase()));
         if (m.length === 1) input.value = `${m[0]} `;
+      } else if (first === 'theme') {
+        const names = [...THEMES.map((x) => x.id), 'random', 'reset', 'list'];
+        const m = names.filter((c) => c.startsWith(second.toLowerCase()));
+        if (m.length === 1) input.value = `theme ${m[0]}`;
       } else if (['open', 'cd'].includes(first)) {
         const m = Object.keys(PAGES).filter((c) => c.startsWith(second.toLowerCase()));
         if (m.length === 1) input.value = `${first} ${m[0]}`;

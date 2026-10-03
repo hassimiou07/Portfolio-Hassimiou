@@ -13,6 +13,7 @@ Les pages HTML sont **générées** à partir d'un fichier de données, pour que
 | `data/site.js` | Tout le contenu : profil, projets, compétences, pentest |
 | `tools/build.js` | Générateur de pages (Node.js, aucune dépendance) |
 | `Css/style.css` | Tout le style (thème terminal sombre) |
+| `Css/themes.css` | Couleurs alternatives, généré depuis `data/site.js` |
 | `js/site.js` | Menu mobile, filtre des projets, formulaire de contact |
 | `js/terminal.js` | Terminal interactif de la page d'accueil |
 
@@ -37,6 +38,12 @@ Les pages HTML sont **générées** à partir d'un fichier de données, pour que
 Les fichiers `.html` à la racine et dans `projects/`, `Pentest/` et `Skills/` sont écrasés à chaque génération : ne pas les modifier à la main.
 
 Les compétences et les projets sont réunis sur `Projects.html`. Les anciennes pages `Skills.html` et `Skills/*.html` ne sont plus que des redirections vers cette page, pour ne casser aucun ancien lien.
+
+## Thèmes de couleurs
+
+La commande `theme` du terminal change les couleurs de tout le site (`theme` liste les thèmes, `theme ambre`, `theme random`, `theme reset`). Le choix est mémorisé dans le navigateur du visiteur.
+
+Pour ajouter un thème, ajouter une ligne dans la liste `themes` de `data/site.js` (couleur principale, couleur secondaire), puis lancer `node tools/build.js`.
 
 ## Ajouter un projet
 

@@ -134,6 +134,15 @@ const timeline = [
   },
 ];
 
+// Thèmes de couleurs (commande `theme` du terminal). Le thème par défaut doit rester identique aux valeurs de :root dans Css/style.css.
+const themes = [
+  { id: `vert`, label: `Vert terminal`, hex: `#3ddc97`, rgb: `61, 220, 151`, hex2: `#5cc8ff`, rgb2: `92, 200, 255`, default: true },
+  { id: `ambre`, label: `Ambre rétro`, hex: `#ffb454`, rgb: `255, 180, 84`, hex2: `#ff7a59`, rgb2: `255, 122, 89` },
+  { id: `cyan`, label: `Cyan glacé`, hex: `#4dd8ff`, rgb: `77, 216, 255`, hex2: `#7c9cff`, rgb2: `124, 156, 255` },
+  { id: `violet`, label: `Violet néon`, hex: `#b794ff`, rgb: `183, 148, 255`, hex2: `#ff7ad9`, rgb2: `255, 122, 217` },
+  { id: `rouge`, label: `Rouge (red team)`, hex: `#ff6b6b`, rgb: `255, 107, 107`, hex2: `#ffb454`, rgb2: `255, 180, 84` },
+];
+
 // Groupes d'affichage de la page Projets (dans cet ordre).
 const groups = [
   { id: `equipe`, title: `Réalisations en équipe`, note: `Applications développées à plusieurs` },
@@ -466,4 +475,4 @@ const pentest = {
   ],
 };
 
-module.exports = { profile, nav, competences, skillGroups, experiences, timeline, groups, projects, pentest };
+module.exports = { profile, nav, competences, skillGroups, experiences, timeline, themes, groups, projects, pentest };

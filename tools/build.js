@@ -59,7 +59,9 @@ function layout({ rel, title, description, active = '', body, bodyClass = '', sc
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
   <link rel="stylesheet" href="${root}Css/style.css">
+  <link rel="stylesheet" href="${root}Css/themes.css">
 </head>
 <body class="${bodyClass}">
   <a class="skip" href="#main">Aller au contenu</a>
@@ -514,6 +516,7 @@ function homePage() {
     competences: D.competences.map((c) => ({ title: c.title, summary: c.summary, file: c.file })),
     projects: ordered.map((p) => ({ title: p.title, subtitle: p.subtitle, kind: p.kind, period: p.period, page: p.page || '' })),
     skillGroups: D.skillGroups.map((g) => ({ title: g.title, items: g.items })),
+    themes: D.themes.map((x) => ({ id: x.id, label: x.label, hex: x.hex, hex2: x.hex2, default: !!x.default })),
   };
   const json = JSON.stringify(data).replace(/</g, '\\u003c');
   const stack = ['Linux', 'Java', 'PHP', 'JavaScript', 'React', 'PostgreSQL', 'Docker', 'Metasploit', 'Burp Suite'];
@@ -585,8 +588,19 @@ function notFoundPage() {
   }).replace('href="Css/style.css"', 'href="/Portfolio-Hassimiou/Css/style.css"').replace(/(href|src)="(?!https?:|\/|#|mailto:|tel:)([^"]+)"/g, '$1="/Portfolio-Hassimiou/$2"'));
 }
 
+/* ---------- Thèmes de couleurs ---------- */
+
+function themesCss() {
+  const rules = D.themes
+    .filter((x) => !x.default)
+    .map((x) => `html[data-theme="${x.id}"] { --green: ${x.hex}; --cyan: ${x.hex2}; --accent-rgb: ${x.rgb}; --accent2-rgb: ${x.rgb2}; }`)
+    .join('\n');
+  write('Css/themes.css', `/* Généré par tools/build.js à partir de data/site.js : ne pas modifier à la main. */\n${rules}\n`);
+}
+
 /* ---------- Exécution ---------- */
 
+themesCss();
 homePage();
 aboutPage();
 redirects();
